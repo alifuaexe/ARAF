@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ARAFModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ITEM">
+    <Key>
+      <PropertyRef Name="ITEM_ID" />
+    </Key>
+    <Property Name="ITEM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ITEM_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ITEM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="OPERATOR">
+    <Key>
+      <PropertyRef Name="OPR_ID" />
+    </Key>
+    <Property Name="OPR_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OPR_BARCODE" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="OPR_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OPR_STATUS" Type="Int32" />
+  </EntityType>
+  <EntityType Name="PLANNING">
+    <Key>
+      <PropertyRef Name="PLAN_ID" />
+    </Key>
+    <Property Name="PLAN_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WS_ID" Type="Int32" />
+    <Property Name="OP_ID" Type="Int32" />
+    <Property Name="OP_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PLAN_DATE" Type="DateTime" Precision="3" />
+    <Property Name="PLAN_START_TIME" Type="DateTime" Precision="3" />
+    <Property Name="PLAN_END_TIME" Type="DateTime" Precision="3" />
+    <Property Name="WORK_ORDER_NO" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PLAN_STATUS" Type="Boolean" />
+    <Property Name="ITEM_ID" Type="Int32" />
+    <Property Name="CUSTOMER_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CUSTOMER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WORK_ORDER_QUANTITY" Type="Double" />
+  </EntityType>
+  <EntityType Name="PLC">
+    <Key>
+      <PropertyRef Name="PLC_ID" />
+    </Key>
+    <Property Name="PLC_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PLC_IP" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="PLC_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PLC_STATUS" Type="Boolean" />
+    <Property Name="PLC_TYPE" Type="Byte" />
+    <Property Name="PLC_PORT" Type="Int32" />
+  </EntityType>
+  <EntityType Name="PLC_DATA">
+    <Key>
+      <PropertyRef Name="PLC_DATA_ID" />
+    </Key>
+    <Property Name="PLC_DATA_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PLC_ID" Type="Int32" />
+    <Property Name="PLC_DT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PRODUCTION">
+    <Key>
+      <PropertyRef Name="PROD_ID" />
+    </Key>
+    <Property Name="PROD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PLAN_ID" Type="Int32" />
+    <Property Name="PROD_START_DATE" Type="DateTime" Precision="3" />
+    <Property Name="PROD_END_DATE" Type="DateTime" Precision="3" />
+    <Property Name="PROD_QUANTITY" Type="Double" />
+  </EntityType>
+  <EntityType Name="PRODUCTION_OPERATOR">
+    <Key>
+      <PropertyRef Name="PRD_OPR_ID" />
+    </Key>
+    <Property Name="PRD_OPR_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PROD_ID" Type="Int32" />
+    <Property Name="OPR_ID" Type="Int32" />
+    <Property Name="ROT_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ROTATION">
+    <Key>
+      <PropertyRef Name="ROT_ID" />
+    </Key>
+    <Property Name="ROT_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ROT_START_TIME" Type="DateTime" Precision="3" />
+    <Property Name="ROT_END_TIME" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SCRAP_REWORK">
+    <Key>
+      <PropertyRef Name="SCRW_ID" />
+    </Key>
+    <Property Name="SCRW_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SCRW_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="SCRW_TYPE" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SERVICE_LOG">
+    <Key>
+      <PropertyRef Name="SRVS_ID" />
+    </Key>
+    <Property Name="SRVS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SRVS_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="SRVS_MESSAGE" Type="String" MaxLength="1050" FixedLength="false" Unicode="true" />
+    <Property Name="SRVS_DATE" Type="DateTime" Precision="3" />
+    <Property Name="SRVS_PARAM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SUSPEND">
+    <Key>
+      <PropertyRef Name="SUSPEND_ID" />
+    </Key>
+    <Property Name="SUSPEND_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SUSPEND_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SUSPEND_GROUP_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SUSPEND_GROUP">
+    <Key>
+      <PropertyRef Name="SUSPEND_GROUP_ID" />
+    </Key>
+    <Property Name="SUSPEND_GROUP_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SUSPEND_GROUP_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="SYSTEM_FORMS">
+    <Key>
+      <PropertyRef Name="FORM_ID" />
+    </Key>
+    <Property Name="FORM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FORM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FORM_CAPTION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SYSTEM_USER_DETAIL">
+    <Key>
+      <PropertyRef Name="SYSUSERD_ID" />
+    </Key>
+    <Property Name="SYSUSERD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SYSUSER_ID" Type="Int32" />
+    <Property Name="FORM_ID" Type="Int32" />
+    <Property Name="SYSUSERD_READ" Type="Boolean" />
+    <Property Name="SYSUSERD_WRITE" Type="Boolean" />
+    <Property Name="SYSUSERD_CHANGE" Type="Boolean" />
+    <Property Name="SYSUSERD_DELETE" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="SYSTEM_USER_GROUPS">
+    <Key>
+      <PropertyRef Name="SYSUSER_GRUPID" />
+    </Key>
+    <Property Name="SYSUSER_GRUPID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SYSUSERGRP_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SYSTEM_USERS">
+    <Key>
+      <PropertyRef Name="SYSTEMUSER_ID" />
+    </Key>
+    <Property Name="SYSTEMUSER_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SYSUSER_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SYSUSER_PASS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SYSUSER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SYSUSER_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SYSUSER_STATUS" Type="Boolean" />
+    <Property Name="SYSUSER_GRUPID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="WORKSTATION">
+    <Key>
+      <PropertyRef Name="WS_ID" />
+    </Key>
+    <Property Name="WS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WSG_ID" Type="Int32" />
+    <Property Name="WS_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WS_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="WORKSTATION_DETAIL">
+    <Key>
+      <PropertyRef Name="WSD_ID" />
+    </Key>
+    <Property Name="WSD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WS_ID" Type="Int32" />
+    <Property Name="PLC_DATA_ID" Type="Int32" />
+    <Property Name="WSD_COUNTER" Type="Int32" />
+  </EntityType>
+  <EntityType Name="WORKSTATION_GROUP">
+    <Key>
+      <PropertyRef Name="WSG_ID" />
+    </Key>
+    <Property Name="WSG_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WSG_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WSG_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="WORKSTATION_GROUP1" Relationship="Self.FK_WORKSTATION_GROUP_WORKSTATION_GROUP" FromRole="WORKSTATION_GROUP" ToRole="WORKSTATION_GROUP1" />
+    <NavigationProperty Name="WORKSTATION_GROUP2" Relationship="Self.FK_WORKSTATION_GROUP_WORKSTATION_GROUP" FromRole="WORKSTATION_GROUP1" ToRole="WORKSTATION_GROUP" />
+  </EntityType>
+  <EntityType Name="OPERATION">
+    <Key>
+      <PropertyRef Name="OP_ID" />
+    </Key>
+    <Property Name="OP_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OP_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OP_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OP_TIME_UNIT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_WORKSTATION_GROUP_WORKSTATION_GROUP">
+    <End Role="WORKSTATION_GROUP" Type="Self.WORKSTATION_GROUP" Multiplicity="1" />
+    <End Role="WORKSTATION_GROUP1" Type="Self.WORKSTATION_GROUP" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WORKSTATION_GROUP">
+        <PropertyRef Name="WSG_ID" />
+      </Principal>
+      <Dependent Role="WORKSTATION_GROUP1">
+        <PropertyRef Name="WSG_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ARAFEntitiesContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ITEMS" EntityType="Self.ITEM" />
+    <EntitySet Name="OPERATORs" EntityType="Self.OPERATOR" />
+    <EntitySet Name="PLANNINGs" EntityType="Self.PLANNING" />
+    <EntitySet Name="PLCs" EntityType="Self.PLC" />
+    <EntitySet Name="PLC_DATA" EntityType="Self.PLC_DATA" />
+    <EntitySet Name="PRODUCTIONs" EntityType="Self.PRODUCTION" />
+    <EntitySet Name="PRODUCTION_OPERATOR" EntityType="Self.PRODUCTION_OPERATOR" />
+    <EntitySet Name="ROTATIONs" EntityType="Self.ROTATION" />
+    <EntitySet Name="SCRAP_REWORK" EntityType="Self.SCRAP_REWORK" />
+    <EntitySet Name="SERVICE_LOG" EntityType="Self.SERVICE_LOG" />
+    <EntitySet Name="SUSPENDs" EntityType="Self.SUSPEND" />
+    <EntitySet Name="SUSPEND_GROUP" EntityType="Self.SUSPEND_GROUP" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="SYSTEM_FORMS" EntityType="Self.SYSTEM_FORMS" />
+    <EntitySet Name="SYSTEM_USER_DETAIL" EntityType="Self.SYSTEM_USER_DETAIL" />
+    <EntitySet Name="SYSTEM_USER_GROUPS" EntityType="Self.SYSTEM_USER_GROUPS" />
+    <EntitySet Name="SYSTEM_USERS" EntityType="Self.SYSTEM_USERS" />
+    <EntitySet Name="WORKSTATIONs" EntityType="Self.WORKSTATION" />
+    <EntitySet Name="WORKSTATION_DETAIL" EntityType="Self.WORKSTATION_DETAIL" />
+    <EntitySet Name="WORKSTATION_GROUP" EntityType="Self.WORKSTATION_GROUP" />
+    <EntitySet Name="OPERATIONS" EntityType="Self.OPERATION" />
+    <AssociationSet Name="FK_WORKSTATION_GROUP_WORKSTATION_GROUP" Association="Self.FK_WORKSTATION_GROUP_WORKSTATION_GROUP">
+      <End Role="WORKSTATION_GROUP" EntitySet="WORKSTATION_GROUP" />
+      <End Role="WORKSTATION_GROUP1" EntitySet="WORKSTATION_GROUP" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

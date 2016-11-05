@@ -1,0 +1,136 @@
+﻿<XtraSerializer version="1.0" application="DevExpress.XtraBars.Ribbon.RibbonCustomizationModel">
+  <property name="Categories" iskey="true" value="1">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="Text">(Atanmamış Sayfalar)</property>
+      <property name="IsVisible">true</property>
+      <property name="Pages" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Text">Üretim İşlemleri</property>
+          <property name="IsVisible">true</property>
+          <property name="Groups" iskey="true" value="1">
+            <property name="Item1" isnull="true" iskey="true">
+              <property name="Text" />
+              <property name="ShowCaptionButton">true</property>
+              <property name="IsVisible">true</property>
+              <property name="Items" iskey="true" value="5">
+                <property name="Item1" isnull="true" iskey="true">
+                  <property name="Text">ÜRETİM BAŞLAT</property>
+                  <property name="IsVisible">true</property>
+                  <property name="ItemSourceIdInfo" isnull="true" iskey="true">
+                    <property name="Id">2147483647</property>
+                  </property>
+                  <property name="IsCustom">false</property>
+                  <property name="Alias">ÜRETİM BAŞLAT</property>
+                  <property name="Name" />
+                  <property name="IdInfo" isnull="true" iskey="true">
+                    <property name="Id">11</property>
+                  </property>
+                  <property name="SourceIdInfo" isnull="true" iskey="true">
+                    <property name="Id">3</property>
+                  </property>
+                </property>
+                <property name="Item2" isnull="true" iskey="true">
+                  <property name="Text">ÜRETİM BİTİR</property>
+                  <property name="IsVisible">true</property>
+                  <property name="ItemSourceIdInfo" isnull="true" iskey="true">
+                    <property name="Id">2147483647</property>
+                  </property>
+                  <property name="IsCustom">false</property>
+                  <property name="Alias">ÜRETİM BİTİR</property>
+                  <property name="Name" />
+                  <property name="IdInfo" isnull="true" iskey="true">
+                    <property name="Id">12</property>
+                  </property>
+                  <property name="SourceIdInfo" isnull="true" iskey="true">
+                    <property name="Id">4</property>
+                  </property>
+                </property>
+                <property name="Item3" isnull="true" iskey="true">
+                  <property name="Text">DURUŞ  BAŞLAT</property>
+                  <property name="IsVisible">true</property>
+                  <property name="ItemSourceIdInfo" isnull="true" iskey="true">
+                    <property name="Id">2147483647</property>
+                  </property>
+                  <property name="IsCustom">false</property>
+                  <property name="Alias">DURUŞ  BAŞLAT</property>
+                  <property name="Name" />
+                  <property name="IdInfo" isnull="true" iskey="true">
+                    <property name="Id">13</property>
+                  </property>
+                  <property name="SourceIdInfo" isnull="true" iskey="true">
+                    <property name="Id">5</property>
+                  </property>
+                </property>
+                <property name="Item4" isnull="true" iskey="true">
+                  <property name="Text">DURUŞ BİTİR</property>
+                  <property name="IsVisible">true</property>
+                  <property name="ItemSourceIdInfo" isnull="true" iskey="true">
+                    <property name="Id">2147483647</property>
+                  </property>
+                  <property name="IsCustom">false</property>
+                  <property name="Alias">DURUŞ BİTİR</property>
+                  <property name="Name" />
+                  <property name="IdInfo" isnull="true" iskey="true">
+                    <property name="Id">14</property>
+                  </property>
+                  <property name="SourceIdInfo" isnull="true" iskey="true">
+                    <property name="Id">6</property>
+                  </property>
+                </property>
+                <property name="Item5" isnull="true" iskey="true">
+                  <property name="Text">İŞ DURUMU</property>
+                  <property name="IsVisible">true</property>
+                  <property name="ItemSourceIdInfo" isnull="true" iskey="true">
+                    <property name="Id">2147483647</property>
+                  </property>
+                  <property name="IsCustom">false</property>
+                  <property name="Alias">İŞ DURUMU</property>
+                  <property name="Name" />
+                  <property name="IdInfo" isnull="true" iskey="true">
+                    <property name="Id">15</property>
+                  </property>
+                  <property name="SourceIdInfo" isnull="true" iskey="true">
+                    <property name="Id">7</property>
+                  </property>
+                </property>
+              </property>
+              <property name="IsCustom">false</property>
+              <property name="Alias" />
+              <property name="Name">ribbonPageGroup1</property>
+              <property name="IdInfo" isnull="true" iskey="true">
+                <property name="Id">10</property>
+              </property>
+              <property name="SourceIdInfo" isnull="true" iskey="true">
+                <property name="Id">2</property>
+              </property>
+            </property>
+          </property>
+          <property name="IsCustom">false</property>
+          <property name="Alias">Üretim İşlemleri</property>
+          <property name="Name">ribbonPage1</property>
+          <property name="IdInfo" isnull="true" iskey="true">
+            <property name="Id">9</property>
+          </property>
+          <property name="SourceIdInfo" isnull="true" iskey="true">
+            <property name="Id">1</property>
+          </property>
+        </property>
+      </property>
+      <property name="IsCustom">false</property>
+      <property name="Alias">(Atanmamış Sayfalar)</property>
+      <property name="Name" />
+      <property name="IdInfo" isnull="true" iskey="true">
+        <property name="Id">8</property>
+      </property>
+      <property name="SourceIdInfo" isnull="true" iskey="true">
+        <property name="Id">0</property>
+      </property>
+    </property>
+  </property>
+  <property name="CommonSettings" isnull="true" iskey="true">
+    <property name="Minimized">false</property>
+    <property name="ToolbarLocation">Default</property>
+    <property name="IsReady">true</property>
+    <property name="HashCode">8</property>
+  </property>
+</XtraSerializer>

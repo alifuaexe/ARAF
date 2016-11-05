@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="ArafEntty" />
+  <Alias Key="Target" Value="ArafEntty.Store" />
+  <EntityContainerMapping CdmEntityContainer="ArafEnttyContainer" StorageEntityContainer="ArafEnttyStoreContainer">
+    <EntitySetMapping Name="WORKSTATION">
+      <EntityTypeMapping TypeName="ArafEntty.WORKSTATION">
+        <MappingFragment StoreEntitySet="WORKSTATION">
+          <ScalarProperty Name="WS_NAME" ColumnName="WS_NAME" />
+          <ScalarProperty Name="WS_CODE" ColumnName="WS_CODE" />
+          <ScalarProperty Name="WSG_ID" ColumnName="WSG_ID" />
+          <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
