@@ -1,0 +1,731 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ARAFModelStoreContainer" CdmEntityContainer="ARAFEntities">
+    <EntitySetMapping Name="FACTORY">
+      <EntityTypeMapping TypeName="ARAFModel.FACTORY">
+        <MappingFragment StoreEntitySet="FACTORY">
+          <ScalarProperty Name="FACTORY_ID" ColumnName="FACTORY_ID" />
+          <ScalarProperty Name="FACTORY_CODE" ColumnName="FACTORY_CODE" />
+          <ScalarProperty Name="FACTORY_NAME" ColumnName="FACTORY_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITEM_GROUP">
+      <EntityTypeMapping TypeName="ARAFModel.ITEM_GROUP">
+        <MappingFragment StoreEntitySet="ITEM_GROUP">
+          <ScalarProperty Name="ITEM_GRP_ID" ColumnName="ITEM_GRP_ID" />
+          <ScalarProperty Name="ITEM_GRP_CODE" ColumnName="ITEM_GRP_CODE" />
+          <ScalarProperty Name="ITEM_GRP_NAME" ColumnName="ITEM_GRP_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITEM_TREE">
+      <EntityTypeMapping TypeName="ARAFModel.ITEM_TREE">
+        <MappingFragment StoreEntitySet="ITEM_TREE">
+          <ScalarProperty Name="ITEM_TREE_ID" ColumnName="ITEM_TREE_ID" />
+          <ScalarProperty Name="MUST" ColumnName="MUST" />
+          <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
+          <ScalarProperty Name="MATERIAL_ID" ColumnName="MATERIAL_ID" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITEMS">
+      <EntityTypeMapping TypeName="ARAFModel.ITEMS">
+        <MappingFragment StoreEntitySet="ITEMS">
+          <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
+          <ScalarProperty Name="ITEM_CODE" ColumnName="ITEM_CODE" />
+          <ScalarProperty Name="ITEM_NAME" ColumnName="ITEM_NAME" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="ERP_ID" ColumnName="ERP_ID" />
+          <ScalarProperty Name="ITEM_GRP_ID" ColumnName="ITEM_GRP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OPERATIONS">
+      <EntityTypeMapping TypeName="ARAFModel.OPERATIONS">
+        <MappingFragment StoreEntitySet="OPERATIONS">
+          <ScalarProperty Name="OP_ID" ColumnName="OP_ID" />
+          <ScalarProperty Name="OP_CODE" ColumnName="OP_CODE" />
+          <ScalarProperty Name="OP_NAME" ColumnName="OP_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OPERATOR">
+      <EntityTypeMapping TypeName="ARAFModel.OPERATOR">
+        <MappingFragment StoreEntitySet="OPERATOR">
+          <ScalarProperty Name="OPR_ID" ColumnName="OPR_ID" />
+          <ScalarProperty Name="OPR_BARCODE" ColumnName="OPR_BARCODE" />
+          <ScalarProperty Name="OPR_NAME" ColumnName="OPR_NAME" />
+          <ScalarProperty Name="OPR_STATUS" ColumnName="OPR_STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PANEL_TYPE_DETAIL">
+      <EntityTypeMapping TypeName="ARAFModel.PANEL_TYPE_DETAIL">
+        <MappingFragment StoreEntitySet="PANEL_TYPE_DETAIL">
+          <ScalarProperty Name="PANEL_TYPE_ID" ColumnName="PANEL_TYPE_ID" />
+          <ScalarProperty Name="PANEL_ID" ColumnName="PANEL_ID" />
+          <ScalarProperty Name="FIELD_NAME" ColumnName="FIELD_NAME" />
+          <ScalarProperty Name="FIELD_CAPTION" ColumnName="FIELD_CAPTION" />
+          <ScalarProperty Name="QUEUE" ColumnName="QUEUE" />
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PLANNING">
+      <EntityTypeMapping TypeName="ARAFModel.PLANNING">
+        <MappingFragment StoreEntitySet="PLANNING">
+          <ScalarProperty Name="PLAN_ID" ColumnName="PLAN_ID" />
+          <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
+          <ScalarProperty Name="OP_ID" ColumnName="OP_ID" />
+          <ScalarProperty Name="PLAN_DATE" ColumnName="PLAN_DATE" />
+          <ScalarProperty Name="PLAN_START_TIME" ColumnName="PLAN_START_TIME" />
+          <ScalarProperty Name="PLAN_END_TIME" ColumnName="PLAN_END_TIME" />
+          <ScalarProperty Name="WORK_ORDER_NO" ColumnName="WORK_ORDER_NO" />
+          <ScalarProperty Name="PLAN_STATUS" ColumnName="PLAN_STATUS" />
+          <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
+          <ScalarProperty Name="CUSTOMER_CODE" ColumnName="CUSTOMER_CODE" />
+          <ScalarProperty Name="CUSTOMER_NAME" ColumnName="CUSTOMER_NAME" />
+          <ScalarProperty Name="WORK_ORDER_QUANTITY" ColumnName="WORK_ORDER_QUANTITY" />
+          <ScalarProperty Name="ERP_ID" ColumnName="ERP_ID" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="ORDER_DATE" ColumnName="ORDER_DATE" />
+          <ScalarProperty Name="DELIVERY_DATE" ColumnName="DELIVERY_DATE" />
+          <ScalarProperty Name="LINEEXP" ColumnName="LINEEXP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PLC">
+      <EntityTypeMapping TypeName="ARAFModel.PLC">
+        <MappingFragment StoreEntitySet="PLC">
+          <ScalarProperty Name="PLC_ID" ColumnName="PLC_ID" />
+          <ScalarProperty Name="PLC_IP" ColumnName="PLC_IP" />
+          <ScalarProperty Name="PLC_NAME" ColumnName="PLC_NAME" />
+          <ScalarProperty Name="PLC_STATUS" ColumnName="PLC_STATUS" />
+          <ScalarProperty Name="PLC_TYPE" ColumnName="PLC_TYPE" />
+          <ScalarProperty Name="PLC_PORT" ColumnName="PLC_PORT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PLC_DATA">
+      <EntityTypeMapping TypeName="ARAFModel.PLC_DATA">
+        <MappingFragment StoreEntitySet="PLC_DATA">
+          <ScalarProperty Name="PLC_DT_TIME" ColumnName="PLC_DT_TIME" />
+          <ScalarProperty Name="PLC_DATA_ID" ColumnName="PLC_DATA_ID" />
+          <ScalarProperty Name="PLC_ID" ColumnName="PLC_ID" />
+          <ScalarProperty Name="PLC_DT" ColumnName="PLC_DT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTION_OPERATOR">
+      <EntityTypeMapping TypeName="ARAFModel.PRODUCTION_OPERATOR">
+        <MappingFragment StoreEntitySet="PRODUCTION_OPERATOR">
+          <ScalarProperty Name="PRD_OPR_ID" ColumnName="PRD_OPR_ID" />
+          <ScalarProperty Name="PROD_ID" ColumnName="PROD_ID" />
+          <ScalarProperty Name="OPR_ID" ColumnName="OPR_ID" />
+          <ScalarProperty Name="ROT_ID" ColumnName="ROT_ID" />
+          <ScalarProperty Name="PRD_WS_ID" ColumnName="PRD_WS_ID" />
+          <ScalarProperty Name="PRD_STATUS" ColumnName="PRD_STATUS" />
+          <ScalarProperty Name="SHIFT_ID" ColumnName="SHIFT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTION_PLANNING">
+      <EntityTypeMapping TypeName="ARAFModel.PRODUCTION_PLANNING">
+        <MappingFragment StoreEntitySet="PRODUCTION_PLANNING">
+          <ScalarProperty Name="LAST_READ_DATE" ColumnName="LAST_READ_DATE" />
+          <ScalarProperty Name="PROD_PLAN_ID" ColumnName="PROD_PLAN_ID" />
+          <ScalarProperty Name="PROD_ID" ColumnName="PROD_ID" />
+          <ScalarProperty Name="PLAN_ID" ColumnName="PLAN_ID" />
+          <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
+          <ScalarProperty Name="PRD_PLN_QUANTITY" ColumnName="PRD_PLN_QUANTITY" />
+          <ScalarProperty Name="PRD_QUANTITY" ColumnName="PRD_QUANTITY" />
+          <ScalarProperty Name="MULTIPLIER" ColumnName="MULTIPLIER" />
+          <ScalarProperty Name="DIVIDING" ColumnName="DIVIDING" />
+          <ScalarProperty Name="PROD_PLAN_STATUS" ColumnName="PROD_PLAN_STATUS" />
+          <ScalarProperty Name="PROD_PLAN_START_DATE" ColumnName="PROD_PLAN_START_DATE" />
+          <ScalarProperty Name="PROD_PLAN_END_DATE" ColumnName="PROD_PLAN_END_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROTATION">
+      <EntityTypeMapping TypeName="ARAFModel.ROTATION">
+        <MappingFragment StoreEntitySet="ROTATION">
+          <ScalarProperty Name="ROT_ID" ColumnName="ROT_ID" />
+          <ScalarProperty Name="ROT_START_TIME" ColumnName="ROT_START_TIME" />
+          <ScalarProperty Name="ROT_END_TIME" ColumnName="ROT_END_TIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCRAP_REWORK">
+      <EntityTypeMapping TypeName="ARAFModel.SCRAP_REWORK">
+        <MappingFragment StoreEntitySet="SCRAP_REWORK">
+          <ScalarProperty Name="SCRW_ID" ColumnName="SCRW_ID" />
+          <ScalarProperty Name="SCRW_NAME" ColumnName="SCRW_NAME" />
+          <ScalarProperty Name="SCRW_TYPE" ColumnName="SCRW_TYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SECTION">
+      <EntityTypeMapping TypeName="ARAFModel.SECTION">
+        <MappingFragment StoreEntitySet="SECTION">
+          <ScalarProperty Name="SECTION_ID" ColumnName="SECTION_ID" />
+          <ScalarProperty Name="SECTION_CODE" ColumnName="SECTION_CODE" />
+          <ScalarProperty Name="SECTION_NAME" ColumnName="SECTION_NAME" />
+          <ScalarProperty Name="FACTORY_ID" ColumnName="FACTORY_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERVICE_LOG">
+      <EntityTypeMapping TypeName="ARAFModel.SERVICE_LOG">
+        <MappingFragment StoreEntitySet="SERVICE_LOG">
+          <ScalarProperty Name="SRVS_ID" ColumnName="SRVS_ID" />
+          <ScalarProperty Name="SRVS_NAME" ColumnName="SRVS_NAME" />
+          <ScalarProperty Name="SRVS_MESSAGE" ColumnName="SRVS_MESSAGE" />
+          <ScalarProperty Name="SRVS_DATE" ColumnName="SRVS_DATE" />
+          <ScalarProperty Name="SRVS_PARAM" ColumnName="SRVS_PARAM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SHIFT">
+      <EntityTypeMapping TypeName="ARAFModel.SHIFT">
+        <MappingFragment StoreEntitySet="SHIFT">
+          <ScalarProperty Name="SHIFT_ID" ColumnName="SHIFT_ID" />
+          <ScalarProperty Name="SHIFT_NO" ColumnName="SHIFT_NO" />
+          <ScalarProperty Name="SHIFT_CODE" ColumnName="SHIFT_CODE" />
+          <ScalarProperty Name="SHIFT_START_DATE" ColumnName="SHIFT_START_DATE" />
+          <ScalarProperty Name="SHIFT_END_DATE" ColumnName="SHIFT_END_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUSPEND">
+      <EntityTypeMapping TypeName="ARAFModel.SUSPEND">
+        <MappingFragment StoreEntitySet="SUSPEND">
+          <ScalarProperty Name="SUSPEND_ID" ColumnName="SUSPEND_ID" />
+          <ScalarProperty Name="SUSPEND_NAME" ColumnName="SUSPEND_NAME" />
+          <ScalarProperty Name="SUSPEND_GROUP_ID" ColumnName="SUSPEND_GROUP_ID" />
+          <ScalarProperty Name="SUSPEND_TYPE" ColumnName="SUSPEND_TYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUSPEND_WORKSTATION">
+      <EntityTypeMapping TypeName="ARAFModel.SUSPEND_WORKSTATION">
+        <MappingFragment StoreEntitySet="SUSPEND_WORKSTATION">
+          <ScalarProperty Name="SSPND_WS_ID" ColumnName="SSPND_WS_ID" />
+          <ScalarProperty Name="SUSPEND_ID" ColumnName="SUSPEND_ID" />
+          <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
+          <ScalarProperty Name="BUTTON_QUEUE" ColumnName="BUTTON_QUEUE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ARAFModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SYSTEM_FORMS">
+      <EntityTypeMapping TypeName="ARAFModel.SYSTEM_FORMS">
+        <MappingFragment StoreEntitySet="SYSTEM_FORMS">
+          <ScalarProperty Name="FORM_ID" ColumnName="FORM_ID" />
+          <ScalarProperty Name="FORM_NAME" ColumnName="FORM_NAME" />
+          <ScalarProperty Name="FORM_CAPTION" ColumnName="FORM_CAPTION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SYSTEM_USER_DETAIL">
+      <EntityTypeMapping TypeName="ARAFModel.SYSTEM_USER_DETAIL">
+        <MappingFragment StoreEntitySet="SYSTEM_USER_DETAIL">
+          <ScalarProperty Name="SYSUSERD_ID" ColumnName="SYSUSERD_ID" />
+          <ScalarProperty Name="SYSUSER_ID" ColumnName="SYSUSER_ID" />
+          <ScalarProperty Name="FORM_ID" ColumnName="FORM_ID" />
+          <ScalarProperty Name="SYSUSERD_READ" ColumnName="SYSUSERD_READ" />
+          <ScalarProperty Name="SYSUSERD_WRITE" ColumnName="SYSUSERD_WRITE" />
+          <ScalarProperty Name="SYSUSERD_CHANGE" ColumnName="SYSUSERD_CHANGE" />
+          <ScalarProperty Name="SYSUSERD_DELETE" ColumnName="SYSUSERD_DELETE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SYSTEM_USER_GROUPS">
+      <EntityTypeMapping TypeName="ARAFModel.SYSTEM_USER_GROUPS">
+        <MappingFragment StoreEntitySet="SYSTEM_USER_GROUPS">
+          <ScalarProperty Name="SYSUSER_GRUPID" ColumnName="SYSUSER_GRUPID" />
+          <ScalarProperty Name="SYSUSERGRP_NAME" ColumnName="SYSUSERGRP_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SYSTEM_USERS">
+      <EntityTypeMapping TypeName="ARAFModel.SYSTEM_USERS">
+        <MappingFragment StoreEntitySet="SYSTEM_USERS">
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USER_CODE" ColumnName="USER_CODE" />
+          <ScalarProperty Name="USER_PASS" ColumnName="USER_PASS" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="USER_EMAIL" ColumnName="USER_EMAIL" />
+          <ScalarProperty Name="USER_STATUS" ColumnName="USER_STATUS" />
+          <ScalarProperty Name="USER_GRUPID" ColumnName="USER_GRUPID" />
+          <ScalarProperty Name="SURNAME" ColumnName="SURNAME" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TMP_ORDERS">
+      <EntityTypeMapping TypeName="ARAFModel.TMP_ORDERS">
+        <MappingFragment StoreEntitySet="TMP_ORDERS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
+          <ScalarProperty Name="WORK_ORDER_NO" ColumnName="WORK_ORDER_NO" />
+          <ScalarProperty Name="ORDER_DATE" ColumnName="ORDER_DATE" />
+          <ScalarProperty Name="DELIVERY_DATE" ColumnName="DELIVERY_DATE" />
+          <ScalarProperty Name="ITEM_CODE" ColumnName="ITEM_CODE" />
+          <ScalarProperty Name="ITEM_NAME" ColumnName="ITEM_NAME" />
+          <ScalarProperty Name="LINEEXP" ColumnName="LINEEXP" />
+          <ScalarProperty Name="CUSTOMER_CODE" ColumnName="CUSTOMER_CODE" />
+          <ScalarProperty Name="CUSTOMER_NAME" ColumnName="CUSTOMER_NAME" />
+          <ScalarProperty Name="WORK_ORDER_QUANTITY" ColumnName="WORK_ORDER_QUANTITY" />
+          <ScalarProperty Name="ERP_ID" ColumnName="ERP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TMP_PLANNING">
+      <EntityTypeMapping TypeName="ARAFModel.TMP_PLANNING">
+        <MappingFragment StoreEntitySet="TMP_PLANNING">
+          <ScalarProperty Name="TMP_PLN_ID" ColumnName="TMP_PLN_ID" />
+          <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
+          <ScalarProperty Name="PLAN_ID" ColumnName="PLAN_ID" />
+          <ScalarProperty Name="MULTIPLIER" ColumnName="MULTIPLIER" />
+          <ScalarProperty Name="DIVIDING" ColumnName="DIVIDING" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UNIT_DEFINITION">
+      <EntityTypeMapping TypeName="ARAFModel.UNIT_DEFINITION">
+        <MappingFragment StoreEntitySet="UNIT_DEFINITION">
+          <ScalarProperty Name="UNIT_ID" ColumnName="UNIT_ID" />
+          <ScalarProperty Name="UNIT_NAME" ColumnName="UNIT_NAME" />
+          <ScalarProperty Name="EXPLANATION" ColumnName="EXPLANATION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WORKSTATION">
+      <EntityTypeMapping TypeName="ARAFModel.WORKSTATION">
+        <MappingFragment StoreEntitySet="WORKSTATION">
+          <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
+          <ScalarProperty Name="WSG_ID" ColumnName="WSG_ID" />
+          <ScalarProperty Name="WS_CODE" ColumnName="WS_CODE" />
+          <ScalarProperty Name="WS_NAME" ColumnName="WS_NAME" />
+          <ScalarProperty Name="COMPUTER_NAME" ColumnName="COMPUTER_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WORKSTATION_DETAIL">
+      <EntityTypeMapping TypeName="ARAFModel.WORKSTATION_DETAIL">
+        <MappingFragment StoreEntitySet="WORKSTATION_DETAIL">
+          <ScalarProperty Name="RESET_COUNTER" ColumnName="RESET_COUNTER" />
+          <ScalarProperty Name="WSD_ID" ColumnName="WSD_ID" />
+          <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
+          <ScalarProperty Name="PLC_DATA_ID" ColumnName="PLC_DATA_ID" />
+          <ScalarProperty Name="WSD_COUNTER" ColumnName="WSD_COUNTER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WORKSTATION_GROUP">
+      <EntityTypeMapping TypeName="ARAFModel.WORKSTATION_GROUP">
+        <MappingFragment StoreEntitySet="WORKSTATION_GROUP">
+          <ScalarProperty Name="WSG_ID" ColumnName="WSG_ID" />
+          <ScalarProperty Name="WSG_CODE" ColumnName="WSG_CODE" />
+          <ScalarProperty Name="WSG_NAME" ColumnName="WSG_NAME" />
+          <ScalarProperty Name="SECTION_ID" ColumnName="SECTION_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITEM_OPERATIONS">
+      <EntityTypeMapping TypeName="ARAFModel.ITEM_OPERATIONS">
+        <MappingFragment StoreEntitySet="ITEM_OPERATIONS">
+          <ScalarProperty Name="ITEM_OP_ID" ColumnName="ITEM_OP_ID" />
+          <ScalarProperty Name="QUEUE" ColumnName="QUEUE" />
+          <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
+          <ScalarProperty Name="OP_ID" ColumnName="OP_ID" />
+          <ScalarProperty Name="OP_TIME_UNIT" ColumnName="OP_TIME_UNIT" />
+          <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
+          <ScalarProperty Name="LAST_OP" ColumnName="LAST_OP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARF_ITEM_OPERATIONS">
+      <EntityTypeMapping TypeName="ARAFModel.ARF_ITEM_OPERATIONS">
+        <MappingFragment StoreEntitySet="ARF_ITEM_OPERATIONS">
+          <ScalarProperty Name="ITEM_OP_ID" ColumnName="ITEM_OP_ID" />
+          <ScalarProperty Name="QUEUE" ColumnName="QUEUE" />
+          <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
+          <ScalarProperty Name="OP_ID" ColumnName="OP_ID" />
+          <ScalarProperty Name="OP_TIME_UNIT" ColumnName="OP_TIME_UNIT" />
+          <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
+          <ScalarProperty Name="LAST_OP" ColumnName="LAST_OP" />
+          <ScalarProperty Name="ITEM_CODE" ColumnName="ITEM_CODE" />
+          <ScalarProperty Name="ITEM_NAME" ColumnName="ITEM_NAME" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="ERP_ID" ColumnName="ERP_ID" />
+          <ScalarProperty Name="ITEM_GRP_ID" ColumnName="ITEM_GRP_ID" />
+          <ScalarProperty Name="OP_CODE" ColumnName="OP_CODE" />
+          <ScalarProperty Name="OP_NAME" ColumnName="OP_NAME" />
+          <ScalarProperty Name="WSG_ID" ColumnName="WSG_ID" />
+          <ScalarProperty Name="WS_CODE" ColumnName="WS_CODE" />
+          <ScalarProperty Name="WS_NAME" ColumnName="WS_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARF_ITEMS_LIST">
+      <EntityTypeMapping TypeName="ARAFModel.ARF_ITEMS_LIST">
+        <MappingFragment StoreEntitySet="ARF_ITEMS_LIST">
+          <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
+          <ScalarProperty Name="ITEM_CODE" ColumnName="ITEM_CODE" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="ITEM_NAME" ColumnName="ITEM_NAME" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="ERP_ID" ColumnName="ERP_ID" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="ITEM_GRP_ID" ColumnName="ITEM_GRP_ID" />
+          <ScalarProperty Name="ITEM_GRP_CODE" ColumnName="ITEM_GRP_CODE" />
+          <ScalarProperty Name="ITEM_GRP_NAME" ColumnName="ITEM_GRP_NAME" />
+          <ScalarProperty Name="UNIT_NAME" ColumnName="UNIT_NAME" />
+          <ScalarProperty Name="EXPLANATION" ColumnName="EXPLANATION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARF_PLANNING">
+      <EntityTypeMapping TypeName="ARAFModel.ARF_PLANNING">
+        <MappingFragment StoreEntitySet="ARF_PLANNING">
+          <ScalarProperty Name="PLAN_ID" ColumnName="PLAN_ID" />
+          <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
+          <ScalarProperty Name="WS_CODE" ColumnName="WS_CODE" />
+          <ScalarProperty Name="WS_NAME" ColumnName="WS_NAME" />
+          <ScalarProperty Name="OP_ID" ColumnName="OP_ID" />
+          <ScalarProperty Name="OP_CODE" ColumnName="OP_CODE" />
+          <ScalarProperty Name="OP_NAME" ColumnName="OP_NAME" />
+          <ScalarProperty Name="PLAN_DATE" ColumnName="PLAN_DATE" />
+          <ScalarProperty Name="PLAN_START_TIME" ColumnName="PLAN_START_TIME" />
+          <ScalarProperty Name="PLAN_END_TIME" ColumnName="PLAN_END_TIME" />
+          <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
+          <ScalarProperty Name="ITEM_CODE" ColumnName="ITEM_CODE" />
+          <ScalarProperty Name="ITEM_NAME" ColumnName="ITEM_NAME" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="UNIT_NAME" ColumnName="UNIT_NAME" />
+          <ScalarProperty Name="LINEEXP" ColumnName="LINEEXP" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="CUSTOMER_CODE" ColumnName="CUSTOMER_CODE" />
+          <ScalarProperty Name="CUSTOMER_NAME" ColumnName="CUSTOMER_NAME" />
+          <ScalarProperty Name="WORK_ORDER_NO" ColumnName="WORK_ORDER_NO" />
+          <ScalarProperty Name="WORK_ORDER_QUANTITY" ColumnName="WORK_ORDER_QUANTITY" />
+          <ScalarProperty Name="ERP_ID" ColumnName="ERP_ID" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="ORDER_DATE" ColumnName="ORDER_DATE" />
+          <ScalarProperty Name="DELIVERY_DATE" ColumnName="DELIVERY_DATE" />
+          <ScalarProperty Name="PLAN_STATUS" ColumnName="PLAN_STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARF_PLANNING_WORKSTATION_ITEMS">
+      <EntityTypeMapping TypeName="ARAFModel.ARF_PLANNING_WORKSTATION_ITEMS">
+        <MappingFragment StoreEntitySet="ARF_PLANNING_WORKSTATION_ITEMS">
+          <ScalarProperty Name="ITEM_CODE" ColumnName="ITEM_CODE" />
+          <ScalarProperty Name="ITEM_NAME" ColumnName="ITEM_NAME" />
+          <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
+          <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARF_SUSPEND_WORKSTATION">
+      <EntityTypeMapping TypeName="ARAFModel.ARF_SUSPEND_WORKSTATION">
+        <MappingFragment StoreEntitySet="ARF_SUSPEND_WORKSTATION">
+          <ScalarProperty Name="SSPND_WS_ID" ColumnName="SSPND_WS_ID" />
+          <ScalarProperty Name="SUSPEND_ID" ColumnName="SUSPEND_ID" />
+          <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
+          <ScalarProperty Name="BUTTON_QUEUE" ColumnName="BUTTON_QUEUE" />
+          <ScalarProperty Name="SUSPEND_NAME" ColumnName="SUSPEND_NAME" />
+          <ScalarProperty Name="SUSPEND_GROUP_ID" ColumnName="SUSPEND_GROUP_ID" />
+          <ScalarProperty Name="SUSPEND_TYPE" ColumnName="SUSPEND_TYPE" />
+          <ScalarProperty Name="WSG_ID" ColumnName="WSG_ID" />
+          <ScalarProperty Name="WS_CODE" ColumnName="WS_CODE" />
+          <ScalarProperty Name="WS_NAME" ColumnName="WS_NAME" />
+          <ScalarProperty Name="COMPUTER_NAME" ColumnName="COMPUTER_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARF_SYSTEM_USERS">
+      <EntityTypeMapping TypeName="ARAFModel.ARF_SYSTEM_USERS">
+        <MappingFragment StoreEntitySet="ARF_SYSTEM_USERS">
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USER_CODE" ColumnName="USER_CODE" />
+          <ScalarProperty Name="USER_PASS" ColumnName="USER_PASS" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="USER_EMAIL" ColumnName="USER_EMAIL" />
+          <ScalarProperty Name="USER_STATUS" ColumnName="USER_STATUS" />
+          <ScalarProperty Name="USER_GRUPID" ColumnName="USER_GRUPID" />
+          <ScalarProperty Name="SURNAME" ColumnName="SURNAME" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="SYSUSER_GRUPID" ColumnName="SYSUSER_GRUPID" />
+          <ScalarProperty Name="SYSUSERGRP_NAME" ColumnName="SYSUSERGRP_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARF_TMP_PLANNING">
+      <EntityTypeMapping TypeName="ARAFModel.ARF_TMP_PLANNING">
+        <MappingFragment StoreEntitySet="ARF_TMP_PLANNING">
+          <ScalarProperty Name="TMP_PLN_ID" ColumnName="TMP_PLN_ID" />
+          <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
+          <ScalarProperty Name="PLAN_ID" ColumnName="PLAN_ID" />
+          <ScalarProperty Name="MULTIPLIER" ColumnName="MULTIPLIER" />
+          <ScalarProperty Name="DIVIDING" ColumnName="DIVIDING" />
+          <ScalarProperty Name="WSG_ID" ColumnName="WSG_ID" />
+          <ScalarProperty Name="WS_CODE" ColumnName="WS_CODE" />
+          <ScalarProperty Name="WS_NAME" ColumnName="WS_NAME" />
+          <ScalarProperty Name="COMPUTER_NAME" ColumnName="COMPUTER_NAME" />
+          <ScalarProperty Name="OP_ID" ColumnName="OP_ID" />
+          <ScalarProperty Name="OP_CODE" ColumnName="OP_CODE" />
+          <ScalarProperty Name="OP_NAME" ColumnName="OP_NAME" />
+          <ScalarProperty Name="PLAN_DATE" ColumnName="PLAN_DATE" />
+          <ScalarProperty Name="PLAN_START_TIME" ColumnName="PLAN_START_TIME" />
+          <ScalarProperty Name="PLAN_END_TIME" ColumnName="PLAN_END_TIME" />
+          <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
+          <ScalarProperty Name="ITEM_CODE" ColumnName="ITEM_CODE" />
+          <ScalarProperty Name="ITEM_NAME" ColumnName="ITEM_NAME" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="UNIT_NAME" ColumnName="UNIT_NAME" />
+          <ScalarProperty Name="LINEEXP" ColumnName="LINEEXP" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="CUSTOMER_CODE" ColumnName="CUSTOMER_CODE" />
+          <ScalarProperty Name="CUSTOMER_NAME" ColumnName="CUSTOMER_NAME" />
+          <ScalarProperty Name="WORK_ORDER_NO" ColumnName="WORK_ORDER_NO" />
+          <ScalarProperty Name="WORK_ORDER_QUANTITY" ColumnName="WORK_ORDER_QUANTITY" />
+          <ScalarProperty Name="ERP_ID" ColumnName="ERP_ID" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="ORDER_DATE" ColumnName="ORDER_DATE" />
+          <ScalarProperty Name="DELIVERY_DATE" ColumnName="DELIVERY_DATE" />
+          <ScalarProperty Name="PLAN_STATUS" ColumnName="PLAN_STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARF_W_COUNTER_DETAIL">
+      <EntityTypeMapping TypeName="ARAFModel.ARF_W_COUNTER_DETAIL">
+        <MappingFragment StoreEntitySet="ARF_W_COUNTER_DETAIL">
+          <ScalarProperty Name="WSD_ID" ColumnName="WSD_ID" />
+          <ScalarProperty Name="WS_CODE" ColumnName="WS_CODE" />
+          <ScalarProperty Name="WS_NAME" ColumnName="WS_NAME" />
+          <ScalarProperty Name="PLC_DT" ColumnName="PLC_DT" />
+          <ScalarProperty Name="WSD_COUNTER" ColumnName="WSD_COUNTER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARF_W_ITEM_TREE">
+      <EntityTypeMapping TypeName="ARAFModel.ARF_W_ITEM_TREE">
+        <MappingFragment StoreEntitySet="ARF_W_ITEM_TREE">
+          <ScalarProperty Name="ITEM_TREE_ID" ColumnName="ITEM_TREE_ID" />
+          <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
+          <ScalarProperty Name="ITEM_CODE" ColumnName="ITEM_CODE" />
+          <ScalarProperty Name="ITEM_NAME" ColumnName="ITEM_NAME" />
+          <ScalarProperty Name="MATERIAL_ID" ColumnName="MATERIAL_ID" />
+          <ScalarProperty Name="MATERIAL_CODE" ColumnName="MATERIAL_CODE" />
+          <ScalarProperty Name="MATERIAL_NAME" ColumnName="MATERIAL_NAME" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="ORDER" ColumnName="ORDER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARF_W_SETTING_PLC">
+      <EntityTypeMapping TypeName="ARAFModel.ARF_W_SETTING_PLC">
+        <MappingFragment StoreEntitySet="ARF_W_SETTING_PLC">
+          <ScalarProperty Name="RESET_COUNTER" ColumnName="RESET_COUNTER" />
+          <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
+          <ScalarProperty Name="WSG_ID" ColumnName="WSG_ID" />
+          <ScalarProperty Name="WS_CODE" ColumnName="WS_CODE" />
+          <ScalarProperty Name="WS_NAME" ColumnName="WS_NAME" />
+          <ScalarProperty Name="WSG_CODE" ColumnName="WSG_CODE" />
+          <ScalarProperty Name="WSG_NAME" ColumnName="WSG_NAME" />
+          <ScalarProperty Name="PLC_DATA_ID" ColumnName="PLC_DATA_ID" />
+          <ScalarProperty Name="WSD_COUNTER" ColumnName="WSD_COUNTER" />
+          <ScalarProperty Name="PLC_ID" ColumnName="PLC_ID" />
+          <ScalarProperty Name="PLC_DT" ColumnName="PLC_DT" />
+          <ScalarProperty Name="PLC_IP" ColumnName="PLC_IP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARF_WORKSTATIONS">
+      <EntityTypeMapping TypeName="ARAFModel.ARF_WORKSTATIONS">
+        <MappingFragment StoreEntitySet="ARF_WORKSTATIONS">
+          <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
+          <ScalarProperty Name="WSG_ID" ColumnName="WSG_ID" />
+          <ScalarProperty Name="WSG_NAME" ColumnName="WSG_NAME" />
+          <ScalarProperty Name="WS_CODE" ColumnName="WS_CODE" />
+          <ScalarProperty Name="WS_NAME" ColumnName="WS_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ARF_PRODUCTION_PLANNIG_INSERT" FunctionName="ARAFModel.Store.ARF_PRODUCTION_PLANNIG_INSERT" />
+    <FunctionImportMapping FunctionImportName="ARF_PRODUCTION_START" FunctionName="ARAFModel.Store.ARF_PRODUCTION_START" />
+    <FunctionImportMapping FunctionImportName="ARF_SP_ITEM_TREE_INSERT" FunctionName="ARAFModel.Store.ARF_SP_ITEM_TREE_INSERT" />
+    <EntitySetMapping Name="PRODUCTION_SUSPEND">
+      <EntityTypeMapping TypeName="ARAFModel.PRODUCTION_SUSPEND">
+        <MappingFragment StoreEntitySet="PRODUCTION_SUSPEND">
+          <ScalarProperty Name="COMMENT" ColumnName="COMMENT" />
+          <ScalarProperty Name="SUSPEND_STATUS" ColumnName="SUSPEND_STATUS" />
+          <ScalarProperty Name="SUSPEND_END_TIME" ColumnName="SUSPEND_END_TIME" />
+          <ScalarProperty Name="SUSPEND_START_TIME" ColumnName="SUSPEND_START_TIME" />
+          <ScalarProperty Name="OPR_ID" ColumnName="OPR_ID" />
+          <ScalarProperty Name="PROD_ID" ColumnName="PROD_ID" />
+          <ScalarProperty Name="SUSPEND_ID" ColumnName="SUSPEND_ID" />
+          <ScalarProperty Name="PROD_SUSPEND_ID" ColumnName="PROD_SUSPEND_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUSPEND_GROUP">
+      <EntityTypeMapping TypeName="ARAFModel.SUSPEND_GROUP">
+        <MappingFragment StoreEntitySet="SUSPEND_GROUP">
+          <ScalarProperty Name="COLOR" ColumnName="COLOR" />
+          <ScalarProperty Name="SUSPEND_GROUP_NAME" ColumnName="SUSPEND_GROUP_NAME" />
+          <ScalarProperty Name="SUSPEND_GROUP_ID" ColumnName="SUSPEND_GROUP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ARF_PRODUCTION_STOPP" FunctionName="ARAFModel.Store.ARF_PRODUCTION_STOPP" />
+    <EntitySetMapping Name="PRODUCTION">
+      <EntityTypeMapping TypeName="ARAFModel.PRODUCTION">
+        <MappingFragment StoreEntitySet="PRODUCTION">
+          <ScalarProperty Name="LAST_READ_DATE" ColumnName="LAST_READ_DATE" />
+          <ScalarProperty Name="PROD_STATUS" ColumnName="PROD_STATUS" />
+          <ScalarProperty Name="OPR_PIECE" ColumnName="OPR_PIECE" />
+          <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
+          <ScalarProperty Name="REPORT_QUANTITY" ColumnName="REPORT_QUANTITY" />
+          <ScalarProperty Name="PROD_QUANTITY" ColumnName="PROD_QUANTITY" />
+          <ScalarProperty Name="PROD_END_DATE" ColumnName="PROD_END_DATE" />
+          <ScalarProperty Name="PROD_START_DATE" ColumnName="PROD_START_DATE" />
+          <ScalarProperty Name="PROD_ID" ColumnName="PROD_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARF_PRODUCTION_OPERATOR">
+      <EntityTypeMapping TypeName="ARAFModel.ARF_PRODUCTION_OPERATOR">
+        <MappingFragment StoreEntitySet="ARF_PRODUCTION_OPERATOR">
+          <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
+          <ScalarProperty Name="COMPUTER_NAME" ColumnName="COMPUTER_NAME" />
+          <ScalarProperty Name="WS_NAME" ColumnName="WS_NAME" />
+          <ScalarProperty Name="WS_CODE" ColumnName="WS_CODE" />
+          <ScalarProperty Name="WSG_ID" ColumnName="WSG_ID" />
+          <ScalarProperty Name="REPORT_QUANTITY" ColumnName="REPORT_QUANTITY" />
+          <ScalarProperty Name="PROD_QUANTITY" ColumnName="PROD_QUANTITY" />
+          <ScalarProperty Name="PROD_END_DATE" ColumnName="PROD_END_DATE" />
+          <ScalarProperty Name="PROD_START_DATE" ColumnName="PROD_START_DATE" />
+          <ScalarProperty Name="OPR_STATUS" ColumnName="OPR_STATUS" />
+          <ScalarProperty Name="OPR_NAME" ColumnName="OPR_NAME" />
+          <ScalarProperty Name="OPR_BARCODE" ColumnName="OPR_BARCODE" />
+          <ScalarProperty Name="PRD_STATUS" ColumnName="PRD_STATUS" />
+          <ScalarProperty Name="PRD_WS_ID" ColumnName="PRD_WS_ID" />
+          <ScalarProperty Name="ROT_ID" ColumnName="ROT_ID" />
+          <ScalarProperty Name="OPR_ID" ColumnName="OPR_ID" />
+          <ScalarProperty Name="PROD_ID" ColumnName="PROD_ID" />
+          <ScalarProperty Name="PRD_OPR_ID" ColumnName="PRD_OPR_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARF_OPERATOR_PANEL">
+      <EntityTypeMapping TypeName="ARAFModel.ARF_OPERATOR_PANEL">
+        <MappingFragment StoreEntitySet="ARF_OPERATOR_PANEL">
+          <ScalarProperty Name="SUSPEND_ID" ColumnName="SUSPEND_ID" />
+          <ScalarProperty Name="COLOR" ColumnName="COLOR" />
+          <ScalarProperty Name="NET_TIME" ColumnName="NET_TIME" />
+          <ScalarProperty Name="TOTAL_TIME" ColumnName="TOTAL_TIME" />
+          <ScalarProperty Name="SETTING_SUSPEND_TIME" ColumnName="SETTING_SUSPEND_TIME" />
+          <ScalarProperty Name="TOTAL_SUSPEND_TIME" ColumnName="TOTAL_SUSPEND_TIME" />
+          <ScalarProperty Name="ACTIVE_SUSPEND_TIME" ColumnName="ACTIVE_SUSPEND_TIME" />
+          <ScalarProperty Name="PRODUCTION_STATUS" ColumnName="PRODUCTION_STATUS" />
+          <ScalarProperty Name="REMAINING" ColumnName="REMAINING" />
+          <ScalarProperty Name="PRODUCTIVITY" ColumnName="PRODUCTIVITY" />
+          <ScalarProperty Name="SHIFT_CODE" ColumnName="SHIFT_CODE" />
+          <ScalarProperty Name="OPR_NAME" ColumnName="OPR_NAME" />
+          <ScalarProperty Name="PROD_STATUS" ColumnName="PROD_STATUS" />
+          <ScalarProperty Name="OPR_PIECE" ColumnName="OPR_PIECE" />
+          <ScalarProperty Name="REPORT_QUANTITY" ColumnName="REPORT_QUANTITY" />
+          <ScalarProperty Name="PROD_QUANTITY" ColumnName="PROD_QUANTITY" />
+          <ScalarProperty Name="PROD_END_DATE" ColumnName="PROD_END_DATE" />
+          <ScalarProperty Name="PROD_START_DATE" ColumnName="PROD_START_DATE" />
+          <ScalarProperty Name="COMPUTER_NAME" ColumnName="COMPUTER_NAME" />
+          <ScalarProperty Name="WS_NAME" ColumnName="WS_NAME" />
+          <ScalarProperty Name="WS_CODE" ColumnName="WS_CODE" />
+          <ScalarProperty Name="WSG_ID" ColumnName="WSG_ID" />
+          <ScalarProperty Name="LINEEXP" ColumnName="LINEEXP" />
+          <ScalarProperty Name="DELIVERY_DATE" ColumnName="DELIVERY_DATE" />
+          <ScalarProperty Name="ORDER_DATE" ColumnName="ORDER_DATE" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="ERP_ID" ColumnName="ERP_ID" />
+          <ScalarProperty Name="WORK_ORDER_QUANTITY" ColumnName="WORK_ORDER_QUANTITY" />
+          <ScalarProperty Name="CUSTOMER_NAME" ColumnName="CUSTOMER_NAME" />
+          <ScalarProperty Name="CUSTOMER_CODE" ColumnName="CUSTOMER_CODE" />
+          <ScalarProperty Name="ITEM_NAME" ColumnName="ITEM_NAME" />
+          <ScalarProperty Name="ITEM_CODE" ColumnName="ITEM_CODE" />
+          <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
+          <ScalarProperty Name="PLAN_STATUS" ColumnName="PLAN_STATUS" />
+          <ScalarProperty Name="WORK_ORDER_NO" ColumnName="WORK_ORDER_NO" />
+          <ScalarProperty Name="PLAN_END_TIME" ColumnName="PLAN_END_TIME" />
+          <ScalarProperty Name="PLAN_START_TIME" ColumnName="PLAN_START_TIME" />
+          <ScalarProperty Name="PLAN_DATE" ColumnName="PLAN_DATE" />
+          <ScalarProperty Name="OP_NAME" ColumnName="OP_NAME" />
+          <ScalarProperty Name="OP_ID" ColumnName="OP_ID" />
+          <ScalarProperty Name="PROD_PLAN_END_DATE" ColumnName="PROD_PLAN_END_DATE" />
+          <ScalarProperty Name="PROD_PLAN_START_DATE" ColumnName="PROD_PLAN_START_DATE" />
+          <ScalarProperty Name="PROD_PLAN_STATUS" ColumnName="PROD_PLAN_STATUS" />
+          <ScalarProperty Name="DIVIDING" ColumnName="DIVIDING" />
+          <ScalarProperty Name="MULTIPLIER" ColumnName="MULTIPLIER" />
+          <ScalarProperty Name="PRD_PLN_QUANTITY" ColumnName="PRD_PLN_QUANTITY" />
+          <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
+          <ScalarProperty Name="PLAN_ID" ColumnName="PLAN_ID" />
+          <ScalarProperty Name="PROD_ID" ColumnName="PROD_ID" />
+          <ScalarProperty Name="PROD_PLAN_ID" ColumnName="PROD_PLAN_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARF_PLANNING_STATUS">
+      <EntityTypeMapping TypeName="ARAFModel.ARF_PLANNING_STATUS">
+        <MappingFragment StoreEntitySet="ARF_PLANNING_STATUS">
+          <ScalarProperty Name="OP_NAME" ColumnName="OP_NAME" />
+          <ScalarProperty Name="OP_CODE" ColumnName="OP_CODE" />
+          <ScalarProperty Name="LAST_OP" ColumnName="LAST_OP" />
+          <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
+          <ScalarProperty Name="OP_TIME_UNIT" ColumnName="OP_TIME_UNIT" />
+          <ScalarProperty Name="OP_ID" ColumnName="OP_ID" />
+          <ScalarProperty Name="ITEM_OP_ID" ColumnName="ITEM_OP_ID" />
+          <ScalarProperty Name="KALAN" ColumnName="KALAN" />
+          <ScalarProperty Name="PROD_QUANTITY" ColumnName="PROD_QUANTITY" />
+          <ScalarProperty Name="PLAN_AMOUNT" ColumnName="PLAN_AMOUNT" />
+          <ScalarProperty Name="QUEUE" ColumnName="QUEUE" />
+          <ScalarProperty Name="ITEM_NAME" ColumnName="ITEM_NAME" />
+          <ScalarProperty Name="ITEM_CODE" ColumnName="ITEM_CODE" />
+          <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
+          <ScalarProperty Name="PLAN_STATUS" ColumnName="PLAN_STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARF_PRODUCTION_SUSPEND">
+      <EntityTypeMapping TypeName="ARAFModel.ARF_PRODUCTION_SUSPEND">
+        <MappingFragment StoreEntitySet="ARF_PRODUCTION_SUSPEND">
+          <ScalarProperty Name="SUSPEND_TYPE" ColumnName="SUSPEND_TYPE" />
+          <ScalarProperty Name="SUSPEND_NAME" ColumnName="SUSPEND_NAME" />
+          <ScalarProperty Name="COMMENT" ColumnName="COMMENT" />
+          <ScalarProperty Name="OPR_ID" ColumnName="OPR_ID" />
+          <ScalarProperty Name="PROD_ID" ColumnName="PROD_ID" />
+          <ScalarProperty Name="SUSPEND_ID" ColumnName="SUSPEND_ID" />
+          <ScalarProperty Name="SUSPEND_TIME" ColumnName="SUSPEND_TIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

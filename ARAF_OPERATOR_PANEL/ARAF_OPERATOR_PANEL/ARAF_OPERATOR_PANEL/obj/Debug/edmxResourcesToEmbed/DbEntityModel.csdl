@@ -1,0 +1,727 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbEntityModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="WORKSTATION">
+    <Key>
+      <PropertyRef Name="WS_ID" />
+    </Key>
+    <Property Name="WS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WSG_ID" Type="Int32" />
+    <Property Name="WS_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WS_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PLANNINGs" Relationship="DbEntityModel.WS_ID" FromRole="WORKSTATION" ToRole="PLANNING" />
+    <NavigationProperty Name="ITEM_OPERATIONS" Relationship="DbEntityModel.FK_ITEM_OPERATIONS_WS_ID" FromRole="WORKSTATION" ToRole="ITEM_OPERATIONS" />
+    <NavigationProperty Name="WORKSTATION_GROUP" Relationship="DbEntityModel.FK_WORKSTATION_WORKSTATION_GROUP" FromRole="WORKSTATION" ToRole="WORKSTATION_GROUP" />
+  </EntityType>
+  <EntityContainer Name="DbEntity" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="WORKSTATIONs" EntityType="Self.WORKSTATION" />
+    <EntitySet Name="ITEMS" EntityType="DbEntityModel.ITEM" />
+    <EntitySet Name="OPERATORs" EntityType="DbEntityModel.OPERATOR" />
+    <EntitySet Name="PLANNINGs" EntityType="DbEntityModel.PLANNING" />
+    <EntitySet Name="PLCs" EntityType="DbEntityModel.PLC" />
+    <EntitySet Name="PLC_DATA" EntityType="DbEntityModel.PLC_DATA" />
+    <EntitySet Name="PRODUCTIONs" EntityType="DbEntityModel.PRODUCTION" />
+    <EntitySet Name="PRODUCTION_OPERATOR" EntityType="DbEntityModel.PRODUCTION_OPERATOR" />
+    <EntitySet Name="ROTATIONs" EntityType="DbEntityModel.ROTATION" />
+    <EntitySet Name="SCRAP_REWORK" EntityType="DbEntityModel.SCRAP_REWORK" />
+    <EntitySet Name="SERVICE_LOG" EntityType="DbEntityModel.SERVICE_LOG" />
+    <EntitySet Name="SUSPENDs" EntityType="DbEntityModel.SUSPEND" />
+    <EntitySet Name="SUSPEND_GROUP" EntityType="DbEntityModel.SUSPEND_GROUP" />
+    <EntitySet Name="sysdiagrams" EntityType="DbEntityModel.sysdiagram" />
+    <EntitySet Name="SYSTEM_FORMS" EntityType="DbEntityModel.SYSTEM_FORMS" />
+    <EntitySet Name="SYSTEM_USER_DETAIL" EntityType="DbEntityModel.SYSTEM_USER_DETAIL" />
+    <EntitySet Name="SYSTEM_USER_GROUPS" EntityType="DbEntityModel.SYSTEM_USER_GROUPS" />
+    <EntitySet Name="SYSTEM_USERS" EntityType="DbEntityModel.SYSTEM_USERS" />
+    <EntitySet Name="WORKSTATION_DETAIL" EntityType="DbEntityModel.WORKSTATION_DETAIL" />
+    <EntitySet Name="WORKSTATION_GROUP" EntityType="DbEntityModel.WORKSTATION_GROUP" />
+    <EntitySet Name="OPERATIONS" EntityType="DbEntityModel.OPERATION" />
+    <AssociationSet Name="FK_WORKSTATION_GROUP_WORKSTATION_GROUP" Association="DbEntityModel.FK_WORKSTATION_GROUP_WORKSTATION_GROUP">
+      <End Role="WORKSTATION_GROUP" EntitySet="WORKSTATION_GROUP" />
+      <End Role="WORKSTATION_GROUP1" EntitySet="WORKSTATION_GROUP" />
+    </AssociationSet>
+    <EntitySet Name="FACTORies" EntityType="DbEntityModel.FACTORY" />
+    <EntitySet Name="ITEM_GROUP" EntityType="DbEntityModel.ITEM_GROUP" />
+    <EntitySet Name="ITEM_TREE" EntityType="DbEntityModel.ITEM_TREE" />
+    <EntitySet Name="SECTIONs" EntityType="DbEntityModel.SECTION" />
+    <EntitySet Name="TMP_ORDERS" EntityType="DbEntityModel.TMP_ORDERS" />
+    <EntitySet Name="UNIT_DEFINITION" EntityType="DbEntityModel.UNIT_DEFINITION" />
+    <EntitySet Name="ITEM_OPERATIONS" EntityType="DbEntityModel.ITEM_OPERATIONS" />
+    <EntitySet Name="ARF_ITEM_OPERATIONS" EntityType="DbEntityModel.ARF_ITEM_OPERATIONS" />
+    <EntitySet Name="ARF_ITEMS_LIST" EntityType="DbEntityModel.ARF_ITEMS_LIST" />
+    <EntitySet Name="ARF_PLANNING" EntityType="DbEntityModel.ARF_PLANNING" />
+    <EntitySet Name="ARF_SYSTEM_USERS" EntityType="DbEntityModel.ARF_SYSTEM_USERS" />
+    <EntitySet Name="ARF_W_ITEM_TREE" EntityType="DbEntityModel.ARF_W_ITEM_TREE" />
+    <EntitySet Name="ARF_W_SETTING_PLC" EntityType="DbEntityModel.ARF_W_SETTING_PLC" />
+    <EntitySet Name="ARF_WORKSTATIONS" EntityType="DbEntityModel.ARF_WORKSTATIONS" />
+    <AssociationSet Name="FK_SECTION_FACTORY" Association="DbEntityModel.FK_SECTION_FACTORY">
+      <End Role="FACTORY" EntitySet="FACTORies" />
+      <End Role="SECTION" EntitySet="SECTIONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ITEM_TREE_ITEM_TREE" Association="DbEntityModel.FK_ITEM_TREE_ITEM_TREE">
+      <End Role="ITEM_TREE" EntitySet="ITEM_TREE" />
+      <End Role="ITEM_TREE1" EntitySet="ITEM_TREE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ITEM_TREE_ITEMS" Association="DbEntityModel.FK_ITEM_TREE_ITEMS">
+      <End Role="ITEM" EntitySet="ITEMS" />
+      <End Role="ITEM_TREE" EntitySet="ITEM_TREE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ITEM_TREE_ITEMSM" Association="DbEntityModel.FK_ITEM_TREE_ITEMSM">
+      <End Role="ITEM" EntitySet="ITEMS" />
+      <End Role="ITEM_TREE" EntitySet="ITEM_TREE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ITEM_OPERATIONS_ITEM_ID" Association="DbEntityModel.FK_ITEM_OPERATIONS_ITEM_ID">
+      <End Role="ITEM" EntitySet="ITEMS" />
+      <End Role="ITEM_OPERATIONS" EntitySet="ITEM_OPERATIONS" />
+    </AssociationSet>
+    <AssociationSet Name="ITEM_ID" Association="DbEntityModel.ITEM_ID">
+      <End Role="ITEM" EntitySet="ITEMS" />
+      <End Role="PLANNING" EntitySet="PLANNINGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ITEM_OPERATIONS_OP_ID" Association="DbEntityModel.FK_ITEM_OPERATIONS_OP_ID">
+      <End Role="OPERATION" EntitySet="OPERATIONS" />
+      <End Role="ITEM_OPERATIONS" EntitySet="ITEM_OPERATIONS" />
+    </AssociationSet>
+    <AssociationSet Name="WS_ID" Association="DbEntityModel.WS_ID">
+      <End Role="WORKSTATION" EntitySet="WORKSTATIONs" />
+      <End Role="PLANNING" EntitySet="PLANNINGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WORKSTATION_GROUP_SECTION" Association="DbEntityModel.FK_WORKSTATION_GROUP_SECTION">
+      <End Role="SECTION" EntitySet="SECTIONs" />
+      <End Role="WORKSTATION_GROUP" EntitySet="WORKSTATION_GROUP" />
+    </AssociationSet>
+    <AssociationSet Name="FORM_ID" Association="DbEntityModel.FORM_ID">
+      <End Role="SYSTEM_FORMS" EntitySet="SYSTEM_FORMS" />
+      <End Role="SYSTEM_USER_DETAIL" EntitySet="SYSTEM_USER_DETAIL" />
+    </AssociationSet>
+    <AssociationSet Name="USER_ID" Association="DbEntityModel.USER_ID">
+      <End Role="SYSTEM_USERS" EntitySet="SYSTEM_USERS" />
+      <End Role="SYSTEM_USER_DETAIL" EntitySet="SYSTEM_USER_DETAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ITEM_OPERATIONS_WS_ID" Association="DbEntityModel.FK_ITEM_OPERATIONS_WS_ID">
+      <End Role="WORKSTATION" EntitySet="WORKSTATIONs" />
+      <End Role="ITEM_OPERATIONS" EntitySet="ITEM_OPERATIONS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WORKSTATION_WORKSTATION_GROUP" Association="DbEntityModel.FK_WORKSTATION_WORKSTATION_GROUP">
+      <End Role="WORKSTATION_GROUP" EntitySet="WORKSTATION_GROUP" />
+      <End Role="WORKSTATION" EntitySet="WORKSTATIONs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ITEM">
+    <Key>
+      <PropertyRef Name="ITEM_ID" />
+    </Key>
+    <Property Name="ITEM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ITEM_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ITEM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UNIT" Type="Int32" />
+    <Property Name="STATUS" Type="Double" />
+    <Property Name="TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ERP_ID" Type="Int32" />
+    <Property Name="ITEM_GRP_ID" Type="Int32" />
+    <NavigationProperty Name="ITEM_TREE" Relationship="DbEntityModel.FK_ITEM_TREE_ITEMS" FromRole="ITEM" ToRole="ITEM_TREE" />
+    <NavigationProperty Name="ITEM_TREE1" Relationship="DbEntityModel.FK_ITEM_TREE_ITEMSM" FromRole="ITEM" ToRole="ITEM_TREE" />
+    <NavigationProperty Name="ITEM_OPERATIONS" Relationship="DbEntityModel.FK_ITEM_OPERATIONS_ITEM_ID" FromRole="ITEM" ToRole="ITEM_OPERATIONS" />
+    <NavigationProperty Name="PLANNINGs" Relationship="DbEntityModel.ITEM_ID" FromRole="ITEM" ToRole="PLANNING" />
+  </EntityType>
+  <EntityType Name="OPERATOR">
+    <Key>
+      <PropertyRef Name="OPR_ID" />
+    </Key>
+    <Property Name="OPR_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OPR_BARCODE" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="OPR_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OPR_STATUS" Type="Int32" />
+  </EntityType>
+  <EntityType Name="PLANNING">
+    <Key>
+      <PropertyRef Name="PLAN_ID" />
+    </Key>
+    <Property Name="PLAN_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WS_ID" Type="Int32" />
+    <Property Name="OP_ID" Type="Int32" />
+    <Property Name="OP_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PLAN_DATE" Type="DateTime" Precision="3" />
+    <Property Name="PLAN_START_TIME" Type="DateTime" Precision="3" />
+    <Property Name="PLAN_END_TIME" Type="DateTime" Precision="3" />
+    <Property Name="WORK_ORDER_NO" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="PLAN_STATUS" Type="Boolean" />
+    <Property Name="ITEM_ID" Type="Int32" Nullable="false" />
+    <Property Name="CUSTOMER_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CUSTOMER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WORK_ORDER_QUANTITY" Type="Double" />
+    <Property Name="ERP_ID" Type="Int32" />
+    <Property Name="AMOUNT" Type="Double" />
+    <Property Name="ORDER_DATE" Type="DateTime" Precision="3" />
+    <Property Name="DELIVERY_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LINEEXP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ITEM" Relationship="DbEntityModel.ITEM_ID" FromRole="PLANNING" ToRole="ITEM" />
+    <NavigationProperty Name="WORKSTATION" Relationship="DbEntityModel.WS_ID" FromRole="PLANNING" ToRole="WORKSTATION" />
+  </EntityType>
+  <EntityType Name="PLC">
+    <Key>
+      <PropertyRef Name="PLC_ID" />
+    </Key>
+    <Property Name="PLC_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PLC_IP" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="PLC_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PLC_STATUS" Type="Boolean" />
+    <Property Name="PLC_TYPE" Type="Byte" />
+    <Property Name="PLC_PORT" Type="Int32" />
+  </EntityType>
+  <EntityType Name="PLC_DATA">
+    <Key>
+      <PropertyRef Name="PLC_DATA_ID" />
+    </Key>
+    <Property Name="PLC_DATA_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PLC_ID" Type="Int32" />
+    <Property Name="PLC_DT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PRODUCTION">
+    <Key>
+      <PropertyRef Name="PROD_ID" />
+    </Key>
+    <Property Name="PROD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PLAN_ID" Type="Int32" />
+    <Property Name="PROD_START_DATE" Type="DateTime" Precision="3" />
+    <Property Name="PROD_END_DATE" Type="DateTime" Precision="3" />
+    <Property Name="PROD_QUANTITY" Type="Double" />
+  </EntityType>
+  <EntityType Name="PRODUCTION_OPERATOR">
+    <Key>
+      <PropertyRef Name="PRD_OPR_ID" />
+    </Key>
+    <Property Name="PRD_OPR_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PROD_ID" Type="Int32" />
+    <Property Name="OPR_ID" Type="Int32" />
+    <Property Name="ROT_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ROTATION">
+    <Key>
+      <PropertyRef Name="ROT_ID" />
+    </Key>
+    <Property Name="ROT_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ROT_START_TIME" Type="DateTime" Precision="3" />
+    <Property Name="ROT_END_TIME" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SCRAP_REWORK">
+    <Key>
+      <PropertyRef Name="SCRW_ID" />
+    </Key>
+    <Property Name="SCRW_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SCRW_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="SCRW_TYPE" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SERVICE_LOG">
+    <Key>
+      <PropertyRef Name="SRVS_ID" />
+    </Key>
+    <Property Name="SRVS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SRVS_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="SRVS_MESSAGE" Type="String" MaxLength="1050" FixedLength="false" Unicode="true" />
+    <Property Name="SRVS_DATE" Type="DateTime" Precision="3" />
+    <Property Name="SRVS_PARAM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SUSPEND">
+    <Key>
+      <PropertyRef Name="SUSPEND_ID" />
+    </Key>
+    <Property Name="SUSPEND_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SUSPEND_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SUSPEND_GROUP_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SUSPEND_GROUP">
+    <Key>
+      <PropertyRef Name="SUSPEND_GROUP_ID" />
+    </Key>
+    <Property Name="SUSPEND_GROUP_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SUSPEND_GROUP_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="SYSTEM_FORMS">
+    <Key>
+      <PropertyRef Name="FORM_ID" />
+    </Key>
+    <Property Name="FORM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FORM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FORM_CAPTION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SYSTEM_USER_DETAIL" Relationship="DbEntityModel.FORM_ID" FromRole="SYSTEM_FORMS" ToRole="SYSTEM_USER_DETAIL" />
+  </EntityType>
+  <EntityType Name="SYSTEM_USER_DETAIL">
+    <Key>
+      <PropertyRef Name="SYSUSERD_ID" />
+    </Key>
+    <Property Name="SYSUSERD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SYSUSER_ID" Type="Int32" Nullable="false" />
+    <Property Name="FORM_ID" Type="Int32" Nullable="false" />
+    <Property Name="SYSUSERD_READ" Type="Boolean" />
+    <Property Name="SYSUSERD_WRITE" Type="Boolean" />
+    <Property Name="SYSUSERD_CHANGE" Type="Boolean" />
+    <Property Name="SYSUSERD_DELETE" Type="Boolean" />
+    <NavigationProperty Name="SYSTEM_FORMS" Relationship="DbEntityModel.FORM_ID" FromRole="SYSTEM_USER_DETAIL" ToRole="SYSTEM_FORMS" />
+    <NavigationProperty Name="SYSTEM_USERS" Relationship="DbEntityModel.USER_ID" FromRole="SYSTEM_USER_DETAIL" ToRole="SYSTEM_USERS" />
+  </EntityType>
+  <EntityType Name="SYSTEM_USER_GROUPS">
+    <Key>
+      <PropertyRef Name="SYSUSER_GRUPID" />
+    </Key>
+    <Property Name="SYSUSER_GRUPID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SYSUSERGRP_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SYSTEM_USERS">
+    <Key>
+      <PropertyRef Name="SYSTEMUSER_ID" />
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="SYSTEMUSER_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SYSUSER_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SYSUSER_PASS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SYSUSER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SYSUSER_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SYSUSER_STATUS" Type="Boolean" />
+    <Property Name="SYSUSER_GRUPID" Type="Int32" />
+    <Property Name="USER_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USER_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="USER_PASS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="USER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="USER_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="USER_STATUS" Type="Boolean" />
+    <Property Name="USER_GRUPID" Type="Int32" />
+    <Property Name="SURNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SYSTEM_USER_DETAIL" Relationship="DbEntityModel.USER_ID" FromRole="SYSTEM_USERS" ToRole="SYSTEM_USER_DETAIL" />
+  </EntityType>
+  <EntityType Name="WORKSTATION_DETAIL">
+    <Key>
+      <PropertyRef Name="WSD_ID" />
+    </Key>
+    <Property Name="WSD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WS_ID" Type="Int32" />
+    <Property Name="PLC_DATA_ID" Type="Int32" />
+    <Property Name="WSD_COUNTER" Type="Int32" />
+  </EntityType>
+  <EntityType Name="WORKSTATION_GROUP">
+    <Key>
+      <PropertyRef Name="WSG_ID" />
+    </Key>
+    <Property Name="WSG_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WSG_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WSG_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="WORKSTATION_GROUP1" Relationship="DbEntityModel.FK_WORKSTATION_GROUP_WORKSTATION_GROUP" FromRole="WORKSTATION_GROUP" ToRole="WORKSTATION_GROUP1" />
+    <NavigationProperty Name="WORKSTATION_GROUP2" Relationship="DbEntityModel.FK_WORKSTATION_GROUP_WORKSTATION_GROUP" FromRole="WORKSTATION_GROUP1" ToRole="WORKSTATION_GROUP" />
+    <Property Name="SECTION_ID" Type="Int32" />
+    <NavigationProperty Name="SECTION" Relationship="DbEntityModel.FK_WORKSTATION_GROUP_SECTION" FromRole="WORKSTATION_GROUP" ToRole="SECTION" />
+    <NavigationProperty Name="WORKSTATIONs" Relationship="DbEntityModel.FK_WORKSTATION_WORKSTATION_GROUP" FromRole="WORKSTATION_GROUP" ToRole="WORKSTATION" />
+  </EntityType>
+  <EntityType Name="OPERATION">
+    <Key>
+      <PropertyRef Name="OP_ID" />
+    </Key>
+    <Property Name="OP_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OP_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OP_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OP_TIME_UNIT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="ITEM_OPERATIONS" Relationship="DbEntityModel.FK_ITEM_OPERATIONS_OP_ID" FromRole="OPERATION" ToRole="ITEM_OPERATIONS" />
+  </EntityType>
+  <Association Name="FK_WORKSTATION_GROUP_WORKSTATION_GROUP">
+    <End Type="DbEntityModel.WORKSTATION_GROUP" Role="WORKSTATION_GROUP" Multiplicity="1" />
+    <End Type="DbEntityModel.WORKSTATION_GROUP" Role="WORKSTATION_GROUP1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WORKSTATION_GROUP">
+        <PropertyRef Name="WSG_ID" />
+      </Principal>
+      <Dependent Role="WORKSTATION_GROUP1">
+        <PropertyRef Name="WSG_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="FACTORY">
+    <Key>
+      <PropertyRef Name="FACTORY_ID" />
+    </Key>
+    <Property Name="FACTORY_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FACTORY_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FACTORY_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SECTIONs" Relationship="DbEntityModel.FK_SECTION_FACTORY" FromRole="FACTORY" ToRole="SECTION" />
+  </EntityType>
+  <EntityType Name="ITEM_GROUP">
+    <Key>
+      <PropertyRef Name="ITEM_GRP_ID" />
+    </Key>
+    <Property Name="ITEM_GRP_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ITEM_GRP_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ITEM_GRP_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ITEM_TREE">
+    <Key>
+      <PropertyRef Name="ITEM_TREE_ID" />
+    </Key>
+    <Property Name="ITEM_TREE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MUST" Type="Int32" Nullable="false" />
+    <Property Name="ITEM_ID" Type="Int32" Nullable="false" />
+    <Property Name="MATERIAL_ID" Type="Int32" Nullable="false" />
+    <Property Name="AMOUNT" Type="Decimal" Nullable="false" Precision="18" Scale="10" />
+    <NavigationProperty Name="ITEM_TREE1" Relationship="DbEntityModel.FK_ITEM_TREE_ITEM_TREE" FromRole="ITEM_TREE" ToRole="ITEM_TREE1" />
+    <NavigationProperty Name="ITEM_TREE2" Relationship="DbEntityModel.FK_ITEM_TREE_ITEM_TREE" FromRole="ITEM_TREE1" ToRole="ITEM_TREE" />
+    <NavigationProperty Name="ITEM" Relationship="DbEntityModel.FK_ITEM_TREE_ITEMS" FromRole="ITEM_TREE" ToRole="ITEM" />
+    <NavigationProperty Name="ITEM1" Relationship="DbEntityModel.FK_ITEM_TREE_ITEMSM" FromRole="ITEM_TREE" ToRole="ITEM" />
+  </EntityType>
+  <EntityType Name="SECTION">
+    <Key>
+      <PropertyRef Name="SECTION_ID" />
+    </Key>
+    <Property Name="SECTION_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SECTION_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SECTION_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FACTORY_ID" Type="Int32" />
+    <NavigationProperty Name="FACTORY" Relationship="DbEntityModel.FK_SECTION_FACTORY" FromRole="SECTION" ToRole="FACTORY" />
+    <NavigationProperty Name="WORKSTATION_GROUP" Relationship="DbEntityModel.FK_WORKSTATION_GROUP_SECTION" FromRole="SECTION" ToRole="WORKSTATION_GROUP" />
+  </EntityType>
+  <EntityType Name="TMP_ORDERS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ITEM_ID" Type="Int32" />
+    <Property Name="WORK_ORDER_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ORDER_DATE" Type="DateTime" Precision="3" />
+    <Property Name="DELIVERY_DATE" Type="DateTime" Precision="3" />
+    <Property Name="ITEM_CODE" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ITEM_NAME" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="LINEEXP" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+    <Property Name="CUSTOMER_CODE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CUSTOMER_NAME" Type="String" MaxLength="520" FixedLength="false" Unicode="true" />
+    <Property Name="WORK_ORDER_QUANTITY" Type="Double" />
+    <Property Name="ERP_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="UNIT_DEFINITION">
+    <Key>
+      <PropertyRef Name="UNIT_ID" />
+    </Key>
+    <Property Name="UNIT_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UNIT_NAME" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="EXPLANATION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ITEM_OPERATIONS">
+    <Key>
+      <PropertyRef Name="ITEM_OP_ID" />
+      <PropertyRef Name="MUST" />
+      <PropertyRef Name="ITEM_ID" />
+      <PropertyRef Name="OP_ID" />
+      <PropertyRef Name="WS_ID" />
+      <PropertyRef Name="LAST_OP" />
+    </Key>
+    <Property Name="ITEM_OP_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MUST" Type="Int32" Nullable="false" />
+    <Property Name="ITEM_ID" Type="Int32" Nullable="false" />
+    <Property Name="OP_ID" Type="Int32" Nullable="false" />
+    <Property Name="OP_TIME_UNIT" Type="Double" />
+    <Property Name="WS_ID" Type="Int32" Nullable="false" />
+    <Property Name="LAST_OP" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="ITEM" Relationship="DbEntityModel.FK_ITEM_OPERATIONS_ITEM_ID" FromRole="ITEM_OPERATIONS" ToRole="ITEM" />
+    <NavigationProperty Name="OPERATION" Relationship="DbEntityModel.FK_ITEM_OPERATIONS_OP_ID" FromRole="ITEM_OPERATIONS" ToRole="OPERATION" />
+    <NavigationProperty Name="WORKSTATION" Relationship="DbEntityModel.FK_ITEM_OPERATIONS_WS_ID" FromRole="ITEM_OPERATIONS" ToRole="WORKSTATION" />
+  </EntityType>
+  <EntityType Name="ARF_ITEM_OPERATIONS">
+    <Key>
+      <PropertyRef Name="ITEM_OP_ID" />
+      <PropertyRef Name="MUST" />
+      <PropertyRef Name="ITEM_ID" />
+      <PropertyRef Name="OP_ID" />
+      <PropertyRef Name="WS_ID" />
+      <PropertyRef Name="LAST_OP" />
+    </Key>
+    <Property Name="ITEM_OP_ID" Type="Int32" Nullable="false" />
+    <Property Name="MUST" Type="Int32" Nullable="false" />
+    <Property Name="ITEM_ID" Type="Int32" Nullable="false" />
+    <Property Name="OP_ID" Type="Int32" Nullable="false" />
+    <Property Name="OP_TIME_UNIT" Type="Double" />
+    <Property Name="WS_ID" Type="Int32" Nullable="false" />
+    <Property Name="LAST_OP" Type="Boolean" Nullable="false" />
+    <Property Name="ITEM_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ITEM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UNIT" Type="Int32" />
+    <Property Name="STATUS" Type="Double" />
+    <Property Name="TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ERP_ID" Type="Int32" />
+    <Property Name="ITEM_GRP_ID" Type="Int32" />
+    <Property Name="OP_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OP_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WSG_ID" Type="Int32" />
+    <Property Name="WS_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WS_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ARF_ITEMS_LIST">
+    <Key>
+      <PropertyRef Name="ITEM_ID" />
+    </Key>
+    <Property Name="ITEM_ID" Type="Int32" Nullable="false" />
+    <Property Name="ITEM_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UNIT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ITEM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS" Type="Double" />
+    <Property Name="ERP_ID" Type="Int32" />
+    <Property Name="TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ITEM_GRP_ID" Type="Int32" />
+    <Property Name="ITEM_GRP_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ITEM_GRP_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UNIT_NAME" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="EXPLANATION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ARF_PLANNING">
+    <Key>
+      <PropertyRef Name="PLAN_ID" />
+      <PropertyRef Name="ITEM_ID" />
+      <PropertyRef Name="WORK_ORDER_NO" />
+    </Key>
+    <Property Name="PLAN_ID" Type="Int32" Nullable="false" />
+    <Property Name="WS_ID" Type="Int32" />
+    <Property Name="WS_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WS_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="OP_ID" Type="Int32" />
+    <Property Name="OP_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OP_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PLAN_DATE" Type="DateTime" Precision="3" />
+    <Property Name="PLAN_START_TIME" Type="DateTime" Precision="3" />
+    <Property Name="PLAN_END_TIME" Type="DateTime" Precision="3" />
+    <Property Name="PLAN_STATUS" Type="Boolean" />
+    <Property Name="ITEM_ID" Type="Int32" Nullable="false" />
+    <Property Name="ITEM_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ITEM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UNIT" Type="Int32" />
+    <Property Name="UNIT_NAME" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="LINEEXP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CUSTOMER_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CUSTOMER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WORK_ORDER_NO" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="WORK_ORDER_QUANTITY" Type="Double" />
+    <Property Name="ERP_ID" Type="Int32" />
+    <Property Name="AMOUNT" Type="Double" />
+    <Property Name="ORDER_DATE" Type="DateTime" Precision="3" />
+    <Property Name="DELIVERY_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ARF_SYSTEM_USERS">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="Int32" Nullable="false" />
+    <Property Name="USER_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="USER_PASS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="USER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="USER_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="USER_STATUS" Type="Boolean" />
+    <Property Name="USER_GRUPID" Type="Int32" />
+    <Property Name="SURNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SYSUSER_GRUPID" Type="Int32" />
+    <Property Name="SYSUSERGRP_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ARF_W_ITEM_TREE">
+    <Key>
+      <PropertyRef Name="ITEM_TREE_ID" />
+      <PropertyRef Name="ITEM_ID" />
+      <PropertyRef Name="MATERIAL_ID" />
+      <PropertyRef Name="AMOUNT" />
+      <PropertyRef Name="ORDER" />
+    </Key>
+    <Property Name="ITEM_TREE_ID" Type="Int32" Nullable="false" />
+    <Property Name="ITEM_ID" Type="Int32" Nullable="false" />
+    <Property Name="ITEM_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ITEM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MATERIAL_ID" Type="Int32" Nullable="false" />
+    <Property Name="MATERIAL_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MATERIAL_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AMOUNT" Type="Decimal" Nullable="false" Precision="18" Scale="10" />
+    <Property Name="ORDER" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ARF_W_SETTING_PLC">
+    <Key>
+      <PropertyRef Name="WS_ID" />
+    </Key>
+    <Property Name="WS_ID" Type="Int32" Nullable="false" />
+    <Property Name="WSG_ID" Type="Int32" />
+    <Property Name="WS_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WS_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="WSG_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WSG_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PLC_DATA_ID" Type="Int32" />
+    <Property Name="WSD_COUNTER" Type="Int32" />
+    <Property Name="PLC_ID" Type="Int32" />
+    <Property Name="PLC_DT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PLC_IP" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ARF_WORKSTATIONS">
+    <Key>
+      <PropertyRef Name="WS_ID" />
+    </Key>
+    <Property Name="WS_ID" Type="Int32" Nullable="false" />
+    <Property Name="WSG_ID" Type="Int32" />
+    <Property Name="WSG_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WS_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WS_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_SECTION_FACTORY">
+    <End Type="DbEntityModel.FACTORY" Role="FACTORY" Multiplicity="0..1" />
+    <End Type="DbEntityModel.SECTION" Role="SECTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FACTORY">
+        <PropertyRef Name="FACTORY_ID" />
+      </Principal>
+      <Dependent Role="SECTION">
+        <PropertyRef Name="FACTORY_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ITEM_TREE_ITEM_TREE">
+    <End Type="DbEntityModel.ITEM_TREE" Role="ITEM_TREE" Multiplicity="1" />
+    <End Type="DbEntityModel.ITEM_TREE" Role="ITEM_TREE1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ITEM_TREE">
+        <PropertyRef Name="ITEM_TREE_ID" />
+      </Principal>
+      <Dependent Role="ITEM_TREE1">
+        <PropertyRef Name="ITEM_TREE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ITEM_TREE_ITEMS">
+    <End Type="DbEntityModel.ITEM" Role="ITEM" Multiplicity="1" />
+    <End Type="DbEntityModel.ITEM_TREE" Role="ITEM_TREE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ITEM">
+        <PropertyRef Name="ITEM_ID" />
+      </Principal>
+      <Dependent Role="ITEM_TREE">
+        <PropertyRef Name="ITEM_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ITEM_TREE_ITEMSM">
+    <End Type="DbEntityModel.ITEM" Role="ITEM" Multiplicity="1" />
+    <End Type="DbEntityModel.ITEM_TREE" Role="ITEM_TREE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ITEM">
+        <PropertyRef Name="ITEM_ID" />
+      </Principal>
+      <Dependent Role="ITEM_TREE">
+        <PropertyRef Name="MATERIAL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ITEM_OPERATIONS_ITEM_ID">
+    <End Type="DbEntityModel.ITEM" Role="ITEM" Multiplicity="1" />
+    <End Type="DbEntityModel.ITEM_OPERATIONS" Role="ITEM_OPERATIONS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ITEM">
+        <PropertyRef Name="ITEM_ID" />
+      </Principal>
+      <Dependent Role="ITEM_OPERATIONS">
+        <PropertyRef Name="ITEM_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ITEM_ID">
+    <End Type="DbEntityModel.ITEM" Role="ITEM" Multiplicity="1" />
+    <End Type="DbEntityModel.PLANNING" Role="PLANNING" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ITEM">
+        <PropertyRef Name="ITEM_ID" />
+      </Principal>
+      <Dependent Role="PLANNING">
+        <PropertyRef Name="ITEM_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ITEM_OPERATIONS_OP_ID">
+    <End Type="DbEntityModel.OPERATION" Role="OPERATION" Multiplicity="1" />
+    <End Type="DbEntityModel.ITEM_OPERATIONS" Role="ITEM_OPERATIONS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OPERATION">
+        <PropertyRef Name="OP_ID" />
+      </Principal>
+      <Dependent Role="ITEM_OPERATIONS">
+        <PropertyRef Name="OP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="WS_ID">
+    <End Type="DbEntityModel.WORKSTATION" Role="WORKSTATION" Multiplicity="0..1" />
+    <End Type="DbEntityModel.PLANNING" Role="PLANNING" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WORKSTATION">
+        <PropertyRef Name="WS_ID" />
+      </Principal>
+      <Dependent Role="PLANNING">
+        <PropertyRef Name="WS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WORKSTATION_GROUP_SECTION">
+    <End Type="DbEntityModel.SECTION" Role="SECTION" Multiplicity="0..1" />
+    <End Type="DbEntityModel.WORKSTATION_GROUP" Role="WORKSTATION_GROUP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SECTION">
+        <PropertyRef Name="SECTION_ID" />
+      </Principal>
+      <Dependent Role="WORKSTATION_GROUP">
+        <PropertyRef Name="SECTION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FORM_ID">
+    <End Type="DbEntityModel.SYSTEM_FORMS" Role="SYSTEM_FORMS" Multiplicity="1" />
+    <End Type="DbEntityModel.SYSTEM_USER_DETAIL" Role="SYSTEM_USER_DETAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SYSTEM_FORMS">
+        <PropertyRef Name="FORM_ID" />
+      </Principal>
+      <Dependent Role="SYSTEM_USER_DETAIL">
+        <PropertyRef Name="FORM_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="USER_ID">
+    <End Type="DbEntityModel.SYSTEM_USERS" Role="SYSTEM_USERS" Multiplicity="1" />
+    <End Type="DbEntityModel.SYSTEM_USER_DETAIL" Role="SYSTEM_USER_DETAIL" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="SYSTEM_USERS">
+        <PropertyRef Name="USER_ID" />
+      </Principal>
+      <Dependent Role="SYSTEM_USER_DETAIL">
+        <PropertyRef Name="SYSUSERD_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ITEM_OPERATIONS_WS_ID">
+    <End Type="DbEntityModel.WORKSTATION" Role="WORKSTATION" Multiplicity="1" />
+    <End Type="DbEntityModel.ITEM_OPERATIONS" Role="ITEM_OPERATIONS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WORKSTATION">
+        <PropertyRef Name="WS_ID" />
+      </Principal>
+      <Dependent Role="ITEM_OPERATIONS">
+        <PropertyRef Name="WS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WORKSTATION_WORKSTATION_GROUP">
+    <End Type="DbEntityModel.WORKSTATION_GROUP" Role="WORKSTATION_GROUP" Multiplicity="0..1" />
+    <End Type="DbEntityModel.WORKSTATION" Role="WORKSTATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WORKSTATION_GROUP">
+        <PropertyRef Name="WSG_ID" />
+      </Principal>
+      <Dependent Role="WORKSTATION">
+        <PropertyRef Name="WSG_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9fe8e1e6e0034fa49885f6ae06046888" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="ARAFModel.FACTORY" Width="1.5" PointX="12.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.ITEM_GROUP" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.ITEM_TREE" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.ITEMS" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.OPERATIONS" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.OPERATOR" Width="1.5" PointX="10.5" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.PANEL_TYPE_DETAIL" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.PLANNING" Width="1.5" PointX="6" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.PLC" Width="1.5" PointX="7.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.PLC_DATA" Width="1.5" PointX="12.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.PRODUCTION_OPERATOR" Width="2.25" PointX="11.875" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.PRODUCTION_PLANNING" Width="3.25" PointX="10.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.ROTATION" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.SCRAP_REWORK" Width="1.5" PointX="14.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.SECTION" Width="1.5" PointX="15" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.SERVICE_LOG" Width="1.5" PointX="7.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.SHIFT" Width="1.5" PointX="9.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.SUSPEND" Width="1.5" PointX="10.5" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.SUSPEND_WORKSTATION" Width="2.25" PointX="14.375" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.sysdiagrams" Width="1.5" PointX="4.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.SYSTEM_FORMS" Width="1.5" PointX="2.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.SYSTEM_USER_DETAIL" Width="1.5" PointX="5" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.SYSTEM_USER_GROUPS" Width="1.5" PointX="16.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.SYSTEM_USERS" Width="1.5" PointX="2.75" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.TMP_ORDERS" Width="1.5" PointX="16.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.TMP_PLANNING" Width="1.5" PointX="16.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.UNIT_DEFINITION" Width="1.5" PointX="14.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.WORKSTATION" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.WORKSTATION_DETAIL" Width="1.5" PointX="16.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.WORKSTATION_GROUP" Width="1.5" PointX="17.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.ITEM_OPERATIONS" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.ARF_ITEM_OPERATIONS" Width="1.5" PointX="6.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.ARF_ITEMS_LIST" Width="1.5" PointX="8.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.ARF_PLANNING" Width="1.5" PointX="18.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.ARF_PLANNING_WORKSTATION_ITEMS" Width="1.5" PointX="18.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.ARF_SUSPEND_WORKSTATION" Width="2.625" PointX="19.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.ARF_SYSTEM_USERS" Width="1.5" PointX="0.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.ARF_TMP_PLANNING" Width="1.5" PointX="2.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.ARF_W_COUNTER_DETAIL" Width="1.5" PointX="12.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.ARF_W_ITEM_TREE" Width="1.5" PointX="14.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.ARF_W_SETTING_PLC" Width="1.5" PointX="20.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.ARF_WORKSTATIONS" Width="1.5" PointX="20.75" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="ARAFModel.FK_SECTION_FACTORY" ManuallyRouted="false" />
+        <AssociationConnector Association="ARAFModel.FK_ITEM_TREE_ITEM_TREE" ManuallyRouted="false" />
+        <AssociationConnector Association="ARAFModel.FK_ITEM_TREE_ITEMS" ManuallyRouted="false" />
+        <AssociationConnector Association="ARAFModel.FK_ITEM_TREE_ITEMSM" ManuallyRouted="false" />
+        <AssociationConnector Association="ARAFModel.FK_ITEM_OPERATIONS_ITEM_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="ARAFModel.ITEM_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="ARAFModel.FK_ITEM_OPERATIONS_OP_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="ARAFModel.FK_PLANNING_OPERATIONS" ManuallyRouted="false" />
+        <AssociationConnector Association="ARAFModel.FK_PRODUCTION_PLANNING_PLANNING" ManuallyRouted="false" />
+        <AssociationConnector Association="ARAFModel.WS_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="ARAFModel.FK_PRODUCTION_PLANNING_WORKSTATION" ManuallyRouted="false" />
+        <AssociationConnector Association="ARAFModel.FK_WORKSTATION_GROUP_SECTION" ManuallyRouted="false" />
+        <AssociationConnector Association="ARAFModel.FORM_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="ARAFModel.USER_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="ARAFModel.FK_ITEM_OPERATIONS_WS_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="ARAFModel.FK_WORKSTATION_GROUP_WORKSTATION_GROUP" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ARAFModel.PRODUCTION_SUSPEND" Width="2.875" PointX="22.75" PointY="12" />
+        <AssociationConnector Association="ARAFModel.FK_PRODUCTION_SUSPEND_SUSPEND" />
+        <EntityTypeShape EntityType="ARAFModel.SUSPEND_GROUP" Width="1.5" PointX="17.375" PointY="20.75" />
+        <EntityTypeShape EntityType="ARAFModel.PRODUCTION" Width="1.5" PointX="3" PointY="28.375" />
+        <AssociationConnector Association="ARAFModel.FK_PRODUCTION_PLANNING_PRODUCTION" />
+        <AssociationConnector Association="ARAFModel.FK_PRODUCTION_SUSPEND_PRODUCTION" />
+        <AssociationConnector Association="ARAFModel.FK_PRODUCTION_WS_ID" />
+        <EntityTypeShape EntityType="ARAFModel.ARF_PRODUCTION_OPERATOR" Width="2.375" PointX="20.25" PointY="13.5" />
+        <EntityTypeShape EntityType="ARAFModel.ARF_OPERATOR_PANEL" Width="3.375" PointX="19.375" PointY="18.75" />
+        <EntityTypeShape EntityType="ARAFModel.ARF_PLANNING_STATUS" Width="3.25" PointX="14.5" PointY="24.25" />
+        <EntityTypeShape EntityType="ARAFModel.ARF_PRODUCTION_SUSPEND" Width="1.5" PointX="9.375" PointY="22.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

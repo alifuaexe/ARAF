@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ArafEntty" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ArafEnttyContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="WORKSTATION" EntityType="ArafEntty.WORKSTATION" />
+  </EntityContainer>
+  <EntityType Name="WORKSTATION">
+    <Key>
+      <PropertyRef Name="WS_ID" />
+    </Key>
+    <Property Name="WS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WSG_ID" Type="Int32" />
+    <Property Name="WS_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WS_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>
