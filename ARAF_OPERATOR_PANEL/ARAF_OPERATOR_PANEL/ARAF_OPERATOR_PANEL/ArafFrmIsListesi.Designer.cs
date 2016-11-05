@@ -65,6 +65,7 @@
             this.gridControlStokListesi = new DevExpress.XtraGrid.GridControl();
             this.gridViewStokListesi = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.groupBoxArama = new System.Windows.Forms.GroupBox();
             this.buttonEditStokKoduAra = new DevExpress.XtraEditors.ButtonEdit();
             this.buttonEditIsEmriAra = new DevExpress.XtraEditors.ButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -86,6 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewStokListesi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
+            this.groupBoxArama.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEditStokKoduAra.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEditIsEmriAra.Properties)).BeginInit();
             this.SuspendLayout();
@@ -161,11 +163,11 @@
             this.gridViewPlanListe.Appearance.FilterCloseButton.Options.UseFont = true;
             this.gridViewPlanListe.Appearance.FilterPanel.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.gridViewPlanListe.Appearance.FilterPanel.Options.UseFont = true;
-            this.gridViewPlanListe.Appearance.GroupRow.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridViewPlanListe.Appearance.GroupRow.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.gridViewPlanListe.Appearance.GroupRow.Options.UseFont = true;
-            this.gridViewPlanListe.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridViewPlanListe.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.gridViewPlanListe.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridViewPlanListe.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridViewPlanListe.Appearance.Row.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.gridViewPlanListe.Appearance.Row.Options.UseFont = true;
             this.gridViewPlanListe.GridControl = this.gridControlPlanListe;
             this.gridViewPlanListe.Name = "gridViewPlanListe";
@@ -274,12 +276,16 @@
             this.gridViewIsListesi.Appearance.FilterCloseButton.Options.UseFont = true;
             this.gridViewIsListesi.Appearance.FilterPanel.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.gridViewIsListesi.Appearance.FilterPanel.Options.UseFont = true;
-            this.gridViewIsListesi.Appearance.GroupRow.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridViewIsListesi.Appearance.GroupRow.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.gridViewIsListesi.Appearance.GroupRow.Options.UseFont = true;
-            this.gridViewIsListesi.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridViewIsListesi.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.gridViewIsListesi.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridViewIsListesi.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridViewIsListesi.Appearance.Row.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.gridViewIsListesi.Appearance.Row.Options.UseFont = true;
+            this.gridViewIsListesi.Appearance.RowSeparator.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            this.gridViewIsListesi.Appearance.RowSeparator.Options.UseFont = true;
+            this.gridViewIsListesi.Appearance.SelectedRow.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            this.gridViewIsListesi.Appearance.SelectedRow.Options.UseFont = true;
             this.gridViewIsListesi.GridControl = this.gridControlIsListesi;
             this.gridViewIsListesi.Name = "gridViewIsListesi";
             this.gridViewIsListesi.OptionsBehavior.Editable = false;
@@ -307,11 +313,11 @@
             // 
             this.gridControlStokListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControlStokListesi.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gridControlStokListesi.Location = new System.Drawing.Point(2, 191);
+            this.gridControlStokListesi.Location = new System.Drawing.Point(2, 145);
             this.gridControlStokListesi.MainView = this.gridViewStokListesi;
             this.gridControlStokListesi.MenuManager = this.ribbonControl1;
             this.gridControlStokListesi.Name = "gridControlStokListesi";
-            this.gridControlStokListesi.Size = new System.Drawing.Size(295, 439);
+            this.gridControlStokListesi.Size = new System.Drawing.Size(295, 485);
             this.gridControlStokListesi.TabIndex = 6;
             this.gridControlStokListesi.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewStokListesi});
@@ -332,12 +338,18 @@
             this.gridViewStokListesi.Appearance.EvenRow.Options.UseFont = true;
             this.gridViewStokListesi.Appearance.FilterCloseButton.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.gridViewStokListesi.Appearance.FilterCloseButton.Options.UseFont = true;
-            this.gridViewStokListesi.Appearance.GroupRow.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridViewStokListesi.Appearance.GroupRow.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.gridViewStokListesi.Appearance.GroupRow.Options.UseFont = true;
-            this.gridViewStokListesi.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridViewStokListesi.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.gridViewStokListesi.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridViewStokListesi.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridViewStokListesi.Appearance.Row.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.gridViewStokListesi.Appearance.Row.Options.UseFont = true;
+            this.gridViewStokListesi.Appearance.RowSeparator.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            this.gridViewStokListesi.Appearance.RowSeparator.Options.UseFont = true;
+            this.gridViewStokListesi.Appearance.SelectedRow.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            this.gridViewStokListesi.Appearance.SelectedRow.Options.UseFont = true;
+            this.gridViewStokListesi.Appearance.TopNewRow.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            this.gridViewStokListesi.Appearance.TopNewRow.Options.UseFont = true;
             this.gridViewStokListesi.GridControl = this.gridControlStokListesi;
             this.gridViewStokListesi.Name = "gridViewStokListesi";
             this.gridViewStokListesi.OptionsBehavior.Editable = false;
@@ -345,73 +357,91 @@
             // 
             // panelControl3
             // 
-            this.panelControl3.Controls.Add(this.buttonEditStokKoduAra);
-            this.panelControl3.Controls.Add(this.buttonEditIsEmriAra);
+            this.panelControl3.Controls.Add(this.groupBoxArama);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl3.Location = new System.Drawing.Point(2, 2);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(295, 189);
+            this.panelControl3.Size = new System.Drawing.Size(295, 143);
             this.panelControl3.TabIndex = 4;
+            // 
+            // groupBoxArama
+            // 
+            this.groupBoxArama.Controls.Add(this.buttonEditStokKoduAra);
+            this.groupBoxArama.Controls.Add(this.buttonEditIsEmriAra);
+            this.groupBoxArama.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxArama.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            this.groupBoxArama.Location = new System.Drawing.Point(2, 2);
+            this.groupBoxArama.Name = "groupBoxArama";
+            this.groupBoxArama.Size = new System.Drawing.Size(291, 139);
+            this.groupBoxArama.TabIndex = 10;
+            this.groupBoxArama.TabStop = false;
+            this.groupBoxArama.Text = "Arama";
             // 
             // buttonEditStokKoduAra
             // 
             this.buttonEditStokKoduAra.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonEditStokKoduAra.Location = new System.Drawing.Point(2, 42);
+            this.buttonEditStokKoduAra.Location = new System.Drawing.Point(3, 40);
             this.buttonEditStokKoduAra.MenuManager = this.ribbonControl1;
             this.buttonEditStokKoduAra.Name = "buttonEditStokKoduAra";
             this.buttonEditStokKoduAra.Properties.Appearance.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.buttonEditStokKoduAra.Properties.Appearance.Options.UseFont = true;
-            serializableAppearanceObject1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.buttonEditStokKoduAra.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonEditStokKoduAra.Properties.AppearanceDisabled.Options.UseFont = true;
+            this.buttonEditStokKoduAra.Properties.AppearanceFocused.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonEditStokKoduAra.Properties.AppearanceFocused.Options.UseFont = true;
+            this.buttonEditStokKoduAra.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonEditStokKoduAra.Properties.AppearanceReadOnly.Options.UseFont = true;
+            serializableAppearanceObject1.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             serializableAppearanceObject1.Options.UseFont = true;
-            serializableAppearanceObject2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            serializableAppearanceObject2.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             serializableAppearanceObject2.Options.UseFont = true;
-            serializableAppearanceObject3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            serializableAppearanceObject3.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             serializableAppearanceObject3.Options.UseFont = true;
-            serializableAppearanceObject4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            serializableAppearanceObject4.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             serializableAppearanceObject4.Options.UseFont = true;
-            serializableAppearanceObject5.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            serializableAppearanceObject5.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             serializableAppearanceObject5.Options.UseFont = true;
-            serializableAppearanceObject6.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            serializableAppearanceObject6.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             serializableAppearanceObject6.Options.UseFont = true;
-            serializableAppearanceObject7.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            serializableAppearanceObject7.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             serializableAppearanceObject7.Options.UseFont = true;
-            serializableAppearanceObject8.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            serializableAppearanceObject8.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             serializableAppearanceObject8.Options.UseFont = true;
             this.buttonEditStokKoduAra.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Stok Kodu", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sil", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, true)});
-            this.buttonEditStokKoduAra.Size = new System.Drawing.Size(291, 40);
-            this.buttonEditStokKoduAra.TabIndex = 9;
+            this.buttonEditStokKoduAra.Size = new System.Drawing.Size(285, 23);
+            this.buttonEditStokKoduAra.TabIndex = 11;
             // 
             // buttonEditIsEmriAra
             // 
             this.buttonEditIsEmriAra.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonEditIsEmriAra.Location = new System.Drawing.Point(2, 2);
+            this.buttonEditIsEmriAra.Location = new System.Drawing.Point(3, 17);
             this.buttonEditIsEmriAra.MenuManager = this.ribbonControl1;
             this.buttonEditIsEmriAra.Name = "buttonEditIsEmriAra";
             this.buttonEditIsEmriAra.Properties.Appearance.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.buttonEditIsEmriAra.Properties.Appearance.Options.UseFont = true;
-            serializableAppearanceObject9.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            serializableAppearanceObject9.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             serializableAppearanceObject9.Options.UseFont = true;
-            serializableAppearanceObject10.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            serializableAppearanceObject10.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             serializableAppearanceObject10.Options.UseFont = true;
             serializableAppearanceObject11.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             serializableAppearanceObject11.Options.UseFont = true;
-            serializableAppearanceObject12.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            serializableAppearanceObject12.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             serializableAppearanceObject12.Options.UseFont = true;
-            serializableAppearanceObject13.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            serializableAppearanceObject13.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             serializableAppearanceObject13.Options.UseFont = true;
-            serializableAppearanceObject14.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            serializableAppearanceObject14.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             serializableAppearanceObject14.Options.UseFont = true;
             serializableAppearanceObject15.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             serializableAppearanceObject15.Options.UseFont = true;
-            serializableAppearanceObject16.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            serializableAppearanceObject16.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             serializableAppearanceObject16.Options.UseFont = true;
             this.buttonEditIsEmriAra.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "İş Emri No", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sil", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, true)});
-            this.buttonEditIsEmriAra.Size = new System.Drawing.Size(291, 40);
-            this.buttonEditIsEmriAra.TabIndex = 8;
+            this.buttonEditIsEmriAra.Size = new System.Drawing.Size(285, 23);
+            this.buttonEditIsEmriAra.TabIndex = 10;
             // 
             // ArafFrmIsListesi
             // 
@@ -449,6 +479,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewStokListesi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
+            this.groupBoxArama.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.buttonEditStokKoduAra.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEditIsEmriAra.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -474,12 +505,13 @@
         private DevExpress.XtraEditors.SimpleButton simpleButtonKapat;
         private DevExpress.XtraEditors.SimpleButton simpleButtonPlanSil;
         private DevExpress.XtraEditors.SimpleButton simpleButtonPlanEkle;
-        private DevExpress.XtraEditors.ButtonEdit buttonEditStokKoduAra;
-        private DevExpress.XtraEditors.ButtonEdit buttonEditIsEmriAra;
         private DevExpress.XtraGrid.GridControl gridControlPlanListe;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewPlanListe;
         private DevExpress.XtraGrid.GridControl gridControlIsListesi;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewIsListesi;
+        private System.Windows.Forms.GroupBox groupBoxArama;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditStokKoduAra;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditIsEmriAra;
     }
 
 }

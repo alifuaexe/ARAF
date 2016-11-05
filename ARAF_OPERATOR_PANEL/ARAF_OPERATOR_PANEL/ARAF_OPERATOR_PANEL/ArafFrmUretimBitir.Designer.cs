@@ -75,7 +75,6 @@
             this.barButtonItemIsDegistir.Caption = "İş Değiştir";
             this.barButtonItemIsDegistir.Id = 2;
             this.barButtonItemIsDegistir.Name = "barButtonItemIsDegistir";
-            this.barButtonItemIsDegistir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // barButtonItemIsSonlandir
             // 

@@ -56,11 +56,6 @@ namespace ARAF_OPERATOR_PANEL
             this.repositoryItemColorPickEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.WorkStationPanel = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.tableLayoutPanel_UST = new System.Windows.Forms.TableLayoutPanel();
             this.textEditVardiyaAdi = new DevExpress.XtraEditors.TextEdit();
@@ -84,11 +79,7 @@ namespace ARAF_OPERATOR_PANEL
             this.gridControlSiparis_urun = new DevExpress.XtraGrid.GridControl();
             this.cardViewSiparis_Urun = new DevExpress.XtraGrid.Views.Card.CardView();
             this.chartControlDuruslar = new DevExpress.XtraCharts.ChartControl();
-            this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ribbonGalleryBarItem2 = new DevExpress.XtraBars.RibbonGalleryBarItem();
-            this.gridView7 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView8 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView9 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             ribbonPageGroupBut = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
@@ -99,11 +90,6 @@ namespace ARAF_OPERATOR_PANEL
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPlanDurumu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRatingControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             this.tableLayoutPanel_UST.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditVardiyaAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditMakineAdi.Properties)).BeginInit();
@@ -130,10 +116,6 @@ namespace ARAF_OPERATOR_PANEL
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView9)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonPageGroupBut
@@ -301,10 +283,20 @@ namespace ARAF_OPERATOR_PANEL
             this.gridViewPlanDurumu.Appearance.EvenRow.Options.UseFont = true;
             this.gridViewPlanDurumu.Appearance.FilterCloseButton.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.FilterCloseButton.Font")));
             this.gridViewPlanDurumu.Appearance.FilterCloseButton.Options.UseFont = true;
+            this.gridViewPlanDurumu.Appearance.FilterPanel.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.FilterPanel.Font")));
+            this.gridViewPlanDurumu.Appearance.FilterPanel.Options.UseFont = true;
+            this.gridViewPlanDurumu.Appearance.FixedLine.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.FixedLine.Font")));
+            this.gridViewPlanDurumu.Appearance.FixedLine.Options.UseFont = true;
+            this.gridViewPlanDurumu.Appearance.FocusedCell.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.FocusedCell.Font")));
+            this.gridViewPlanDurumu.Appearance.FocusedCell.Options.UseFont = true;
+            this.gridViewPlanDurumu.Appearance.FooterPanel.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.FooterPanel.Font")));
+            this.gridViewPlanDurumu.Appearance.FooterPanel.Options.UseFont = true;
             this.gridViewPlanDurumu.Appearance.GroupRow.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.GroupRow.Font")));
             this.gridViewPlanDurumu.Appearance.GroupRow.Options.UseFont = true;
             this.gridViewPlanDurumu.Appearance.HeaderPanel.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.HeaderPanel.Font")));
             this.gridViewPlanDurumu.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridViewPlanDurumu.Appearance.Preview.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.Preview.Font")));
+            this.gridViewPlanDurumu.Appearance.Preview.Options.UseFont = true;
             this.gridViewPlanDurumu.Appearance.Row.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.Row.Font")));
             this.gridViewPlanDurumu.Appearance.Row.Options.UseFont = true;
             this.gridViewPlanDurumu.GridControl = this.gridControlPlanDurumu;
@@ -368,26 +360,6 @@ namespace ARAF_OPERATOR_PANEL
             // 
             this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // gridView1
-            // 
-            this.gridView1.Name = "gridView1";
-            // 
-            // gridView2
-            // 
-            this.gridView2.Name = "gridView2";
-            // 
-            // gridView3
-            // 
-            this.gridView3.Name = "gridView3";
-            // 
-            // gridView4
-            // 
-            this.gridView4.Name = "gridView4";
-            // 
-            // gridView5
-            // 
-            this.gridView5.Name = "gridView5";
             // 
             // WorkStationPanel
             // 
@@ -497,16 +469,32 @@ namespace ARAF_OPERATOR_PANEL
             // 
             // cardViewMiktar
             // 
+            this.cardViewMiktar.Appearance.Card.Font = ((System.Drawing.Font)(resources.GetObject("cardViewMiktar.Appearance.Card.Font")));
+            this.cardViewMiktar.Appearance.Card.Options.UseFont = true;
+            this.cardViewMiktar.Appearance.CardButton.Font = ((System.Drawing.Font)(resources.GetObject("cardViewMiktar.Appearance.CardButton.Font")));
+            this.cardViewMiktar.Appearance.CardButton.Options.UseFont = true;
             this.cardViewMiktar.Appearance.CardCaption.Font = ((System.Drawing.Font)(resources.GetObject("cardViewMiktar.Appearance.CardCaption.Font")));
             this.cardViewMiktar.Appearance.CardCaption.Options.UseFont = true;
             this.cardViewMiktar.Appearance.CardExpandButton.Font = ((System.Drawing.Font)(resources.GetObject("cardViewMiktar.Appearance.CardExpandButton.Font")));
             this.cardViewMiktar.Appearance.CardExpandButton.Options.UseFont = true;
+            this.cardViewMiktar.Appearance.EmptySpace.Font = ((System.Drawing.Font)(resources.GetObject("cardViewMiktar.Appearance.EmptySpace.Font")));
+            this.cardViewMiktar.Appearance.EmptySpace.Options.UseFont = true;
             this.cardViewMiktar.Appearance.FieldCaption.Font = ((System.Drawing.Font)(resources.GetObject("cardViewMiktar.Appearance.FieldCaption.Font")));
             this.cardViewMiktar.Appearance.FieldCaption.Options.UseFont = true;
             this.cardViewMiktar.Appearance.FieldValue.Font = ((System.Drawing.Font)(resources.GetObject("cardViewMiktar.Appearance.FieldValue.Font")));
             this.cardViewMiktar.Appearance.FieldValue.Options.UseFont = true;
+            this.cardViewMiktar.Appearance.FilterCloseButton.Font = ((System.Drawing.Font)(resources.GetObject("cardViewMiktar.Appearance.FilterCloseButton.Font")));
+            this.cardViewMiktar.Appearance.FilterCloseButton.Options.UseFont = true;
+            this.cardViewMiktar.Appearance.FilterPanel.Font = ((System.Drawing.Font)(resources.GetObject("cardViewMiktar.Appearance.FilterPanel.Font")));
+            this.cardViewMiktar.Appearance.FilterPanel.Options.UseFont = true;
             this.cardViewMiktar.Appearance.FocusedCardCaption.Font = ((System.Drawing.Font)(resources.GetObject("cardViewMiktar.Appearance.FocusedCardCaption.Font")));
             this.cardViewMiktar.Appearance.FocusedCardCaption.Options.UseFont = true;
+            this.cardViewMiktar.Appearance.HideSelectionCardCaption.Font = ((System.Drawing.Font)(resources.GetObject("cardViewMiktar.Appearance.HideSelectionCardCaption.Font")));
+            this.cardViewMiktar.Appearance.HideSelectionCardCaption.Options.UseFont = true;
+            this.cardViewMiktar.Appearance.SelectedCardCaption.Font = ((System.Drawing.Font)(resources.GetObject("cardViewMiktar.Appearance.SelectedCardCaption.Font")));
+            this.cardViewMiktar.Appearance.SelectedCardCaption.Options.UseFont = true;
+            this.cardViewMiktar.Appearance.SeparatorLine.Font = ((System.Drawing.Font)(resources.GetObject("cardViewMiktar.Appearance.SeparatorLine.Font")));
+            this.cardViewMiktar.Appearance.SeparatorLine.Options.UseFont = true;
             this.cardViewMiktar.Appearance.ViewCaption.Font = ((System.Drawing.Font)(resources.GetObject("cardViewMiktar.Appearance.ViewCaption.Font")));
             this.cardViewMiktar.Appearance.ViewCaption.Options.UseFont = true;
             this.cardViewMiktar.AppearancePrint.FieldValue.BackColor = ((System.Drawing.Color)(resources.GetObject("cardViewMiktar.AppearancePrint.FieldValue.BackColor")));
@@ -564,12 +552,28 @@ namespace ARAF_OPERATOR_PANEL
             this.gridViewPlandakiIsler.Appearance.EvenRow.Options.UseFont = true;
             this.gridViewPlandakiIsler.Appearance.FilterCloseButton.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlandakiIsler.Appearance.FilterCloseButton.Font")));
             this.gridViewPlandakiIsler.Appearance.FilterCloseButton.Options.UseFont = true;
+            this.gridViewPlandakiIsler.Appearance.FilterPanel.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlandakiIsler.Appearance.FilterPanel.Font")));
+            this.gridViewPlandakiIsler.Appearance.FilterPanel.Options.UseFont = true;
+            this.gridViewPlandakiIsler.Appearance.GroupPanel.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlandakiIsler.Appearance.GroupPanel.Font")));
+            this.gridViewPlandakiIsler.Appearance.GroupPanel.Options.UseFont = true;
             this.gridViewPlandakiIsler.Appearance.GroupRow.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlandakiIsler.Appearance.GroupRow.Font")));
             this.gridViewPlandakiIsler.Appearance.GroupRow.Options.UseFont = true;
             this.gridViewPlandakiIsler.Appearance.HeaderPanel.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlandakiIsler.Appearance.HeaderPanel.Font")));
             this.gridViewPlandakiIsler.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridViewPlandakiIsler.Appearance.HideSelectionRow.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlandakiIsler.Appearance.HideSelectionRow.Font")));
+            this.gridViewPlandakiIsler.Appearance.HideSelectionRow.Options.UseFont = true;
+            this.gridViewPlandakiIsler.Appearance.HorzLine.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlandakiIsler.Appearance.HorzLine.Font")));
+            this.gridViewPlandakiIsler.Appearance.HorzLine.Options.UseFont = true;
+            this.gridViewPlandakiIsler.Appearance.OddRow.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlandakiIsler.Appearance.OddRow.Font")));
+            this.gridViewPlandakiIsler.Appearance.OddRow.Options.UseFont = true;
+            this.gridViewPlandakiIsler.Appearance.Preview.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlandakiIsler.Appearance.Preview.Font")));
+            this.gridViewPlandakiIsler.Appearance.Preview.Options.UseFont = true;
             this.gridViewPlandakiIsler.Appearance.Row.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlandakiIsler.Appearance.Row.Font")));
             this.gridViewPlandakiIsler.Appearance.Row.Options.UseFont = true;
+            this.gridViewPlandakiIsler.Appearance.RowSeparator.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlandakiIsler.Appearance.RowSeparator.Font")));
+            this.gridViewPlandakiIsler.Appearance.RowSeparator.Options.UseFont = true;
+            this.gridViewPlandakiIsler.Appearance.SelectedRow.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlandakiIsler.Appearance.SelectedRow.Font")));
+            this.gridViewPlandakiIsler.Appearance.SelectedRow.Options.UseFont = true;
             this.gridViewPlandakiIsler.GridControl = this.gridControlPlandakiIsler;
             this.gridViewPlandakiIsler.Name = "gridViewPlandakiIsler";
             this.gridViewPlandakiIsler.OptionsBehavior.Editable = false;
@@ -606,10 +610,20 @@ namespace ARAF_OPERATOR_PANEL
             this.cardViewSiparis_Urun.Appearance.CardButton.Options.UseFont = true;
             this.cardViewSiparis_Urun.Appearance.CardCaption.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.CardCaption.Font")));
             this.cardViewSiparis_Urun.Appearance.CardCaption.Options.UseFont = true;
+            this.cardViewSiparis_Urun.Appearance.CardExpandButton.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.CardExpandButton.Font")));
+            this.cardViewSiparis_Urun.Appearance.CardExpandButton.Options.UseFont = true;
+            this.cardViewSiparis_Urun.Appearance.EmptySpace.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.EmptySpace.Font")));
+            this.cardViewSiparis_Urun.Appearance.EmptySpace.Options.UseFont = true;
             this.cardViewSiparis_Urun.Appearance.FieldCaption.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.FieldCaption.Font")));
             this.cardViewSiparis_Urun.Appearance.FieldCaption.Options.UseFont = true;
             this.cardViewSiparis_Urun.Appearance.FieldValue.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.FieldValue.Font")));
             this.cardViewSiparis_Urun.Appearance.FieldValue.Options.UseFont = true;
+            this.cardViewSiparis_Urun.Appearance.FilterCloseButton.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.FilterCloseButton.Font")));
+            this.cardViewSiparis_Urun.Appearance.FilterCloseButton.Options.UseFont = true;
+            this.cardViewSiparis_Urun.Appearance.FilterPanel.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.FilterPanel.Font")));
+            this.cardViewSiparis_Urun.Appearance.FilterPanel.Options.UseFont = true;
+            this.cardViewSiparis_Urun.Appearance.FocusedCardCaption.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.FocusedCardCaption.Font")));
+            this.cardViewSiparis_Urun.Appearance.FocusedCardCaption.Options.UseFont = true;
             this.cardViewSiparis_Urun.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.cardViewSiparis_Urun.CardScrollButtonBorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.cardViewSiparis_Urun.CardWidth = 400;
@@ -648,10 +662,6 @@ namespace ARAF_OPERATOR_PANEL
             this.chartControlDuruslar.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
             // 
-            // gridView6
-            // 
-            this.gridView6.Name = "gridView6";
-            // 
             // ribbonGalleryBarItem2
             // 
             resources.ApplyResources(this.ribbonGalleryBarItem2, "ribbonGalleryBarItem2");
@@ -662,18 +672,6 @@ namespace ARAF_OPERATOR_PANEL
             galleryItemGroup1});
             this.ribbonGalleryBarItem2.Id = 3;
             this.ribbonGalleryBarItem2.Name = "ribbonGalleryBarItem2";
-            // 
-            // gridView7
-            // 
-            this.gridView7.Name = "gridView7";
-            // 
-            // gridView8
-            // 
-            this.gridView8.Name = "gridView8";
-            // 
-            // gridView9
-            // 
-            this.gridView9.Name = "gridView9";
             // 
             // defaultLookAndFeel1
             // 
@@ -706,11 +704,6 @@ namespace ARAF_OPERATOR_PANEL
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPlanDurumu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRatingControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             this.tableLayoutPanel_UST.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textEditVardiyaAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditMakineAdi.Properties)).EndInit();
@@ -737,10 +730,6 @@ namespace ARAF_OPERATOR_PANEL
             ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControlDuruslar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -761,12 +750,9 @@ namespace ARAF_OPERATOR_PANEL
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
        
        
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
+      
         private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel WorkStationPanel;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
+     
         private DevExpress.XtraBars.BarButtonItem barButtonItemIsDurumu;
         private DevExpress.XtraBars.RibbonGalleryBarItem ribbonGalleryBarItem2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_UST;
@@ -774,9 +760,7 @@ namespace ARAF_OPERATOR_PANEL
         private DevExpress.XtraEditors.TextEdit textEditMakineAdi;
         private DevExpress.XtraEditors.TextEdit textEditOperatorAdi;
         private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView7;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView8;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView9;
+      
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_Orta;
         private DevExpress.XtraTab.XtraTabControl xtraTabControlUretim;
