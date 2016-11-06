@@ -80,8 +80,7 @@ namespace ARAF_OPERATOR_PANEL
 
         private void barButtonItemIsSonlandir_ItemClick(object sender, ItemClickEventArgs e)
         {
-            UretimBitir(Convert.ToInt32(gridViewIslistesi.GetRowCellValue(gridViewIslistesi.FocusedRowHandle, "PROD_ID").ToString()),
-                  Convert.ToInt32(gridViewIslistesi.GetRowCellValue(gridViewIslistesi.FocusedRowHandle, "WS_ID").ToString()));
+           
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

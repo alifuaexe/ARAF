@@ -22,6 +22,7 @@ namespace ARAF_OPERATOR_PANEL
     public partial class ArafFrmOperatorPanel : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         private int WS_ID_;
+        private int PlanEkleBut = 0;
         public int WS_ID { get { return WS_ID_; } set { WS_ID_ = value; } }
 
         public object XRChart { get; private set; }
@@ -32,6 +33,7 @@ namespace ARAF_OPERATOR_PANEL
         ArafFrmDurusInsert ArafDurusInsert;
         ArafFrmUretimBitir ArafUretimBitir;
         ArafFrmPlanDurumu ArafPlanDurumu;
+        ArafFrmIsListesi ArafPlanEkle;
         Default df = new Default();
        
 
@@ -376,7 +378,7 @@ namespace ARAF_OPERATOR_PANEL
                 var Prd = from h in context.ARF_PLANNING_STATUS select h;
                 if (Prd != null)
                 {
-                    gridControlPlanDurumu.DataSource = Prd.ToList();
+                 //   gridControlPlanDurumu.DataSource = Prd.ToList();
 
                 }
             }
@@ -396,23 +398,30 @@ namespace ARAF_OPERATOR_PANEL
 
         private void simpleButtonPlandakiIsiBaslat_Click(object sender, EventArgs e)
         {
-            int PLAN_ID_ = Convert.ToInt32(gridViewPlandakiIsler.GetRowCellValue(gridViewPlandakiIsler.FocusedRowHandle, "PLAN_ID").ToString());
 
-            using (ARAFEntities context = new ARAFEntities())
+        }
+
+        private void barButtonItemPlanEkle_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (ProductionID == 0)
             {
-                var query1 = (from contact1 in context.PRODUCTION_PLANNING
-                             where contact1.WS_ID == MakineID && contact1.PROD_PLAN_STATUS == 1
-                             select contact1).First();
-                query1.PROD_PLAN_STATUS = 2;
-                context.SaveChanges();
-
-                var query = (from contact1 in context.PRODUCTION_PLANNING
-                             where contact1.WS_ID == MakineID && contact1.PLAN_ID == PLAN_ID_ && contact1.PROD_PLAN_STATUS == 0
-                             select contact1).First();
-                query.PROD_PLAN_STATUS = 1;
-                context.SaveChanges();
+                MessageBox.Show("Açık Üretim Yok. Plan ekleme İşlemi Yapamazsınız.");
+                return;
             }
-            PlandakiIsler(MakineID);
+            if (ArafPlanEkle == null)
+            {
+                ArafPlanEkle = new ArafFrmIsListesi();
+                ArafPlanEkle.MakineID = MakineID;
+                ArafPlanEkle.PlanEkle_ = 1;
+                if (ArafPlanEkle.ShowDialog() == DialogResult.OK)
+                {
+                    ArafPlanEkle.Dispose();
+                    ArafPlanEkle = null;
+                    PlandakiIsler(MakineID);
+
+                }
+
+            }
         }
 
         private void barButtonItemUretimBitir_ItemClick(object sender, ItemClickEventArgs e)
@@ -422,18 +431,8 @@ namespace ARAF_OPERATOR_PANEL
                 MessageBox.Show("Açık Üretim Yok. Bitirme İşlemi Yapamazsınız.");
                 return;
             }
-            if (ArafUretimBitir == null)
-            {
-                ArafUretimBitir = new ArafFrmUretimBitir();
-                ArafUretimBitir.MakineID = MakineID;
-                if (ArafUretimBitir.ShowDialog() == DialogResult.OK)
-                {
-                    ArafUretimBitir.Dispose();
-                    ArafUretimBitir = null;
-
-                }
-
-            }
+            UretimBitir(ProductionID,
+                 MakineID);
         }
 
       
@@ -450,6 +449,12 @@ namespace ARAF_OPERATOR_PANEL
                 MessageBox.Show("Makine Seçiniz.");
                 return;
             }
+            if (gridViewPlandakiIsler.DataRowCount!=0)
+            {
+                MessageBox.Show("Plandaki İşlerden Üretim Başlatınız.");
+                xtraTabControlUretim.SelectedTabPageIndex = 1;
+                return;
+            }
             if (ArafOperatorInsert == null)
             {
                 ArafOperatorInsert = new ArafFrmOperatorInsert();
@@ -462,11 +467,22 @@ namespace ARAF_OPERATOR_PANEL
                 }
 
             }
+
         }
-              
+        public void UretimBitir(int _PROD_ID_, int _WS_ID)
+        {
+            int dd;
+            using (ARAFEntities context = new ARAFEntities())
+            {
+                dd = Convert.ToInt32(context.ARF_PRODUCTION_STOPP(_PROD_ID_, _WS_ID).ToString());
+            }
 
-    
+        }
 
-      
+
+
+
+
+
     }
 }

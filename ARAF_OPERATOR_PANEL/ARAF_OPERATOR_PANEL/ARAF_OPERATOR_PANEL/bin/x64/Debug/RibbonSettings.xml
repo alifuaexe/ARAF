@@ -6,13 +6,13 @@
       <property name="Pages" iskey="true" value="1">
         <property name="Item1" isnull="true" iskey="true">
           <property name="Text">Üretim İşlemleri</property>
-          <property name="IsVisible">true</property>
+          <property name="IsVisible">false</property>
           <property name="Groups" iskey="true" value="1">
             <property name="Item1" isnull="true" iskey="true">
               <property name="Text" />
               <property name="ShowCaptionButton">true</property>
               <property name="IsVisible">true</property>
-              <property name="Items" iskey="true" value="5">
+              <property name="Items" iskey="true" value="6">
                 <property name="Item1" isnull="true" iskey="true">
                   <property name="Text">ÜRETİM BAŞLAT</property>
                   <property name="IsVisible">true</property>
@@ -23,7 +23,7 @@
                   <property name="Alias">ÜRETİM BAŞLAT</property>
                   <property name="Name" />
                   <property name="IdInfo" isnull="true" iskey="true">
-                    <property name="Id">11</property>
+                    <property name="Id">12</property>
                   </property>
                   <property name="SourceIdInfo" isnull="true" iskey="true">
                     <property name="Id">3</property>
@@ -39,7 +39,7 @@
                   <property name="Alias">ÜRETİM BİTİR</property>
                   <property name="Name" />
                   <property name="IdInfo" isnull="true" iskey="true">
-                    <property name="Id">12</property>
+                    <property name="Id">13</property>
                   </property>
                   <property name="SourceIdInfo" isnull="true" iskey="true">
                     <property name="Id">4</property>
@@ -55,7 +55,7 @@
                   <property name="Alias">DURUŞ  BAŞLAT</property>
                   <property name="Name" />
                   <property name="IdInfo" isnull="true" iskey="true">
-                    <property name="Id">13</property>
+                    <property name="Id">14</property>
                   </property>
                   <property name="SourceIdInfo" isnull="true" iskey="true">
                     <property name="Id">5</property>
@@ -71,7 +71,7 @@
                   <property name="Alias">DURUŞ BİTİR</property>
                   <property name="Name" />
                   <property name="IdInfo" isnull="true" iskey="true">
-                    <property name="Id">14</property>
+                    <property name="Id">15</property>
                   </property>
                   <property name="SourceIdInfo" isnull="true" iskey="true">
                     <property name="Id">6</property>
@@ -87,10 +87,26 @@
                   <property name="Alias">İŞ DURUMU</property>
                   <property name="Name" />
                   <property name="IdInfo" isnull="true" iskey="true">
-                    <property name="Id">15</property>
+                    <property name="Id">16</property>
                   </property>
                   <property name="SourceIdInfo" isnull="true" iskey="true">
                     <property name="Id">7</property>
+                  </property>
+                </property>
+                <property name="Item6" isnull="true" iskey="true">
+                  <property name="Text">PLAN EKLE</property>
+                  <property name="IsVisible">true</property>
+                  <property name="ItemSourceIdInfo" isnull="true" iskey="true">
+                    <property name="Id">2147483647</property>
+                  </property>
+                  <property name="IsCustom">false</property>
+                  <property name="Alias">PLAN EKLE</property>
+                  <property name="Name" />
+                  <property name="IdInfo" isnull="true" iskey="true">
+                    <property name="Id">17</property>
+                  </property>
+                  <property name="SourceIdInfo" isnull="true" iskey="true">
+                    <property name="Id">8</property>
                   </property>
                 </property>
               </property>
@@ -98,7 +114,7 @@
               <property name="Alias" />
               <property name="Name">ribbonPageGroup1</property>
               <property name="IdInfo" isnull="true" iskey="true">
-                <property name="Id">10</property>
+                <property name="Id">11</property>
               </property>
               <property name="SourceIdInfo" isnull="true" iskey="true">
                 <property name="Id">2</property>
@@ -109,7 +125,7 @@
           <property name="Alias">Üretim İşlemleri</property>
           <property name="Name">ribbonPage1</property>
           <property name="IdInfo" isnull="true" iskey="true">
-            <property name="Id">9</property>
+            <property name="Id">10</property>
           </property>
           <property name="SourceIdInfo" isnull="true" iskey="true">
             <property name="Id">1</property>
@@ -120,7 +136,7 @@
       <property name="Alias">(Atanmamış Sayfalar)</property>
       <property name="Name" />
       <property name="IdInfo" isnull="true" iskey="true">
-        <property name="Id">8</property>
+        <property name="Id">9</property>
       </property>
       <property name="SourceIdInfo" isnull="true" iskey="true">
         <property name="Id">0</property>
@@ -131,6 +147,6 @@
     <property name="Minimized">false</property>
     <property name="ToolbarLocation">Default</property>
     <property name="IsReady">true</property>
-    <property name="HashCode">8</property>
+    <property name="HashCode">9</property>
   </property>
 </XtraSerializer>

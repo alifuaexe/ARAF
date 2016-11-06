@@ -29,6 +29,14 @@
         ///
         private void InitializeComponent()
         {
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject21 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject22 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject23 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject24 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -37,14 +45,6 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -68,6 +68,7 @@
             this.groupBoxArama = new System.Windows.Forms.GroupBox();
             this.buttonEditStokKoduAra = new DevExpress.XtraEditors.ButtonEdit();
             this.buttonEditIsEmriAra = new DevExpress.XtraEditors.ButtonEdit();
+            this.simpleButtonPlanListesineEkle = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
@@ -175,6 +176,7 @@
             // 
             // panelControl5
             // 
+            this.panelControl5.Controls.Add(this.simpleButtonPlanListesineEkle);
             this.panelControl5.Controls.Add(this.simpleButtonseciliIsiBaslat);
             this.panelControl5.Controls.Add(this.simpleButtonTumunuBaslat);
             this.panelControl5.Controls.Add(this.simpleButtonKapat);
@@ -391,25 +393,25 @@
             this.buttonEditStokKoduAra.Properties.AppearanceFocused.Options.UseFont = true;
             this.buttonEditStokKoduAra.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.buttonEditStokKoduAra.Properties.AppearanceReadOnly.Options.UseFont = true;
-            serializableAppearanceObject1.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject1.Options.UseFont = true;
-            serializableAppearanceObject2.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject2.Options.UseFont = true;
-            serializableAppearanceObject3.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject3.Options.UseFont = true;
-            serializableAppearanceObject4.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject4.Options.UseFont = true;
-            serializableAppearanceObject5.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject5.Options.UseFont = true;
-            serializableAppearanceObject6.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject6.Options.UseFont = true;
-            serializableAppearanceObject7.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject7.Options.UseFont = true;
-            serializableAppearanceObject8.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject8.Options.UseFont = true;
+            serializableAppearanceObject17.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject17.Options.UseFont = true;
+            serializableAppearanceObject18.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject18.Options.UseFont = true;
+            serializableAppearanceObject19.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject19.Options.UseFont = true;
+            serializableAppearanceObject20.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject20.Options.UseFont = true;
+            serializableAppearanceObject21.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject21.Options.UseFont = true;
+            serializableAppearanceObject22.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject22.Options.UseFont = true;
+            serializableAppearanceObject23.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject23.Options.UseFont = true;
+            serializableAppearanceObject24.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject24.Options.UseFont = true;
             this.buttonEditStokKoduAra.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Stok Kodu", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sil", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Stok Kodu", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sil", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, true)});
             this.buttonEditStokKoduAra.Size = new System.Drawing.Size(285, 23);
             this.buttonEditStokKoduAra.TabIndex = 11;
             // 
@@ -421,27 +423,37 @@
             this.buttonEditIsEmriAra.Name = "buttonEditIsEmriAra";
             this.buttonEditIsEmriAra.Properties.Appearance.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.buttonEditIsEmriAra.Properties.Appearance.Options.UseFont = true;
-            serializableAppearanceObject9.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject9.Options.UseFont = true;
-            serializableAppearanceObject10.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject10.Options.UseFont = true;
-            serializableAppearanceObject11.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            serializableAppearanceObject11.Options.UseFont = true;
-            serializableAppearanceObject12.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject12.Options.UseFont = true;
-            serializableAppearanceObject13.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject13.Options.UseFont = true;
-            serializableAppearanceObject14.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject14.Options.UseFont = true;
-            serializableAppearanceObject15.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            serializableAppearanceObject15.Options.UseFont = true;
-            serializableAppearanceObject16.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject16.Options.UseFont = true;
+            serializableAppearanceObject1.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject1.Options.UseFont = true;
+            serializableAppearanceObject2.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject2.Options.UseFont = true;
+            serializableAppearanceObject3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            serializableAppearanceObject3.Options.UseFont = true;
+            serializableAppearanceObject4.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject4.Options.UseFont = true;
+            serializableAppearanceObject5.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject5.Options.UseFont = true;
+            serializableAppearanceObject6.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject6.Options.UseFont = true;
+            serializableAppearanceObject7.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            serializableAppearanceObject7.Options.UseFont = true;
+            serializableAppearanceObject8.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject8.Options.UseFont = true;
             this.buttonEditIsEmriAra.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "İş Emri No", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sil", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "İş Emri No", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sil", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, true)});
             this.buttonEditIsEmriAra.Size = new System.Drawing.Size(285, 23);
             this.buttonEditIsEmriAra.TabIndex = 10;
+            // 
+            // simpleButtonPlanListesineEkle
+            // 
+            this.simpleButtonPlanListesineEkle.Dock = System.Windows.Forms.DockStyle.Right;
+            this.simpleButtonPlanListesineEkle.Location = new System.Drawing.Point(767, 2);
+            this.simpleButtonPlanListesineEkle.Name = "simpleButtonPlanListesineEkle";
+            this.simpleButtonPlanListesineEkle.Size = new System.Drawing.Size(163, 101);
+            this.simpleButtonPlanListesineEkle.TabIndex = 5;
+            this.simpleButtonPlanListesineEkle.Text = "Plan Listesi Ekle";
+            this.simpleButtonPlanListesineEkle.Click += new System.EventHandler(this.simpleButtonPlanListesineEkle_Click);
             // 
             // ArafFrmIsListesi
             // 
@@ -512,6 +524,7 @@
         private System.Windows.Forms.GroupBox groupBoxArama;
         private DevExpress.XtraEditors.ButtonEdit buttonEditStokKoduAra;
         private DevExpress.XtraEditors.ButtonEdit buttonEditIsEmriAra;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonPlanListesineEkle;
     }
 
 }

@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="ribbonPageGroupBut.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ribbonPageGroupBut.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -497,124 +494,55 @@
         w4fbsNiI3/axb/go9h8Q2pbSLK4qWAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gridControlPlanDurumu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="barButtonItemPlanEkle.Caption" xml:space="preserve">
+    <value>PLAN EKLE</value>
   </data>
-  <data name="gridControlPlanDurumu.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 36pt</value>
+  <data name="barButtonItemPlanEkle.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAATdEVYdFRpdGxlAENoZWNrQnV0dG9uczuIUu6RAAAC
+        VklEQVQ4T1WSaU8TURSGiUS0LCLgD0HURIP+C7eY+AmsJkYSTUAKwahRiAVKoRuhLiHYCsgHgRijJARc
+        CMYI4m9QWUr3bda+nnM7M7STPHPnw33ec889U0FPpT+0uTI+/RuB6a0ib7bgD/+y8DEhZhPe15twv1r/
+        TF4VAPYrDvOm0qfA0KtIoWQtQCdGJ3+yaaNtIqDKM7UhRFnRIRnkZQNJQ05SkcuryOY1aFoBwy9+sFlj
+        BbgnN0TVcqkIS1mSM4T/+RwUTYczuF4WcGT45XdxzANBQyZHkkE6p8EXnMOZC9cgqzr6A2ts1poBR51B
+        DiiUCSapjAbvxFucPn8Vo4EZ0d5jzxc268wAW79/TVxOOqsgRQHJrIqEgWdiFqdar2DEP414WhEt9rlW
+        2TxmBTz0fBUBLLKQyKhi89j4DFpIdvnCiKZkRJIy3YUGx+Aym/VmQPWDkRXoekFILa2XMUqim4578twl
+        DHnDiCSK8l5CorZUdD5bKguocTiXoVEAV3GR0Exi89mLGPKEhbTLxCXsEElq8+7TT2weNwNqOweWoNJ8
+        96gSC4NjITgJFnZjErZNohLiGQUdjz6w2WAG1N178pECdCHsxPICS6Lvf/t5/BXkEEspuN33ns1GK+AO
+        JSo0X97MVbajJBmwxPyJSEQO+3QXt3oW2WyyAjiRfxAeYYomwX3GeRJELC1TVRn7VDlC7XGb9u75shPY
+        2rpmV2/2LsLeuwB7zwLauxdwwzF/wP15tBHtXe8E1zumvpFn/YmHiGqinmgwaCyhqYQTxlpHVAKo+A/M
+        xcr4PlH2UgAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="gridControlPlanDurumu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="gridViewPlanDurumu.Appearance.ColumnFilterButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Narrow, 9pt, style=Bold</value>
-  </data>
-  <data name="gridViewPlanDurumu.Appearance.ColumnFilterButtonActive.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Narrow, 9pt, style=Bold</value>
-  </data>
-  <data name="gridViewPlanDurumu.Appearance.CustomizationFormHint.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Narrow, 9pt, style=Bold</value>
-  </data>
-  <data name="gridViewPlanDurumu.Appearance.DetailTip.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Narrow, 9pt, style=Bold</value>
-  </data>
-  <data name="gridViewPlanDurumu.Appearance.Empty.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Narrow, 9pt, style=Bold</value>
-  </data>
-  <data name="gridViewPlanDurumu.Appearance.EvenRow.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Narrow, 9pt, style=Bold</value>
-  </data>
-  <data name="gridViewPlanDurumu.Appearance.FilterCloseButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Narrow, 9pt, style=Bold</value>
-  </data>
-  <data name="gridViewPlanDurumu.Appearance.FilterPanel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Narrow, 9pt, style=Bold</value>
-  </data>
-  <data name="gridViewPlanDurumu.Appearance.FixedLine.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Narrow, 9pt, style=Bold</value>
-  </data>
-  <data name="gridViewPlanDurumu.Appearance.FocusedCell.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Narrow, 9pt, style=Bold</value>
-  </data>
-  <data name="gridViewPlanDurumu.Appearance.FooterPanel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Narrow, 9pt, style=Bold</value>
-  </data>
-  <data name="gridViewPlanDurumu.Appearance.GroupRow.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Narrow, 9pt, style=Bold</value>
-  </data>
-  <data name="gridViewPlanDurumu.Appearance.HeaderPanel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Narrow, 9pt, style=Bold</value>
-  </data>
-  <data name="gridViewPlanDurumu.Appearance.Preview.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Narrow, 9pt, style=Bold</value>
-  </data>
-  <data name="gridViewPlanDurumu.Appearance.Row.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Narrow, 9pt, style=Bold</value>
-  </data>
-  <data name="gridControlPlanDurumu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>644, 383</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gridControlPlanDurumu.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;gridControlPlanDurumu.Name" xml:space="preserve">
-    <value>gridControlPlanDurumu</value>
-  </data>
-  <data name="&gt;&gt;gridControlPlanDurumu.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;gridControlPlanDurumu.Parent" xml:space="preserve">
-    <value>backstageViewClientControl1</value>
-  </data>
-  <data name="&gt;&gt;gridControlPlanDurumu.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="backstageViewClientControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 0</value>
-  </data>
-  <data name="backstageViewClientControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>644, 383</value>
-  </data>
-  <data name="backstageViewClientControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;backstageViewClientControl1.Name" xml:space="preserve">
-    <value>backstageViewClientControl1</value>
-  </data>
-  <data name="&gt;&gt;backstageViewClientControl1.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.BackstageViewClientControl, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;backstageViewClientControl1.Parent" xml:space="preserve">
-    <value>GenelBakis_backstageViewControl</value>
-  </data>
-  <data name="&gt;&gt;backstageViewClientControl1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="backstageViewTabItem1.Caption" xml:space="preserve">
-    <value>İŞ EMRİ DURUMU</value>
-  </data>
-  <data name="GenelBakis_backstageViewControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 20</value>
-  </data>
-  <data name="GenelBakis_backstageViewControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>806, 383</value>
-  </data>
-  <data name="GenelBakis_backstageViewControl.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="&gt;&gt;GenelBakis_backstageViewControl.Name" xml:space="preserve">
-    <value>GenelBakis_backstageViewControl</value>
-  </data>
-  <data name="&gt;&gt;GenelBakis_backstageViewControl.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.BackstageViewControl, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;GenelBakis_backstageViewControl.Parent" xml:space="preserve">
-    <value>groupBoxSiparisUrun</value>
-  </data>
-  <data name="&gt;&gt;GenelBakis_backstageViewControl.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="barButtonItemPlanEkle.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
   </data>
   <data name="ribbon.ApplicationIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -661,8 +589,9 @@
         S1X1n7EK/mD5NyFO/M4mkfwH7BChhS/vhkYAAAAASUVORK5CYII=
 </value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ribbon.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
+    <value>Center</value>
   </data>
   <data name="ribbon.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 5.25pt</value>
@@ -670,6 +599,15 @@
   <data name="ribbon.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="ribbon.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <metadata name="ribbonMiniToolbar1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>271, 17</value>
+  </metadata>
+  <metadata name="ribbonMiniToolbar2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>431, 17</value>
+  </metadata>
   <data name="resource.FormIcon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAEBAAAAAAIABoBAAAZgAAACAgAAAAACAAqBAAAM4EAAAwMAAAAAAgAKglAAB2FQAAQEAAAAAA
@@ -6857,6 +6795,7 @@
   <data name="ribbonPage1.Text" xml:space="preserve">
     <value>Üretim İşlemleri</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="repositoryItemRatingControl1.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -6868,13 +6807,13 @@
     <value>Combo</value>
   </data>
   <data name="ribbon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1022, 147</value>
+    <value>1014, 93</value>
   </data>
   <data name="ribbonStatusBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 699</value>
+    <value>0, 695</value>
   </data>
   <data name="ribbonStatusBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1022, 23</value>
+    <value>1014, 23</value>
   </data>
   <data name="&gt;&gt;ribbonStatusBar.Name" xml:space="preserve">
     <value>ribbonStatusBar</value>
@@ -7130,13 +7069,13 @@
     <value>Arial Narrow, 9pt, style=Bold, Italic, Underline, Strikeout</value>
   </data>
   <data name="WorkStationPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 147</value>
+    <value>0, 93</value>
   </data>
   <data name="WorkStationPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="WorkStationPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 552</value>
+    <value>110, 602</value>
   </data>
   <data name="WorkStationPanel.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -7172,7 +7111,7 @@
     <value>Arial Narrow, 9pt</value>
   </data>
   <data name="textEditVardiyaAdi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 22</value>
+    <value>220, 22</value>
   </data>
   <data name="textEditVardiyaAdi.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -7193,13 +7132,13 @@
     <value>Fill</value>
   </data>
   <data name="textEditMakineAdi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>236, 3</value>
+    <value>229, 3</value>
   </data>
   <data name="textEditMakineAdi.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Narrow, 9pt</value>
   </data>
   <data name="textEditMakineAdi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 22</value>
+    <value>220, 22</value>
   </data>
   <data name="textEditMakineAdi.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -7220,13 +7159,13 @@
     <value>Fill</value>
   </data>
   <data name="textEditOperatorAdi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 3</value>
+    <value>455, 3</value>
   </data>
   <data name="textEditOperatorAdi.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Narrow, 9pt</value>
   </data>
   <data name="textEditOperatorAdi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 22</value>
+    <value>220, 22</value>
   </data>
   <data name="textEditOperatorAdi.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -7247,13 +7186,13 @@
     <value>Fill</value>
   </data>
   <data name="textEdit1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>702, 3</value>
+    <value>681, 3</value>
   </data>
   <data name="textEdit1.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Narrow, 9pt</value>
   </data>
   <data name="textEdit1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 22</value>
+    <value>220, 22</value>
   </data>
   <data name="textEdit1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -7274,7 +7213,7 @@
     <value>Top</value>
   </data>
   <data name="tableLayoutPanel_UST.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 147</value>
+    <value>110, 93</value>
   </data>
   <data name="tableLayoutPanel_UST.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -7283,7 +7222,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel_UST.Size" type="System.Drawing.Size, System.Drawing">
-    <value>932, 28</value>
+    <value>904, 28</value>
   </data>
   <data name="tableLayoutPanel_UST.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -7315,20 +7254,34 @@
   <data name="xtraTabControlUretim.AppearancePage.Header.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Narrow, 9pt</value>
   </data>
-  <data name="xtraTabControlUretim.BorderStyle" type="DevExpress.XtraEditors.Controls.BorderStyles, DevExpress.Utils.v16.1">
-    <value>HotFlat</value>
-  </data>
   <data name="xtraTabControlUretim.BorderStylePage" type="DevExpress.XtraEditors.Controls.BorderStyles, DevExpress.Utils.v16.1">
     <value>NoBorder</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v16.1" name="DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xtraTabControlUretim.ClosePageButtonShowMode" type="DevExpress.XtraTab.ClosePageButtonShowMode, DevExpress.XtraEditors.v16.1">
+    <value>InTabControlHeader</value>
   </data>
   <data name="xtraTabControlUretim.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <data name="xtraTabControlUretim.HeaderLocation" type="DevExpress.XtraTab.TabHeaderLocation, DevExpress.XtraEditors.v16.1">
+    <value>Right</value>
+  </data>
+  <data name="xtraTabControlUretim.HeaderOrientation" type="DevExpress.XtraTab.TabOrientation, DevExpress.XtraEditors.v16.1">
+    <value>Horizontal</value>
+  </data>
   <data name="xtraTabControlUretim.Location" type="System.Drawing.Point, System.Drawing">
-    <value>466, 0</value>
+    <value>452, 0</value>
   </data>
   <data name="xtraTabControlUretim.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
+  </data>
+  <assembly alias="DevExpress.Data.v16.1" name="DevExpress.Data.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xtraTabControlUretim.MultiLine" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v16.1">
+    <value>False</value>
+  </data>
+  <data name="xtraTabControlUretim.PageImagePosition" type="DevExpress.XtraTab.TabPageImagePosition, DevExpress.XtraEditors.v16.1">
+    <value>Center</value>
   </data>
   <data name="gridSplitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -7340,7 +7293,7 @@
     <value>0, 0</value>
   </data>
   <data name="cardViewMiktar.Appearance.Card.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="cardViewMiktar.Appearance.CardButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Black, 12pt, style=Bold</value>
@@ -7388,7 +7341,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="gridControlMiktar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>460, 366</value>
+    <value>350, 436</value>
   </data>
   <data name="gridControlMiktar.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -7409,7 +7362,7 @@
     <value>0, 0</value>
   </data>
   <data name="gridSplitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>460, 366</value>
+    <value>350, 436</value>
   </data>
   <data name="gridSplitContainer1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -7430,7 +7383,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="xtraTabPageUretimBilgileri.Size" type="System.Drawing.Size, System.Drawing">
-    <value>460, 366</value>
+    <value>350, 436</value>
   </data>
   <data name="xtraTabPageUretimBilgileri.Text" xml:space="preserve">
     <value>AÇIK ÜRETİM</value>
@@ -7447,11 +7400,14 @@
   <data name="&gt;&gt;xtraTabPageUretimBilgileri.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="xtraTabControlUretim.ShowTabHeader" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v16.1">
+    <value>True</value>
+  </data>
   <data name="xtraTabControlUretim.Size" type="System.Drawing.Size, System.Drawing">
-    <value>466, 400</value>
+    <value>452, 438</value>
   </data>
   <data name="xtraTabControlUretim.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="tableLayoutPanelPlandakiIsler.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
@@ -7463,10 +7419,10 @@
     <value>Left</value>
   </data>
   <data name="simpleButtonPlandakiIsiBaslat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 290</value>
+    <value>3, 346</value>
   </data>
   <data name="simpleButtonPlandakiIsiBaslat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 73</value>
+    <value>149, 87</value>
   </data>
   <data name="simpleButtonPlandakiIsiBaslat.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -7493,64 +7449,70 @@
     <value>Tahoma, 36pt</value>
   </data>
   <data name="gridControlPlandakiIsler.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>0, 0</value>
   </data>
   <data name="gridViewPlandakiIsler.Appearance.ColumnFilterButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="gridViewPlandakiIsler.Appearance.ColumnFilterButtonActive.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="gridViewPlandakiIsler.Appearance.CustomizationFormHint.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="gridViewPlandakiIsler.Appearance.DetailTip.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="gridViewPlandakiIsler.Appearance.Empty.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="gridViewPlandakiIsler.Appearance.EvenRow.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="gridViewPlandakiIsler.Appearance.FilterCloseButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="gridViewPlandakiIsler.Appearance.FilterPanel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="gridViewPlandakiIsler.Appearance.GroupPanel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="gridViewPlandakiIsler.Appearance.GroupRow.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="gridViewPlandakiIsler.Appearance.HeaderPanel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="gridViewPlandakiIsler.Appearance.HideSelectionRow.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="gridViewPlandakiIsler.Appearance.HorzLine.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="gridViewPlandakiIsler.Appearance.OddRow.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="gridViewPlandakiIsler.Appearance.Preview.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="gridViewPlandakiIsler.Appearance.Row.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="gridViewPlandakiIsler.Appearance.RowSeparator.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="gridViewPlandakiIsler.Appearance.SelectedRow.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="gridViewPlandakiIsler.Appearance.TopNewRow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="gridControlPlandakiIsler.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="gridControlPlandakiIsler.Size" type="System.Drawing.Size, System.Drawing">
-    <value>796, 281</value>
+    <value>350, 343</value>
   </data>
   <data name="gridControlPlandakiIsler.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -7580,7 +7542,7 @@
     <value>2</value>
   </data>
   <data name="tableLayoutPanelPlandakiIsler.Size" type="System.Drawing.Size, System.Drawing">
-    <value>802, 366</value>
+    <value>350, 436</value>
   </data>
   <data name="tableLayoutPanelPlandakiIsler.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -7601,7 +7563,7 @@
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="simpleButtonPlandakiIsiBaslat" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gridControlPlandakiIsler" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50" /&gt;&lt;Rows Styles="Percent,78,68339,Percent,21,31661" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="xtraTabPagePlandakiIsler.Size" type="System.Drawing.Size, System.Drawing">
-    <value>802, 366</value>
+    <value>350, 436</value>
   </data>
   <data name="xtraTabPagePlandakiIsler.Text" xml:space="preserve">
     <value>PLANDAKİ İŞLER</value>
@@ -7619,7 +7581,7 @@
     <value>1</value>
   </data>
   <data name="xtraTabPageGrafik.Size" type="System.Drawing.Size, System.Drawing">
-    <value>802, 366</value>
+    <value>350, 436</value>
   </data>
   <data name="xtraTabPageGrafik.Text" xml:space="preserve">
     <value>GRAFİK</value>
@@ -7652,46 +7614,46 @@
     <value>Fill</value>
   </data>
   <data name="gridControlSiparis_urun.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 17</value>
+    <value>0, 0</value>
   </data>
   <data name="cardViewSiparis_Urun.Appearance.Card.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="cardViewSiparis_Urun.Appearance.CardButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="cardViewSiparis_Urun.Appearance.CardCaption.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="cardViewSiparis_Urun.Appearance.CardExpandButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="cardViewSiparis_Urun.Appearance.EmptySpace.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="cardViewSiparis_Urun.Appearance.FieldCaption.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="cardViewSiparis_Urun.Appearance.FieldValue.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="cardViewSiparis_Urun.Appearance.FilterCloseButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="cardViewSiparis_Urun.Appearance.FilterPanel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="cardViewSiparis_Urun.Appearance.FocusedCardCaption.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="gridControlSiparis_urun.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="gridControlSiparis_urun.Size" type="System.Drawing.Size, System.Drawing">
-    <value>460, 380</value>
+    <value>452, 438</value>
   </data>
   <data name="gridControlSiparis_urun.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;gridControlSiparis_urun.Name" xml:space="preserve">
     <value>gridControlSiparis_urun</value>
@@ -7700,42 +7662,9 @@
     <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gridControlSiparis_urun.Parent" xml:space="preserve">
-    <value>groupBoxSiparisUrun</value>
-  </data>
-  <data name="&gt;&gt;gridControlSiparis_urun.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBoxSiparisUrun.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="groupBoxSiparisUrun.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Narrow, 9pt</value>
-  </data>
-  <data name="groupBoxSiparisUrun.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="groupBoxSiparisUrun.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="groupBoxSiparisUrun.Size" type="System.Drawing.Size, System.Drawing">
-    <value>466, 400</value>
-  </data>
-  <data name="groupBoxSiparisUrun.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="groupBoxSiparisUrun.Text" xml:space="preserve">
-    <value>SİPARİŞ / ÜRÜN</value>
-  </data>
-  <data name="&gt;&gt;groupBoxSiparisUrun.Name" xml:space="preserve">
-    <value>groupBoxSiparisUrun</value>
-  </data>
-  <data name="&gt;&gt;groupBoxSiparisUrun.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxSiparisUrun.Parent" xml:space="preserve">
     <value>tableLayoutPanel_Orta</value>
   </data>
-  <data name="&gt;&gt;groupBoxSiparisUrun.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;gridControlSiparis_urun.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="tableLayoutPanel_Orta.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -7751,7 +7680,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel_Orta.Size" type="System.Drawing.Size, System.Drawing">
-    <value>932, 400</value>
+    <value>904, 438</value>
   </data>
   <data name="tableLayoutPanel_Orta.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -7769,19 +7698,19 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel_Orta.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="xtraTabControlUretim" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBoxSiparisUrun" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="xtraTabControlUretim" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gridControlSiparis_urun" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="chartControlDuruslar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="chartControlDuruslar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 403</value>
+    <value>3, 441</value>
   </data>
   <data name="series1.Name" xml:space="preserve">
     <value>Series 1</value>
   </data>
   <data name="chartControlDuruslar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>926, 118</value>
+    <value>898, 130</value>
   </data>
   <data name="chartControlDuruslar.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -7802,13 +7731,13 @@
     <value>Fill</value>
   </data>
   <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 175</value>
+    <value>110, 121</value>
   </data>
   <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>932, 524</value>
+    <value>904, 574</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -7847,7 +7776,7 @@
     <value>96, 96</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1022, 722</value>
+    <value>1014, 718</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -14063,29 +13992,23 @@
   <data name="&gt;&gt;barButtonItemIsDurumu.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;gridViewPlanDurumu.Name" xml:space="preserve">
-    <value>gridViewPlanDurumu</value>
+  <data name="&gt;&gt;barButtonItemPlanEkle.Name" xml:space="preserve">
+    <value>barButtonItemPlanEkle</value>
   </data>
-  <data name="&gt;&gt;gridViewPlanDurumu.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;barButtonItemPlanEkle.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;backstageViewTabItem1.Name" xml:space="preserve">
-    <value>backstageViewTabItem1</value>
+  <data name="&gt;&gt;ribbonMiniToolbar1.Name" xml:space="preserve">
+    <value>ribbonMiniToolbar1</value>
   </data>
-  <data name="&gt;&gt;backstageViewTabItem1.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.BackstageViewTabItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;ribbonMiniToolbar1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonMiniToolbar, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;backstageViewItemSeparator1.Name" xml:space="preserve">
-    <value>backstageViewItemSeparator1</value>
+  <data name="&gt;&gt;ribbonMiniToolbar2.Name" xml:space="preserve">
+    <value>ribbonMiniToolbar2</value>
   </data>
-  <data name="&gt;&gt;backstageViewItemSeparator1.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;backstageViewItemSeparator2.Name" xml:space="preserve">
-    <value>backstageViewItemSeparator2</value>
-  </data>
-  <data name="&gt;&gt;backstageViewItemSeparator2.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;ribbonMiniToolbar2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonMiniToolbar, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;ribbonPage1.Name" xml:space="preserve">
     <value>ribbonPage1</value>

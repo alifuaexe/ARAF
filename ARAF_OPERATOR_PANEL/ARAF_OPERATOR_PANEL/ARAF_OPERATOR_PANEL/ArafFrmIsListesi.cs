@@ -17,12 +17,12 @@ namespace ARAF_OPERATOR_PANEL
 {
     public partial class ArafFrmIsListesi : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public int MakineID;
+        public int MakineID=0;
+        public int PlanEkle_ = 0;
         Default df = new Default();
         public ArafFrmIsListesi()
         {
             InitializeComponent();
-
 
         }
         private void StokListele()
@@ -46,6 +46,13 @@ namespace ARAF_OPERATOR_PANEL
             df.RestoreLayout(gridViewIsListesi, "gridControlIsListesi_" + this.Name);
             df.RestoreLayout(gridViewPlanListe, "gridControlPlanListe_" + this.Name);
             StokListele();
+            if (PlanEkle_ == 0)
+                simpleButtonPlanListesineEkle.Visible = false;
+            else
+            {
+                simpleButtonseciliIsiBaslat.Visible = false;
+                simpleButtonTumunuBaslat.Visible = false;
+            }
         }
         private void IsListele(string ITEM_CODE_)
         {
@@ -148,15 +155,17 @@ namespace ARAF_OPERATOR_PANEL
                 {
                     uretimPlanEkle(result1.PLAN_ID, result1.WS_ID);
                 }
-                UretimEkle(MakineID);          
+                UretimEkle(MakineID);
 
 
-            
-                var query = (from contact1 in context.PRODUCTION_PLANNING
-                             where contact1.WS_ID== MakineID &&  contact1.PLAN_ID== PLAN_ID_ && contact1.PROD_PLAN_STATUS==0
-                             select contact1).First();
-                query.PROD_PLAN_STATUS = 1;
-                context.SaveChanges();
+                if (PlanEkle_ == 0)
+                {
+                    var query = (from contact1 in context.PRODUCTION_PLANNING
+                                 where contact1.WS_ID == MakineID && contact1.PLAN_ID == PLAN_ID_ && contact1.PROD_PLAN_STATUS == 0
+                                 select contact1).First();
+                    query.PROD_PLAN_STATUS = 1;
+                    context.SaveChanges();
+                }
 
             }
 
@@ -216,6 +225,11 @@ namespace ARAF_OPERATOR_PANEL
             df.SaveLayoutToXml(gridViewPlanListe, "gridControlPlanListe_" + this.Name);
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void simpleButtonPlanListesineEkle_Click(object sender, EventArgs e)
+        {
+            simpleButtonseciliIsiBaslat_Click(sender, e);
         }
     }
 }
