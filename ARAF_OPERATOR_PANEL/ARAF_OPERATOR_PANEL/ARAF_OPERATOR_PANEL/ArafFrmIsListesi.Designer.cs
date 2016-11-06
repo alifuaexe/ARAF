@@ -29,14 +29,6 @@
         ///
         private void InitializeComponent()
         {
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject21 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject22 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject23 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject24 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -45,6 +37,14 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -52,6 +52,7 @@
             this.gridControlPlanListe = new DevExpress.XtraGrid.GridControl();
             this.gridViewPlanListe = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButtonPlanListesineEkle = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButtonseciliIsiBaslat = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButtonTumunuBaslat = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButtonKapat = new DevExpress.XtraEditors.SimpleButton();
@@ -68,7 +69,6 @@
             this.groupBoxArama = new System.Windows.Forms.GroupBox();
             this.buttonEditStokKoduAra = new DevExpress.XtraEditors.ButtonEdit();
             this.buttonEditIsEmriAra = new DevExpress.XtraEditors.ButtonEdit();
-            this.simpleButtonPlanListesineEkle = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
@@ -101,7 +101,7 @@
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 1;
             this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.Size = new System.Drawing.Size(1756, 54);
+            this.ribbonControl1.Size = new System.Drawing.Size(1752, 54);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
             // ribbonStatusBar1
@@ -109,7 +109,7 @@
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 690);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1756, 23);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1752, 23);
             // 
             // panelControl2
             // 
@@ -121,7 +121,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 54);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1756, 636);
+            this.panelControl2.Size = new System.Drawing.Size(1752, 636);
             this.panelControl2.TabIndex = 3;
             // 
             // panelControl6
@@ -130,7 +130,7 @@
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl6.Location = new System.Drawing.Point(333, 374);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(1421, 260);
+            this.panelControl6.Size = new System.Drawing.Size(1417, 260);
             this.panelControl6.TabIndex = 8;
             // 
             // gridControlPlanListe
@@ -141,7 +141,7 @@
             this.gridControlPlanListe.MainView = this.gridViewPlanListe;
             this.gridControlPlanListe.MenuManager = this.ribbonControl1;
             this.gridControlPlanListe.Name = "gridControlPlanListe";
-            this.gridControlPlanListe.Size = new System.Drawing.Size(1417, 256);
+            this.gridControlPlanListe.Size = new System.Drawing.Size(1413, 256);
             this.gridControlPlanListe.TabIndex = 7;
             this.gridControlPlanListe.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPlanListe});
@@ -185,13 +185,23 @@
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl5.Location = new System.Drawing.Point(333, 269);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(1421, 105);
+            this.panelControl5.Size = new System.Drawing.Size(1417, 105);
             this.panelControl5.TabIndex = 7;
+            // 
+            // simpleButtonPlanListesineEkle
+            // 
+            this.simpleButtonPlanListesineEkle.Dock = System.Windows.Forms.DockStyle.Right;
+            this.simpleButtonPlanListesineEkle.Location = new System.Drawing.Point(763, 2);
+            this.simpleButtonPlanListesineEkle.Name = "simpleButtonPlanListesineEkle";
+            this.simpleButtonPlanListesineEkle.Size = new System.Drawing.Size(163, 101);
+            this.simpleButtonPlanListesineEkle.TabIndex = 5;
+            this.simpleButtonPlanListesineEkle.Text = "Plan Listesi Ekle";
+            this.simpleButtonPlanListesineEkle.Click += new System.EventHandler(this.simpleButtonPlanListesineEkle_Click);
             // 
             // simpleButtonseciliIsiBaslat
             // 
             this.simpleButtonseciliIsiBaslat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.simpleButtonseciliIsiBaslat.Location = new System.Drawing.Point(930, 2);
+            this.simpleButtonseciliIsiBaslat.Location = new System.Drawing.Point(926, 2);
             this.simpleButtonseciliIsiBaslat.Name = "simpleButtonseciliIsiBaslat";
             this.simpleButtonseciliIsiBaslat.Size = new System.Drawing.Size(163, 101);
             this.simpleButtonseciliIsiBaslat.TabIndex = 4;
@@ -201,7 +211,7 @@
             // simpleButtonTumunuBaslat
             // 
             this.simpleButtonTumunuBaslat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.simpleButtonTumunuBaslat.Location = new System.Drawing.Point(1093, 2);
+            this.simpleButtonTumunuBaslat.Location = new System.Drawing.Point(1089, 2);
             this.simpleButtonTumunuBaslat.Name = "simpleButtonTumunuBaslat";
             this.simpleButtonTumunuBaslat.Size = new System.Drawing.Size(163, 101);
             this.simpleButtonTumunuBaslat.TabIndex = 3;
@@ -211,7 +221,7 @@
             // simpleButtonKapat
             // 
             this.simpleButtonKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.simpleButtonKapat.Location = new System.Drawing.Point(1256, 2);
+            this.simpleButtonKapat.Location = new System.Drawing.Point(1252, 2);
             this.simpleButtonKapat.Name = "simpleButtonKapat";
             this.simpleButtonKapat.Size = new System.Drawing.Size(163, 101);
             this.simpleButtonKapat.TabIndex = 2;
@@ -244,7 +254,7 @@
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl4.Location = new System.Drawing.Point(333, 2);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1421, 267);
+            this.panelControl4.Size = new System.Drawing.Size(1417, 267);
             this.panelControl4.TabIndex = 6;
             // 
             // gridControlIsListesi
@@ -255,7 +265,7 @@
             this.gridControlIsListesi.MainView = this.gridViewIsListesi;
             this.gridControlIsListesi.MenuManager = this.ribbonControl1;
             this.gridControlIsListesi.Name = "gridControlIsListesi";
-            this.gridControlIsListesi.Size = new System.Drawing.Size(1417, 263);
+            this.gridControlIsListesi.Size = new System.Drawing.Size(1413, 263);
             this.gridControlIsListesi.TabIndex = 7;
             this.gridControlIsListesi.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewIsListesi});
@@ -355,6 +365,9 @@
             this.gridViewStokListesi.GridControl = this.gridControlStokListesi;
             this.gridViewStokListesi.Name = "gridViewStokListesi";
             this.gridViewStokListesi.OptionsBehavior.Editable = false;
+            this.gridViewStokListesi.OptionsFilter.DefaultFilterEditorView = DevExpress.XtraEditors.FilterEditorViewMode.VisualAndText;
+            this.gridViewStokListesi.OptionsFilter.ShowAllTableValuesInFilterPopup = true;
+            this.gridViewStokListesi.OptionsFilter.UseNewCustomFilterDialog = true;
             this.gridViewStokListesi.Click += new System.EventHandler(this.gridViewStokListesi_Click);
             // 
             // panelControl3
@@ -393,25 +406,25 @@
             this.buttonEditStokKoduAra.Properties.AppearanceFocused.Options.UseFont = true;
             this.buttonEditStokKoduAra.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.buttonEditStokKoduAra.Properties.AppearanceReadOnly.Options.UseFont = true;
-            serializableAppearanceObject17.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject17.Options.UseFont = true;
-            serializableAppearanceObject18.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject18.Options.UseFont = true;
-            serializableAppearanceObject19.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject19.Options.UseFont = true;
-            serializableAppearanceObject20.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject20.Options.UseFont = true;
-            serializableAppearanceObject21.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject21.Options.UseFont = true;
-            serializableAppearanceObject22.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject22.Options.UseFont = true;
-            serializableAppearanceObject23.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject23.Options.UseFont = true;
-            serializableAppearanceObject24.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject24.Options.UseFont = true;
+            serializableAppearanceObject1.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject1.Options.UseFont = true;
+            serializableAppearanceObject2.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject2.Options.UseFont = true;
+            serializableAppearanceObject3.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject3.Options.UseFont = true;
+            serializableAppearanceObject4.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject4.Options.UseFont = true;
+            serializableAppearanceObject5.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject5.Options.UseFont = true;
+            serializableAppearanceObject6.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject6.Options.UseFont = true;
+            serializableAppearanceObject7.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject7.Options.UseFont = true;
+            serializableAppearanceObject8.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject8.Options.UseFont = true;
             this.buttonEditStokKoduAra.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Stok Kodu", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sil", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Stok Kodu", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sil", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, true)});
             this.buttonEditStokKoduAra.Size = new System.Drawing.Size(285, 23);
             this.buttonEditStokKoduAra.TabIndex = 11;
             // 
@@ -423,37 +436,27 @@
             this.buttonEditIsEmriAra.Name = "buttonEditIsEmriAra";
             this.buttonEditIsEmriAra.Properties.Appearance.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.buttonEditIsEmriAra.Properties.Appearance.Options.UseFont = true;
-            serializableAppearanceObject1.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject1.Options.UseFont = true;
-            serializableAppearanceObject2.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject2.Options.UseFont = true;
-            serializableAppearanceObject3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            serializableAppearanceObject3.Options.UseFont = true;
-            serializableAppearanceObject4.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject4.Options.UseFont = true;
-            serializableAppearanceObject5.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject5.Options.UseFont = true;
-            serializableAppearanceObject6.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject6.Options.UseFont = true;
-            serializableAppearanceObject7.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            serializableAppearanceObject7.Options.UseFont = true;
-            serializableAppearanceObject8.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject8.Options.UseFont = true;
+            serializableAppearanceObject9.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject9.Options.UseFont = true;
+            serializableAppearanceObject10.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject10.Options.UseFont = true;
+            serializableAppearanceObject11.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            serializableAppearanceObject11.Options.UseFont = true;
+            serializableAppearanceObject12.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject12.Options.UseFont = true;
+            serializableAppearanceObject13.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject13.Options.UseFont = true;
+            serializableAppearanceObject14.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject14.Options.UseFont = true;
+            serializableAppearanceObject15.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            serializableAppearanceObject15.Options.UseFont = true;
+            serializableAppearanceObject16.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject16.Options.UseFont = true;
             this.buttonEditIsEmriAra.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "İş Emri No", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sil", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "İş Emri No", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sil", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, true)});
             this.buttonEditIsEmriAra.Size = new System.Drawing.Size(285, 23);
             this.buttonEditIsEmriAra.TabIndex = 10;
-            // 
-            // simpleButtonPlanListesineEkle
-            // 
-            this.simpleButtonPlanListesineEkle.Dock = System.Windows.Forms.DockStyle.Right;
-            this.simpleButtonPlanListesineEkle.Location = new System.Drawing.Point(767, 2);
-            this.simpleButtonPlanListesineEkle.Name = "simpleButtonPlanListesineEkle";
-            this.simpleButtonPlanListesineEkle.Size = new System.Drawing.Size(163, 101);
-            this.simpleButtonPlanListesineEkle.TabIndex = 5;
-            this.simpleButtonPlanListesineEkle.Text = "Plan Listesi Ekle";
-            this.simpleButtonPlanListesineEkle.Click += new System.EventHandler(this.simpleButtonPlanListesineEkle_Click);
             // 
             // ArafFrmIsListesi
             // 
@@ -462,7 +465,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(1756, 713);
+            this.ClientSize = new System.Drawing.Size(1752, 713);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);

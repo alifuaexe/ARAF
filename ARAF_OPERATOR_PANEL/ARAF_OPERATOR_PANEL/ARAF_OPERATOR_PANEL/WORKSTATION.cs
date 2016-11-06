@@ -28,6 +28,8 @@ namespace ARAF_OPERATOR_PANEL
         public string WS_CODE { get; set; }
         public string WS_NAME { get; set; }
         public string COMPUTER_NAME { get; set; }
+        public Nullable<double> TERM_RATE { get; set; }
+        public Nullable<byte> WORK_ORDER_TYPE { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PLANNING> PLANNING { get; set; }

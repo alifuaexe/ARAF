@@ -64,5 +64,6 @@ namespace ARAF_OPERATOR_PANEL
         public Nullable<int> NET_TIME { get; set; }
         public string COLOR { get; set; }
         public int SUSPEND_ID { get; set; }
+        public Nullable<double> OP_TIME_UNIT { get; set; }
     }
 }

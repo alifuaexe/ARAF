@@ -18,6 +18,8 @@ namespace ARAF_OPERATOR_PANEL
     public partial class ArafFrmIsListesi : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public int MakineID=0;
+        public int WSG_ID_ = 0;
+        public int WORK_ORDER_TYPE_ = 0;
         public int PlanEkle_ = 0;
         Default df = new Default();
         public ArafFrmIsListesi()
@@ -27,24 +29,42 @@ namespace ARAF_OPERATOR_PANEL
         }
         private void StokListele()
         {
+            
             using (ARAFEntities context = new ARAFEntities())
             {
-                var Prd = from h in context.ARF_PLANNING_WORKSTATION_ITEMS where h.WS_ID == MakineID select new { h.ITEM_CODE, h.ITEM_NAME };
-                if (Prd != null)
+             
+                if (WORK_ORDER_TYPE_ == 0)
                 {
-                    gridControlStokListesi.DataSource = Prd.ToList();
+                   var Prd = from h in context.ARF_PLANNING_WORKSTATION_ITEMS
+                              where h.WS_ID == MakineID
+                              select new { h.ITEM_CODE, h.ITEM_NAME };
+                    if (Prd != null)
+                    {
+                        gridControlStokListesi.DataSource = Prd.ToList();
 
+                    }
                 }
+                else
+                {
+                  var Prd = from h in context.ARF_PLANNING_WORKSTATION_ITEMS
+                              where h.WSG_ID== WSG_ID_
+                              select new { h.ITEM_CODE, h.ITEM_NAME };
+                    if (Prd != null)
+                    {
+                        gridControlStokListesi.DataSource = Prd.ToList();
 
+                    }
+                }
+               
             }
-
         }
-
         private void ArafFrmIsListesi_Load(object sender, EventArgs e)
         {
             df.RestoreLayout(gridViewStokListesi,"gridControlStokListesi_" + this.Name);
             df.RestoreLayout(gridViewIsListesi, "gridControlIsListesi_" + this.Name);
             df.RestoreLayout(gridViewPlanListe, "gridControlPlanListe_" + this.Name);
+            WSG_ID_ = df.WSG_IDGET(MakineID);
+            WORK_ORDER_TYPE_ = df.WORK_ORDER_TYPE(MakineID);
             StokListele();
             if (PlanEkle_ == 0)
                 simpleButtonPlanListesineEkle.Visible = false;
@@ -53,16 +73,34 @@ namespace ARAF_OPERATOR_PANEL
                 simpleButtonseciliIsiBaslat.Visible = false;
                 simpleButtonTumunuBaslat.Visible = false;
             }
+       
         }
         private void IsListele(string ITEM_CODE_)
         {
+
             using (ARAFEntities context = new ARAFEntities())
             {
-                var Prd = from h in context.ARF_PLANNING where h.WS_ID == MakineID && h.PLAN_STATUS != 2 && h.ITEM_CODE == ITEM_CODE_ select h;
-                if (Prd != null)
+                if (WORK_ORDER_TYPE_ == 0)
                 {
-                    gridControlIsListesi.DataSource = Prd.ToList();
+                    var Prd = from h in context.ARF_PLANNING
+                              where h.WS_ID == MakineID && h.PLAN_STATUS != 2 && h.ITEM_CODE == ITEM_CODE_
+                              select h;
+                    if (Prd != null)
+                    {
+                        gridControlIsListesi.DataSource = Prd.ToList();
 
+                    }
+                }
+                else
+                {
+                    var Prd = from h in context.ARF_PLANNING
+                              where h.WSG_ID == WSG_ID_ && h.PLAN_STATUS != 2 && h.ITEM_CODE == ITEM_CODE_
+                              select h;
+                    if (Prd != null)
+                    {
+                        gridControlIsListesi.DataSource = Prd.ToList();
+
+                    }
                 }
 
             }

@@ -53,6 +53,7 @@ namespace ARAF_OPERATOR_PANEL
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.WorkStationPanel = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tableLayoutPanel_UST = new System.Windows.Forms.TableLayoutPanel();
             this.textEditVardiyaAdi = new DevExpress.XtraEditors.TextEdit();
             this.textEditMakineAdi = new DevExpress.XtraEditors.TextEdit();
@@ -121,9 +122,10 @@ namespace ARAF_OPERATOR_PANEL
             // 
             // barButtonItemUretimBaslat
             // 
-            this.barButtonItemUretimBaslat.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barButtonItemUretimBaslat.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
             resources.ApplyResources(this.barButtonItemUretimBaslat, "barButtonItemUretimBaslat");
             this.barButtonItemUretimBaslat.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemUretimBaslat.Glyph")));
+            this.barButtonItemUretimBaslat.GlyphDisabled = ((System.Drawing.Image)(resources.GetObject("barButtonItemUretimBaslat.GlyphDisabled")));
             this.barButtonItemUretimBaslat.Id = 1;
             this.barButtonItemUretimBaslat.ItemAppearance.Normal.Font = ((System.Drawing.Font)(resources.GetObject("barButtonItemUretimBaslat.ItemAppearance.Normal.Font")));
             this.barButtonItemUretimBaslat.ItemAppearance.Normal.Options.UseFont = true;
@@ -136,6 +138,8 @@ namespace ARAF_OPERATOR_PANEL
             this.barButtonItemUretimBaslat.ItemInMenuAppearance.Normal.Font = ((System.Drawing.Font)(resources.GetObject("barButtonItemUretimBaslat.ItemInMenuAppearance.Normal.Font")));
             this.barButtonItemUretimBaslat.ItemInMenuAppearance.Normal.Options.UseFont = true;
             this.barButtonItemUretimBaslat.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemUretimBaslat.LargeGlyph")));
+            this.barButtonItemUretimBaslat.LargeGlyphDisabled = ((System.Drawing.Image)(resources.GetObject("barButtonItemUretimBaslat.LargeGlyphDisabled")));
+            this.barButtonItemUretimBaslat.LargeImageIndex = 1;
             this.barButtonItemUretimBaslat.Name = "barButtonItemUretimBaslat";
             this.barButtonItemUretimBaslat.RememberLastCommand = true;
             this.barButtonItemUretimBaslat.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -241,7 +245,6 @@ namespace ARAF_OPERATOR_PANEL
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
             this.ribbon.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
             this.ribbon.StatusBar = this.ribbonStatusBar;
-            this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
             // 
             // ribbonPage1
             // 
@@ -295,10 +298,20 @@ namespace ARAF_OPERATOR_PANEL
             this.WorkStationPanel.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
             new DevExpress.XtraBars.Docking2010.WindowsUIButton(resources.GetString("WorkStationPanel.Buttons"), resources.GetString("WorkStationPanel.Buttons1"), ((DevExpress.XtraBars.Docking2010.ImageLocation)(resources.GetObject("WorkStationPanel.Buttons2"))), ((DevExpress.XtraBars.Docking2010.ButtonStyle)(resources.GetObject("WorkStationPanel.Buttons3"))), resources.GetString("WorkStationPanel.Buttons4"), ((bool)(resources.GetObject("WorkStationPanel.Buttons5"))), ((int)(resources.GetObject("WorkStationPanel.Buttons6"))), ((bool)(resources.GetObject("WorkStationPanel.Buttons7"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("WorkStationPanel.Buttons8"))), ((bool)(resources.GetObject("WorkStationPanel.Buttons9"))), ((bool)(resources.GetObject("WorkStationPanel.Buttons10"))), ((bool)(resources.GetObject("WorkStationPanel.Buttons11"))), ((object)(resources.GetObject("WorkStationPanel.Buttons12"))), ((object)(resources.GetObject("WorkStationPanel.Buttons13"))), ((int)(resources.GetObject("WorkStationPanel.Buttons14"))), ((bool)(resources.GetObject("WorkStationPanel.Buttons15"))), ((bool)(resources.GetObject("WorkStationPanel.Buttons16")))),
             new DevExpress.XtraBars.Docking2010.WindowsUIButton()});
+            this.WorkStationPanel.EnableImageTransparency = true;
             this.WorkStationPanel.ForeColor = System.Drawing.Color.Red;
+            this.WorkStationPanel.Images = this.ımageList1;
             this.WorkStationPanel.Name = "WorkStationPanel";
             this.WorkStationPanel.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.WorkStationPanel.UseWaitCursor = true;
+            this.WorkStationPanel.WrapButtons = true;
             this.WorkStationPanel.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.WorkStationPanel_ButtonClick_1);
+            // 
+            // ımageList1
+            // 
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "1.png");
             // 
             // tableLayoutPanel_UST
             // 
@@ -451,6 +464,7 @@ namespace ARAF_OPERATOR_PANEL
             this.simpleButtonPlandakiIsiBaslat.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.simpleButtonPlandakiIsiBaslat, "simpleButtonPlandakiIsiBaslat");
             this.simpleButtonPlandakiIsiBaslat.Name = "simpleButtonPlandakiIsiBaslat";
+            this.simpleButtonPlandakiIsiBaslat.Click += new System.EventHandler(this.simpleButtonPlandakiIsiBaslat_Click);
             // 
             // gridControlPlandakiIsler
             // 
@@ -702,5 +716,6 @@ namespace ARAF_OPERATOR_PANEL
         private DevExpress.XtraBars.BarButtonItem barButtonItemPlanEkle;
         private DevExpress.XtraBars.Ribbon.RibbonMiniToolbar ribbonMiniToolbar1;
         private DevExpress.XtraBars.Ribbon.RibbonMiniToolbar ribbonMiniToolbar2;
+        private System.Windows.Forms.ImageList ımageList1;
     }
 }

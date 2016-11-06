@@ -318,6 +318,8 @@
     <EntitySetMapping Name="WORKSTATION">
       <EntityTypeMapping TypeName="ARAFModel.WORKSTATION">
         <MappingFragment StoreEntitySet="WORKSTATION">
+          <ScalarProperty Name="WORK_ORDER_TYPE" ColumnName="WORK_ORDER_TYPE" />
+          <ScalarProperty Name="TERM_RATE" ColumnName="TERM_RATE" />
           <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
           <ScalarProperty Name="WSG_ID" ColumnName="WSG_ID" />
           <ScalarProperty Name="WS_CODE" ColumnName="WS_CODE" />
@@ -406,6 +408,7 @@
     <EntitySetMapping Name="ARF_PLANNING">
       <EntityTypeMapping TypeName="ARAFModel.ARF_PLANNING">
         <MappingFragment StoreEntitySet="ARF_PLANNING">
+          <ScalarProperty Name="WSG_ID" ColumnName="WSG_ID" />
           <ScalarProperty Name="PLAN_ID" ColumnName="PLAN_ID" />
           <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
           <ScalarProperty Name="WS_CODE" ColumnName="WS_CODE" />
@@ -438,6 +441,7 @@
     <EntitySetMapping Name="ARF_PLANNING_WORKSTATION_ITEMS">
       <EntityTypeMapping TypeName="ARAFModel.ARF_PLANNING_WORKSTATION_ITEMS">
         <MappingFragment StoreEntitySet="ARF_PLANNING_WORKSTATION_ITEMS">
+          <ScalarProperty Name="WSG_ID" ColumnName="WSG_ID" />
           <ScalarProperty Name="ITEM_CODE" ColumnName="ITEM_CODE" />
           <ScalarProperty Name="ITEM_NAME" ColumnName="ITEM_NAME" />
           <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
@@ -640,6 +644,7 @@
     <EntitySetMapping Name="ARF_OPERATOR_PANEL">
       <EntityTypeMapping TypeName="ARAFModel.ARF_OPERATOR_PANEL">
         <MappingFragment StoreEntitySet="ARF_OPERATOR_PANEL">
+          <ScalarProperty Name="OP_TIME_UNIT" ColumnName="OP_TIME_UNIT" />
           <ScalarProperty Name="SUSPEND_ID" ColumnName="SUSPEND_ID" />
           <ScalarProperty Name="COLOR" ColumnName="COLOR" />
           <ScalarProperty Name="NET_TIME" ColumnName="NET_TIME" />

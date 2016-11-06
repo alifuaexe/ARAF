@@ -21,7 +21,8 @@ namespace ARAF_OPERATOR_PANEL
 {
     public partial class ArafFrmOperatorPanel : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        private int WS_ID_;
+        private int WS_ID_=0;
+        private int WSG_ID_=0;
         private int PlanEkleBut = 0;
         public int WS_ID { get { return WS_ID_; } set { WS_ID_ = value; } }
 
@@ -391,14 +392,27 @@ namespace ARAF_OPERATOR_PANEL
             PlanDurumuListe();
         }
 
-        private void ribbon_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void simpleButtonPlandakiIsiBaslat_Click(object sender, EventArgs e)
         {
+            int PLAN_ID_ = Convert.ToInt32(gridViewPlandakiIsler.GetRowCellValue(gridViewPlandakiIsler.FocusedRowHandle, "PLAN_ID").ToString());
 
+            using (ARAFEntities context = new ARAFEntities())
+            {
+                if (ProductionID != 0) //Üretim var ise mevcut üretimi bitirmektedir. Yeni üretim başlatmaktadır.
+                {
+                    var query1 = (from contact1 in context.PRODUCTION_PLANNING
+                                  where contact1.WS_ID == MakineID && contact1.PROD_PLAN_STATUS == 1
+                                  select contact1).First();
+                    query1.PROD_PLAN_STATUS = 2;
+                    context.SaveChanges();
+                }
+                var query = (from contact1 in context.PRODUCTION_PLANNING
+                             where contact1.WS_ID == MakineID && contact1.PLAN_ID == PLAN_ID_ && contact1.PROD_PLAN_STATUS == 0
+                             select contact1).First();
+                query.PROD_PLAN_STATUS = 1;
+                context.SaveChanges();
+            }
+            PlandakiIsler(MakineID);
         }
 
         private void barButtonItemPlanEkle_ItemClick(object sender, ItemClickEventArgs e)

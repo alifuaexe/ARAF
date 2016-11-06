@@ -18,5 +18,6 @@ namespace ARAF_OPERATOR_PANEL
         public string ITEM_NAME { get; set; }
         public int ITEM_ID { get; set; }
         public Nullable<int> WS_ID { get; set; }
+        public Nullable<int> WSG_ID { get; set; }
     }
 }
