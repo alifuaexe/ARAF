@@ -31,7 +31,45 @@ namespace ARAF_OPERATOR_PANEL
             Grid.SaveLayoutToXml(FileName + "" + DizaynName + ".xml");
            // }
         }
-     
+        public int WSG_IDGET(int WS_ID)
+        {
+            int sonuc = 0;
+            using (ARAFEntities context = new ARAFEntities())
+            {
+                
+                var query = from contact in context.WORKSTATION
+                            where
+                contact.WS_ID == WS_ID
+                            select contact;
+
+                // Iterate through the collection of Contact items.
+                foreach (var result in query)
+                {
+                    sonuc = Convert.ToInt32(result.WSG_ID);
+                }
+            }
+            return sonuc;
+          }
+        public int WORK_ORDER_TYPE(int WS_ID)
+        {
+            int sonuc = 0;
+            using (ARAFEntities context = new ARAFEntities())
+            {
+
+                var query = from contact in context.WORKSTATION
+                            where
+                contact.WS_ID == WS_ID
+                            select contact;
+
+                // Iterate through the collection of Contact items.
+                foreach (var result in query)
+                {
+                    sonuc = Convert.ToInt32(result.WORK_ORDER_TYPE);
+                }
+            }
+            return sonuc;
+        }
+
 
 
 

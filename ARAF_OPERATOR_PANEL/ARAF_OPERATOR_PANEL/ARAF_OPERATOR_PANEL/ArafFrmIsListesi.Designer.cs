@@ -52,6 +52,7 @@
             this.gridControlPlanListe = new DevExpress.XtraGrid.GridControl();
             this.gridViewPlanListe = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButtonPlanListesineEkle = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButtonseciliIsiBaslat = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButtonTumunuBaslat = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButtonKapat = new DevExpress.XtraEditors.SimpleButton();
@@ -100,7 +101,7 @@
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 1;
             this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.Size = new System.Drawing.Size(1756, 54);
+            this.ribbonControl1.Size = new System.Drawing.Size(1752, 54);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
             // ribbonStatusBar1
@@ -108,7 +109,7 @@
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 690);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1756, 23);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1752, 23);
             // 
             // panelControl2
             // 
@@ -120,7 +121,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 54);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1756, 636);
+            this.panelControl2.Size = new System.Drawing.Size(1752, 636);
             this.panelControl2.TabIndex = 3;
             // 
             // panelControl6
@@ -129,7 +130,7 @@
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl6.Location = new System.Drawing.Point(333, 374);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(1421, 260);
+            this.panelControl6.Size = new System.Drawing.Size(1417, 260);
             this.panelControl6.TabIndex = 8;
             // 
             // gridControlPlanListe
@@ -140,7 +141,7 @@
             this.gridControlPlanListe.MainView = this.gridViewPlanListe;
             this.gridControlPlanListe.MenuManager = this.ribbonControl1;
             this.gridControlPlanListe.Name = "gridControlPlanListe";
-            this.gridControlPlanListe.Size = new System.Drawing.Size(1417, 256);
+            this.gridControlPlanListe.Size = new System.Drawing.Size(1413, 256);
             this.gridControlPlanListe.TabIndex = 7;
             this.gridControlPlanListe.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPlanListe});
@@ -175,6 +176,7 @@
             // 
             // panelControl5
             // 
+            this.panelControl5.Controls.Add(this.simpleButtonPlanListesineEkle);
             this.panelControl5.Controls.Add(this.simpleButtonseciliIsiBaslat);
             this.panelControl5.Controls.Add(this.simpleButtonTumunuBaslat);
             this.panelControl5.Controls.Add(this.simpleButtonKapat);
@@ -183,13 +185,23 @@
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl5.Location = new System.Drawing.Point(333, 269);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(1421, 105);
+            this.panelControl5.Size = new System.Drawing.Size(1417, 105);
             this.panelControl5.TabIndex = 7;
+            // 
+            // simpleButtonPlanListesineEkle
+            // 
+            this.simpleButtonPlanListesineEkle.Dock = System.Windows.Forms.DockStyle.Right;
+            this.simpleButtonPlanListesineEkle.Location = new System.Drawing.Point(763, 2);
+            this.simpleButtonPlanListesineEkle.Name = "simpleButtonPlanListesineEkle";
+            this.simpleButtonPlanListesineEkle.Size = new System.Drawing.Size(163, 101);
+            this.simpleButtonPlanListesineEkle.TabIndex = 5;
+            this.simpleButtonPlanListesineEkle.Text = "Plan Listesi Ekle";
+            this.simpleButtonPlanListesineEkle.Click += new System.EventHandler(this.simpleButtonPlanListesineEkle_Click);
             // 
             // simpleButtonseciliIsiBaslat
             // 
             this.simpleButtonseciliIsiBaslat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.simpleButtonseciliIsiBaslat.Location = new System.Drawing.Point(930, 2);
+            this.simpleButtonseciliIsiBaslat.Location = new System.Drawing.Point(926, 2);
             this.simpleButtonseciliIsiBaslat.Name = "simpleButtonseciliIsiBaslat";
             this.simpleButtonseciliIsiBaslat.Size = new System.Drawing.Size(163, 101);
             this.simpleButtonseciliIsiBaslat.TabIndex = 4;
@@ -199,7 +211,7 @@
             // simpleButtonTumunuBaslat
             // 
             this.simpleButtonTumunuBaslat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.simpleButtonTumunuBaslat.Location = new System.Drawing.Point(1093, 2);
+            this.simpleButtonTumunuBaslat.Location = new System.Drawing.Point(1089, 2);
             this.simpleButtonTumunuBaslat.Name = "simpleButtonTumunuBaslat";
             this.simpleButtonTumunuBaslat.Size = new System.Drawing.Size(163, 101);
             this.simpleButtonTumunuBaslat.TabIndex = 3;
@@ -209,7 +221,7 @@
             // simpleButtonKapat
             // 
             this.simpleButtonKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.simpleButtonKapat.Location = new System.Drawing.Point(1256, 2);
+            this.simpleButtonKapat.Location = new System.Drawing.Point(1252, 2);
             this.simpleButtonKapat.Name = "simpleButtonKapat";
             this.simpleButtonKapat.Size = new System.Drawing.Size(163, 101);
             this.simpleButtonKapat.TabIndex = 2;
@@ -242,7 +254,7 @@
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl4.Location = new System.Drawing.Point(333, 2);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1421, 267);
+            this.panelControl4.Size = new System.Drawing.Size(1417, 267);
             this.panelControl4.TabIndex = 6;
             // 
             // gridControlIsListesi
@@ -253,7 +265,7 @@
             this.gridControlIsListesi.MainView = this.gridViewIsListesi;
             this.gridControlIsListesi.MenuManager = this.ribbonControl1;
             this.gridControlIsListesi.Name = "gridControlIsListesi";
-            this.gridControlIsListesi.Size = new System.Drawing.Size(1417, 263);
+            this.gridControlIsListesi.Size = new System.Drawing.Size(1413, 263);
             this.gridControlIsListesi.TabIndex = 7;
             this.gridControlIsListesi.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewIsListesi});
@@ -353,6 +365,9 @@
             this.gridViewStokListesi.GridControl = this.gridControlStokListesi;
             this.gridViewStokListesi.Name = "gridViewStokListesi";
             this.gridViewStokListesi.OptionsBehavior.Editable = false;
+            this.gridViewStokListesi.OptionsFilter.DefaultFilterEditorView = DevExpress.XtraEditors.FilterEditorViewMode.VisualAndText;
+            this.gridViewStokListesi.OptionsFilter.ShowAllTableValuesInFilterPopup = true;
+            this.gridViewStokListesi.OptionsFilter.UseNewCustomFilterDialog = true;
             this.gridViewStokListesi.Click += new System.EventHandler(this.gridViewStokListesi_Click);
             // 
             // panelControl3
@@ -450,7 +465,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(1756, 713);
+            this.ClientSize = new System.Drawing.Size(1752, 713);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
@@ -512,6 +527,7 @@
         private System.Windows.Forms.GroupBox groupBoxArama;
         private DevExpress.XtraEditors.ButtonEdit buttonEditStokKoduAra;
         private DevExpress.XtraEditors.ButtonEdit buttonEditIsEmriAra;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonPlanListesineEkle;
     }
 
 }

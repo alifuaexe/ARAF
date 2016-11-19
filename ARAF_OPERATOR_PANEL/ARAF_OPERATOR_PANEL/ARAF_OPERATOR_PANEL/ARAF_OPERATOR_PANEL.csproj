@@ -691,6 +691,8 @@
     </Compile>
     <EmbeddedResource Include="ArafFrmDurusInsert.resx">
       <DependentUpon>ArafFrmDurusInsert.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ArafFrmDurusInsert1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ArafFrmIsListesi.resx">
       <DependentUpon>ArafFrmIsListesi.cs</DependentUpon>

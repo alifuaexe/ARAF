@@ -92,7 +92,7 @@
     <Property Name="PLAN_STATUS" Type="Int32" />
     <Property Name="ITEM_ID" Type="Int32" Nullable="false" />
     <Property Name="CUSTOMER_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="CUSTOMER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CUSTOMER_NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="WORK_ORDER_QUANTITY" Type="Double" />
     <Property Name="ERP_ID" Type="Int32" />
     <Property Name="AMOUNT" Type="Double" />
@@ -325,6 +325,8 @@
     <NavigationProperty Name="PRODUCTION_PLANNING" Relationship="Self.FK_PRODUCTION_PLANNING_WORKSTATION" FromRole="WORKSTATION" ToRole="PRODUCTION_PLANNING" />
     <NavigationProperty Name="ITEM_OPERATIONS" Relationship="Self.FK_ITEM_OPERATIONS_WS_ID" FromRole="WORKSTATION" ToRole="ITEM_OPERATIONS" />
     <NavigationProperty Name="PRODUCTION" Relationship="ARAFModel.FK_PRODUCTION_WS_ID" FromRole="WORKSTATION" ToRole="PRODUCTION" />
+    <Property Name="TERM_RATE" Type="Double" />
+    <Property Name="WORK_ORDER_TYPE" Type="Byte" />
   </EntityType>
   <EntityType Name="WORKSTATION_DETAIL">
     <Key>
@@ -438,7 +440,7 @@
     <Property Name="LINEEXP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="CUSTOMER_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="CUSTOMER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CUSTOMER_NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="WORK_ORDER_NO" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="WORK_ORDER_QUANTITY" Type="Double" />
     <Property Name="ERP_ID" Type="Int32" />
@@ -446,6 +448,7 @@
     <Property Name="ORDER_DATE" Type="DateTime" Precision="3" />
     <Property Name="DELIVERY_DATE" Type="DateTime" Precision="3" />
     <Property Name="PLAN_STATUS" Type="Int32" />
+    <Property Name="WSG_ID" Type="Int32" />
   </EntityType>
   <EntityType Name="ARF_PLANNING_WORKSTATION_ITEMS">
     <Key>
@@ -455,6 +458,7 @@
     <Property Name="ITEM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="ITEM_ID" Type="Int32" Nullable="false" />
     <Property Name="WS_ID" Type="Int32" />
+    <Property Name="WSG_ID" Type="Int32" />
   </EntityType>
   <EntityType Name="ARF_SUSPEND_WORKSTATION">
     <Key>
@@ -1096,6 +1100,7 @@
     <Property Name="NET_TIME" Type="Int32" />
     <Property Name="COLOR" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="SUSPEND_ID" Type="Int32" Nullable="false" />
+    <Property Name="OP_TIME_UNIT" Type="Double" />
   </EntityType>
   <EntityType Name="ARF_PLANNING_STATUS">
     <Key>

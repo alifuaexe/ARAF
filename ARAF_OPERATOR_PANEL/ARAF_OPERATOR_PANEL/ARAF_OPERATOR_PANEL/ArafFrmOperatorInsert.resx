@@ -6588,13 +6588,13 @@
 </value>
   </data>
   <data name="ribbon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>602, 147</value>
+    <value>598, 147</value>
   </data>
   <data name="ribbonStatusBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 585</value>
   </data>
   <data name="ribbonStatusBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>602, 23</value>
+    <value>598, 23</value>
   </data>
   <data name="&gt;&gt;ribbonStatusBar.Name" xml:space="preserve">
     <value>ribbonStatusBar</value>
@@ -6658,7 +6658,7 @@
     <value>Arial Narrow, 9pt, style=Bold</value>
   </data>
   <data name="gridControlUretimOperator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 286</value>
+    <value>596, 286</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="gridControlUretimOperator.TabIndex" type="System.Int32, mscorlib">
@@ -6690,7 +6690,7 @@
     <value>3, 87</value>
   </data>
   <data name="labelControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 13</value>
+    <value>143, 13</value>
   </data>
   <data name="labelControl2.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -6714,13 +6714,13 @@
     <value>Fill</value>
   </data>
   <data name="edtAdiSoyAdi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 45</value>
+    <value>152, 45</value>
   </data>
   <data name="edtAdiSoyAdi.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 18pt</value>
   </data>
   <data name="edtAdiSoyAdi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 36</value>
+    <value>441, 36</value>
   </data>
   <data name="edtAdiSoyAdi.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -6747,7 +6747,7 @@
     <value>3, 45</value>
   </data>
   <data name="labelControl3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 13</value>
+    <value>143, 13</value>
   </data>
   <data name="labelControl3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -6777,7 +6777,7 @@
     <value>3, 3</value>
   </data>
   <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 13</value>
+    <value>143, 13</value>
   </data>
   <data name="labelControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6801,13 +6801,13 @@
     <value>Fill</value>
   </data>
   <data name="txtBarkodNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 3</value>
+    <value>152, 3</value>
   </data>
   <data name="txtBarkodNo.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 18pt</value>
   </data>
   <data name="txtBarkodNo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 36</value>
+    <value>441, 36</value>
   </data>
   <data name="txtBarkodNo.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -6828,7 +6828,7 @@
     <value>Fill</value>
   </data>
   <data name="edtVardiya.Location" type="System.Drawing.Point, System.Drawing">
-    <value>152, 86</value>
+    <value>151, 86</value>
   </data>
   <data name="edtVardiya.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -6841,7 +6841,7 @@
     <value>Combo</value>
   </data>
   <data name="edtVardiya.Size" type="System.Drawing.Size, System.Drawing">
-    <value>446, 36</value>
+    <value>443, 36</value>
   </data>
   <data name="edtVardiya.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -6868,7 +6868,7 @@
     <value>3</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 125</value>
+    <value>596, 125</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6889,7 +6889,7 @@
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="labelControl2" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="edtAdiSoyAdi" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelControl3" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelControl1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txtBarkodNo" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="edtVardiya" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,25,Percent,75" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="TabDetail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 411</value>
+    <value>596, 411</value>
   </data>
   <data name="TabDetail.Text" xml:space="preserve">
     <value>DETAY</value>
@@ -6907,7 +6907,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>602, 438</value>
+    <value>598, 438</value>
   </data>
   <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6931,7 +6931,7 @@
     <value>0, 147</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>602, 438</value>
+    <value>598, 438</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -6961,7 +6961,7 @@
     <value>96, 96</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>602, 608</value>
+    <value>598, 608</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

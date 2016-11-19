@@ -32,7 +32,7 @@
         <EntityTypeShape EntityType="ARAFModel.TMP_ORDERS" Width="1.5" PointX="16.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ARAFModel.TMP_PLANNING" Width="1.5" PointX="16.75" PointY="12.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ARAFModel.UNIT_DEFINITION" Width="1.5" PointX="14.75" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ARAFModel.WORKSTATION" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ARAFModel.WORKSTATION" Width="2.25" PointX="0.75" PointY="10.625" IsExpanded="true" />
         <EntityTypeShape EntityType="ARAFModel.WORKSTATION_DETAIL" Width="1.5" PointX="16.75" PointY="15.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ARAFModel.WORKSTATION_GROUP" Width="1.5" PointX="17.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="ARAFModel.ITEM_OPERATIONS" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />

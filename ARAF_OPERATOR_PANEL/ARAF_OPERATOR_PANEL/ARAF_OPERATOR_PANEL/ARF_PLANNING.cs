@@ -40,5 +40,6 @@ namespace ARAF_OPERATOR_PANEL
         public Nullable<System.DateTime> ORDER_DATE { get; set; }
         public Nullable<System.DateTime> DELIVERY_DATE { get; set; }
         public Nullable<int> PLAN_STATUS { get; set; }
+        public Nullable<int> WSG_ID { get; set; }
     }
 }

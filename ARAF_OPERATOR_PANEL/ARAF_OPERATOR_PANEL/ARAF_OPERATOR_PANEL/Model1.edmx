@@ -105,7 +105,7 @@ warning 6002: The table/view 'ARAF.dbo.ITEM_OPERATIONS' does not have a primary 
           <Property Name="PLAN_STATUS" Type="int" />
           <Property Name="ITEM_ID" Type="int" Nullable="false" />
           <Property Name="CUSTOMER_CODE" Type="nvarchar" MaxLength="50" />
-          <Property Name="CUSTOMER_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="CUSTOMER_NAME" Type="nvarchar" MaxLength="250" />
           <Property Name="WORK_ORDER_QUANTITY" Type="float" />
           <Property Name="ERP_ID" Type="int" />
           <Property Name="AMOUNT" Type="float" />
@@ -355,6 +355,8 @@ warning 6002: The table/view 'ARAF.dbo.ITEM_OPERATIONS' does not have a primary 
           <Property Name="WS_CODE" Type="varchar" MaxLength="50" />
           <Property Name="WS_NAME" Type="varchar" MaxLength="150" />
           <Property Name="COMPUTER_NAME" Type="nchar" MaxLength="50" />
+          <Property Name="TERM_RATE" Type="float" />
+          <Property Name="WORK_ORDER_TYPE" Type="tinyint" />
         </EntityType>
         <EntityType Name="WORKSTATION_DETAIL">
           <Key>
@@ -449,6 +451,7 @@ warning 6002: The table/view 'ARAF.dbo.ARF_OPERATOR_PANEL' does not have a prima
           <Property Name="PROD_PLAN_END_DATE" Type="datetime" />
           <Property Name="OP_ID" Type="int" />
           <Property Name="OP_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="OP_TIME_UNIT" Type="float" />
           <Property Name="PLAN_DATE" Type="datetime" />
           <Property Name="PLAN_START_TIME" Type="datetime" />
           <Property Name="PLAN_END_TIME" Type="datetime" />
@@ -514,7 +517,7 @@ warning 6002: The table/view 'ARAF.dbo.ARF_PLANNING' does not have a primary key
           <Property Name="LINEEXP" Type="nvarchar(max)" />
           <Property Name="TYPE" Type="nvarchar" MaxLength="50" />
           <Property Name="CUSTOMER_CODE" Type="nvarchar" MaxLength="50" />
-          <Property Name="CUSTOMER_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="CUSTOMER_NAME" Type="nvarchar" MaxLength="250" />
           <Property Name="WORK_ORDER_NO" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="WORK_ORDER_QUANTITY" Type="float" />
           <Property Name="ERP_ID" Type="int" />
@@ -522,6 +525,7 @@ warning 6002: The table/view 'ARAF.dbo.ARF_PLANNING' does not have a primary key
           <Property Name="ORDER_DATE" Type="datetime" />
           <Property Name="DELIVERY_DATE" Type="datetime" />
           <Property Name="PLAN_STATUS" Type="int" />
+          <Property Name="WSG_ID" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'ARAF.dbo.ARF_PLANNING_STATUS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -555,6 +559,7 @@ warning 6002: The table/view 'ARAF.dbo.ARF_PLANNING_WORKSTATION_ITEMS' does not 
           <Property Name="ITEM_NAME" Type="nvarchar" MaxLength="50" />
           <Property Name="ITEM_ID" Type="int" Nullable="false" />
           <Property Name="WS_ID" Type="int" />
+          <Property Name="WSG_ID" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'ARAF.dbo.ARF_PRODUCTION_OPERATOR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -1090,6 +1095,7 @@ warning 6002: The table/view 'ARAF.dbo.ARF_WORKSTATIONS' does not have a primary
     [ARF_OPERATOR_PANEL].[PROD_PLAN_END_DATE] AS [PROD_PLAN_END_DATE], 
     [ARF_OPERATOR_PANEL].[OP_ID] AS [OP_ID], 
     [ARF_OPERATOR_PANEL].[OP_NAME] AS [OP_NAME], 
+    [ARF_OPERATOR_PANEL].[OP_TIME_UNIT] AS [OP_TIME_UNIT], 
     [ARF_OPERATOR_PANEL].[PLAN_DATE] AS [PLAN_DATE], 
     [ARF_OPERATOR_PANEL].[PLAN_START_TIME] AS [PLAN_START_TIME], 
     [ARF_OPERATOR_PANEL].[PLAN_END_TIME] AS [PLAN_END_TIME], 
@@ -1157,7 +1163,8 @@ warning 6002: The table/view 'ARAF.dbo.ARF_WORKSTATIONS' does not have a primary
     [ARF_PLANNING].[AMOUNT] AS [AMOUNT], 
     [ARF_PLANNING].[ORDER_DATE] AS [ORDER_DATE], 
     [ARF_PLANNING].[DELIVERY_DATE] AS [DELIVERY_DATE], 
-    [ARF_PLANNING].[PLAN_STATUS] AS [PLAN_STATUS]
+    [ARF_PLANNING].[PLAN_STATUS] AS [PLAN_STATUS], 
+    [ARF_PLANNING].[WSG_ID] AS [WSG_ID]
     FROM [dbo].[ARF_PLANNING] AS [ARF_PLANNING]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="ARF_PLANNING_STATUS" EntityType="Self.ARF_PLANNING_STATUS" store:Type="Views" store:Schema="dbo">
@@ -1184,7 +1191,8 @@ warning 6002: The table/view 'ARAF.dbo.ARF_WORKSTATIONS' does not have a primary
     [ARF_PLANNING_WORKSTATION_ITEMS].[ITEM_CODE] AS [ITEM_CODE], 
     [ARF_PLANNING_WORKSTATION_ITEMS].[ITEM_NAME] AS [ITEM_NAME], 
     [ARF_PLANNING_WORKSTATION_ITEMS].[ITEM_ID] AS [ITEM_ID], 
-    [ARF_PLANNING_WORKSTATION_ITEMS].[WS_ID] AS [WS_ID]
+    [ARF_PLANNING_WORKSTATION_ITEMS].[WS_ID] AS [WS_ID], 
+    [ARF_PLANNING_WORKSTATION_ITEMS].[WSG_ID] AS [WSG_ID]
     FROM [dbo].[ARF_PLANNING_WORKSTATION_ITEMS] AS [ARF_PLANNING_WORKSTATION_ITEMS]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="ARF_PRODUCTION_OPERATOR" EntityType="Self.ARF_PRODUCTION_OPERATOR" store:Type="Views" store:Schema="dbo">
@@ -1509,7 +1517,7 @@ warning 6002: The table/view 'ARAF.dbo.ARF_WORKSTATIONS' does not have a primary
           <Property Name="PLAN_STATUS" Type="Int32" />
           <Property Name="ITEM_ID" Type="Int32" Nullable="false" />
           <Property Name="CUSTOMER_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CUSTOMER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CUSTOMER_NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="WORK_ORDER_QUANTITY" Type="Double" />
           <Property Name="ERP_ID" Type="Int32" />
           <Property Name="AMOUNT" Type="Double" />
@@ -1742,6 +1750,8 @@ warning 6002: The table/view 'ARAF.dbo.ARF_WORKSTATIONS' does not have a primary
           <NavigationProperty Name="PRODUCTION_PLANNING" Relationship="Self.FK_PRODUCTION_PLANNING_WORKSTATION" FromRole="WORKSTATION" ToRole="PRODUCTION_PLANNING" />
           <NavigationProperty Name="ITEM_OPERATIONS" Relationship="Self.FK_ITEM_OPERATIONS_WS_ID" FromRole="WORKSTATION" ToRole="ITEM_OPERATIONS" />
           <NavigationProperty Name="PRODUCTION" Relationship="ARAFModel.FK_PRODUCTION_WS_ID" FromRole="WORKSTATION" ToRole="PRODUCTION" />
+          <Property Name="TERM_RATE" Type="Double" />
+          <Property Name="WORK_ORDER_TYPE" Type="Byte" />
         </EntityType>
         <EntityType Name="WORKSTATION_DETAIL">
           <Key>
@@ -1855,7 +1865,7 @@ warning 6002: The table/view 'ARAF.dbo.ARF_WORKSTATIONS' does not have a primary
           <Property Name="LINEEXP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CUSTOMER_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CUSTOMER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CUSTOMER_NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="WORK_ORDER_NO" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="WORK_ORDER_QUANTITY" Type="Double" />
           <Property Name="ERP_ID" Type="Int32" />
@@ -1863,6 +1873,7 @@ warning 6002: The table/view 'ARAF.dbo.ARF_WORKSTATIONS' does not have a primary
           <Property Name="ORDER_DATE" Type="DateTime" Precision="3" />
           <Property Name="DELIVERY_DATE" Type="DateTime" Precision="3" />
           <Property Name="PLAN_STATUS" Type="Int32" />
+          <Property Name="WSG_ID" Type="Int32" />
         </EntityType>
         <EntityType Name="ARF_PLANNING_WORKSTATION_ITEMS">
           <Key>
@@ -1872,6 +1883,7 @@ warning 6002: The table/view 'ARAF.dbo.ARF_WORKSTATIONS' does not have a primary
           <Property Name="ITEM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ITEM_ID" Type="Int32" Nullable="false" />
           <Property Name="WS_ID" Type="Int32" />
+          <Property Name="WSG_ID" Type="Int32" />
         </EntityType>
         <EntityType Name="ARF_SUSPEND_WORKSTATION">
           <Key>
@@ -2513,6 +2525,7 @@ warning 6002: The table/view 'ARAF.dbo.ARF_WORKSTATIONS' does not have a primary
           <Property Name="NET_TIME" Type="Int32" />
           <Property Name="COLOR" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="SUSPEND_ID" Type="Int32" Nullable="false" />
+          <Property Name="OP_TIME_UNIT" Type="Double" />
         </EntityType>
         <EntityType Name="ARF_PLANNING_STATUS">
           <Key>
@@ -2870,6 +2883,8 @@ warning 6002: The table/view 'ARAF.dbo.ARF_WORKSTATIONS' does not have a primary
           <EntitySetMapping Name="WORKSTATION">
             <EntityTypeMapping TypeName="ARAFModel.WORKSTATION">
               <MappingFragment StoreEntitySet="WORKSTATION">
+                <ScalarProperty Name="WORK_ORDER_TYPE" ColumnName="WORK_ORDER_TYPE" />
+                <ScalarProperty Name="TERM_RATE" ColumnName="TERM_RATE" />
                 <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
                 <ScalarProperty Name="WSG_ID" ColumnName="WSG_ID" />
                 <ScalarProperty Name="WS_CODE" ColumnName="WS_CODE" />
@@ -2958,6 +2973,7 @@ warning 6002: The table/view 'ARAF.dbo.ARF_WORKSTATIONS' does not have a primary
           <EntitySetMapping Name="ARF_PLANNING">
             <EntityTypeMapping TypeName="ARAFModel.ARF_PLANNING">
               <MappingFragment StoreEntitySet="ARF_PLANNING">
+                <ScalarProperty Name="WSG_ID" ColumnName="WSG_ID" />
                 <ScalarProperty Name="PLAN_ID" ColumnName="PLAN_ID" />
                 <ScalarProperty Name="WS_ID" ColumnName="WS_ID" />
                 <ScalarProperty Name="WS_CODE" ColumnName="WS_CODE" />
@@ -2990,6 +3006,7 @@ warning 6002: The table/view 'ARAF.dbo.ARF_WORKSTATIONS' does not have a primary
           <EntitySetMapping Name="ARF_PLANNING_WORKSTATION_ITEMS">
             <EntityTypeMapping TypeName="ARAFModel.ARF_PLANNING_WORKSTATION_ITEMS">
               <MappingFragment StoreEntitySet="ARF_PLANNING_WORKSTATION_ITEMS">
+                <ScalarProperty Name="WSG_ID" ColumnName="WSG_ID" />
                 <ScalarProperty Name="ITEM_CODE" ColumnName="ITEM_CODE" />
                 <ScalarProperty Name="ITEM_NAME" ColumnName="ITEM_NAME" />
                 <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
@@ -3192,6 +3209,7 @@ warning 6002: The table/view 'ARAF.dbo.ARF_WORKSTATIONS' does not have a primary
           <EntitySetMapping Name="ARF_OPERATOR_PANEL">
             <EntityTypeMapping TypeName="ARAFModel.ARF_OPERATOR_PANEL">
               <MappingFragment StoreEntitySet="ARF_OPERATOR_PANEL">
+                <ScalarProperty Name="OP_TIME_UNIT" ColumnName="OP_TIME_UNIT" />
                 <ScalarProperty Name="SUSPEND_ID" ColumnName="SUSPEND_ID" />
                 <ScalarProperty Name="COLOR" ColumnName="COLOR" />
                 <ScalarProperty Name="NET_TIME" ColumnName="NET_TIME" />

@@ -31,32 +31,29 @@ namespace ARAF_OPERATOR_PANEL
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupBut;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArafFrmOperatorPanel));
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel1 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
             DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView1 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            this.ribbonPageGroupBut = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barButtonItemUretimBaslat = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemUretimBitir = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemDurus_Baslat = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemDurus_Bitir = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemIsDurumu = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemPlanEkle = new DevExpress.XtraBars.BarButtonItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.GenelBakis_backstageViewControl = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
-            this.backstageViewClientControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
-            this.gridControlPlanDurumu = new DevExpress.XtraGrid.GridControl();
-            this.gridViewPlanDurumu = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.backstageViewTabItem1 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
-            this.backstageViewItemSeparator1 = new DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator();
-            this.backstageViewItemSeparator2 = new DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator();
+            this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
+            this.ribbonMiniToolbar2 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.repositoryItemRatingControl1 = new DevExpress.XtraEditors.Repository.RepositoryItemRatingControl();
             this.repositoryItemColorPickEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.WorkStationPanel = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tableLayoutPanel_UST = new System.Windows.Forms.TableLayoutPanel();
             this.textEditVardiyaAdi = new DevExpress.XtraEditors.TextEdit();
             this.textEditMakineAdi = new DevExpress.XtraEditors.TextEdit();
@@ -75,19 +72,12 @@ namespace ARAF_OPERATOR_PANEL
             this.gridControlPlandakiIsler = new DevExpress.XtraGrid.GridControl();
             this.gridViewPlandakiIsler = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPageGrafik = new DevExpress.XtraTab.XtraTabPage();
-            this.groupBoxSiparisUrun = new System.Windows.Forms.GroupBox();
             this.gridControlSiparis_urun = new DevExpress.XtraGrid.GridControl();
             this.cardViewSiparis_Urun = new DevExpress.XtraGrid.Views.Card.CardView();
             this.chartControlDuruslar = new DevExpress.XtraCharts.ChartControl();
             this.ribbonGalleryBarItem2 = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            ribbonPageGroupBut = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GenelBakis_backstageViewControl)).BeginInit();
-            this.GenelBakis_backstageViewControl.SuspendLayout();
-            this.backstageViewClientControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlPlanDurumu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewPlanDurumu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRatingControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).BeginInit();
             this.tableLayoutPanel_UST.SuspendLayout();
@@ -108,7 +98,6 @@ namespace ARAF_OPERATOR_PANEL
             this.tableLayoutPanelPlandakiIsler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlPlandakiIsler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPlandakiIsler)).BeginInit();
-            this.groupBoxSiparisUrun.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlSiparis_urun)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardViewSiparis_Urun)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControlDuruslar)).BeginInit();
@@ -120,21 +109,23 @@ namespace ARAF_OPERATOR_PANEL
             // 
             // ribbonPageGroupBut
             // 
-            ribbonPageGroupBut.Glyph = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroupBut.Glyph")));
-            ribbonPageGroupBut.ItemLinks.Add(this.barButtonItemUretimBaslat);
-            ribbonPageGroupBut.ItemLinks.Add(this.barButtonItemUretimBitir);
-            ribbonPageGroupBut.ItemLinks.Add(this.barButtonItemDurus_Baslat);
-            ribbonPageGroupBut.ItemLinks.Add(this.barButtonItemDurus_Bitir);
-            ribbonPageGroupBut.ItemLinks.Add(this.barButtonItemIsDurumu);
-            ribbonPageGroupBut.MergeOrder = 0;
-            ribbonPageGroupBut.Name = "ribbonPageGroupBut";
-            ribbonPageGroupBut.ShowCaptionButton = false;
+            this.ribbonPageGroupBut.Glyph = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroupBut.Glyph")));
+            this.ribbonPageGroupBut.ItemLinks.Add(this.barButtonItemUretimBaslat);
+            this.ribbonPageGroupBut.ItemLinks.Add(this.barButtonItemUretimBitir);
+            this.ribbonPageGroupBut.ItemLinks.Add(this.barButtonItemDurus_Baslat);
+            this.ribbonPageGroupBut.ItemLinks.Add(this.barButtonItemDurus_Bitir);
+            this.ribbonPageGroupBut.ItemLinks.Add(this.barButtonItemIsDurumu);
+            this.ribbonPageGroupBut.ItemLinks.Add(this.barButtonItemPlanEkle);
+            this.ribbonPageGroupBut.MergeOrder = 0;
+            this.ribbonPageGroupBut.Name = "ribbonPageGroupBut";
+            this.ribbonPageGroupBut.ShowCaptionButton = false;
             // 
             // barButtonItemUretimBaslat
             // 
-            this.barButtonItemUretimBaslat.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barButtonItemUretimBaslat.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
             resources.ApplyResources(this.barButtonItemUretimBaslat, "barButtonItemUretimBaslat");
             this.barButtonItemUretimBaslat.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemUretimBaslat.Glyph")));
+            this.barButtonItemUretimBaslat.GlyphDisabled = ((System.Drawing.Image)(resources.GetObject("barButtonItemUretimBaslat.GlyphDisabled")));
             this.barButtonItemUretimBaslat.Id = 1;
             this.barButtonItemUretimBaslat.ItemAppearance.Normal.Font = ((System.Drawing.Font)(resources.GetObject("barButtonItemUretimBaslat.ItemAppearance.Normal.Font")));
             this.barButtonItemUretimBaslat.ItemAppearance.Normal.Options.UseFont = true;
@@ -147,6 +138,8 @@ namespace ARAF_OPERATOR_PANEL
             this.barButtonItemUretimBaslat.ItemInMenuAppearance.Normal.Font = ((System.Drawing.Font)(resources.GetObject("barButtonItemUretimBaslat.ItemInMenuAppearance.Normal.Font")));
             this.barButtonItemUretimBaslat.ItemInMenuAppearance.Normal.Options.UseFont = true;
             this.barButtonItemUretimBaslat.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemUretimBaslat.LargeGlyph")));
+            this.barButtonItemUretimBaslat.LargeGlyphDisabled = ((System.Drawing.Image)(resources.GetObject("barButtonItemUretimBaslat.LargeGlyphDisabled")));
+            this.barButtonItemUretimBaslat.LargeImageIndex = 1;
             this.barButtonItemUretimBaslat.Name = "barButtonItemUretimBaslat";
             this.barButtonItemUretimBaslat.RememberLastCommand = true;
             this.barButtonItemUretimBaslat.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -210,14 +203,25 @@ namespace ARAF_OPERATOR_PANEL
             this.barButtonItemIsDurumu.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barButtonItemIsDurumu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemIsDurumu_ItemClick);
             // 
+            // barButtonItemPlanEkle
+            // 
+            this.barButtonItemPlanEkle.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            resources.ApplyResources(this.barButtonItemPlanEkle, "barButtonItemPlanEkle");
+            this.barButtonItemPlanEkle.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemPlanEkle.Glyph")));
+            this.barButtonItemPlanEkle.Id = 1;
+            this.barButtonItemPlanEkle.ImageUri.Uri = "AddItem";
+            this.barButtonItemPlanEkle.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemPlanEkle.LargeGlyph")));
+            this.barButtonItemPlanEkle.Name = "barButtonItemPlanEkle";
+            this.barButtonItemPlanEkle.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItemPlanEkle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemPlanEkle_ItemClick);
+            // 
             // ribbon
             // 
-            this.ribbon.AccessibleRole = System.Windows.Forms.AccessibleRole.Client;
-            this.ribbon.AllowCustomization = true;
-            this.ribbon.ApplicationButtonDropDownControl = this.GenelBakis_backstageViewControl;
             resources.ApplyResources(this.ribbon, "ribbon");
-            this.ribbon.AutoSaveLayoutToXml = true;
             this.ribbon.BackColor = System.Drawing.Color.Bisque;
+            this.ribbon.DrawGroupCaptions = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbon.DrawGroupsBorder = false;
+            this.ribbon.ExpandCollapseItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.ForeColor = System.Drawing.Color.Red;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
@@ -226,99 +230,21 @@ namespace ARAF_OPERATOR_PANEL
             this.barButtonItemUretimBitir,
             this.barButtonItemDurus_Baslat,
             this.barButtonItemDurus_Bitir,
-            this.barButtonItemIsDurumu});
-            this.ribbon.MaxItemId = 3;
+            this.barButtonItemIsDurumu,
+            this.barButtonItemPlanEkle});
+            this.ribbon.MaxItemId = 1;
+            this.ribbon.MiniToolbars.Add(this.ribbonMiniToolbar1);
+            this.ribbon.MiniToolbars.Add(this.ribbonMiniToolbar2);
             this.ribbon.Name = "ribbon";
-            this.ribbon.OptionsAnimation.PageCategoryShowAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.OptionsCustomizationForm.FormIcon = ((System.Drawing.Icon)(resources.GetObject("resource.FormIcon")));
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemRatingControl1,
             this.repositoryItemColorPickEdit1});
-            this.ribbon.RibbonCaptionAlignment = DevExpress.XtraBars.Ribbon.RibbonCaptionAlignment.Center;
+            this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
             this.ribbon.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
             this.ribbon.StatusBar = this.ribbonStatusBar;
-            this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
-            // 
-            // GenelBakis_backstageViewControl
-            // 
-            this.GenelBakis_backstageViewControl.ColorScheme = DevExpress.XtraBars.Ribbon.RibbonControlColorScheme.Yellow;
-            this.GenelBakis_backstageViewControl.Controls.Add(this.backstageViewClientControl1);
-            this.GenelBakis_backstageViewControl.Items.Add(this.backstageViewTabItem1);
-            this.GenelBakis_backstageViewControl.Items.Add(this.backstageViewItemSeparator1);
-            this.GenelBakis_backstageViewControl.Items.Add(this.backstageViewItemSeparator2);
-            resources.ApplyResources(this.GenelBakis_backstageViewControl, "GenelBakis_backstageViewControl");
-            this.GenelBakis_backstageViewControl.Name = "GenelBakis_backstageViewControl";
-            this.GenelBakis_backstageViewControl.OwnerControl = this.ribbon;
-            this.GenelBakis_backstageViewControl.Style = DevExpress.XtraBars.Ribbon.BackstageViewStyle.Office2013;
-            // 
-            // backstageViewClientControl1
-            // 
-            this.backstageViewClientControl1.Controls.Add(this.gridControlPlanDurumu);
-            resources.ApplyResources(this.backstageViewClientControl1, "backstageViewClientControl1");
-            this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            // 
-            // gridControlPlanDurumu
-            // 
-            resources.ApplyResources(this.gridControlPlanDurumu, "gridControlPlanDurumu");
-            this.gridControlPlanDurumu.MainView = this.gridViewPlanDurumu;
-            this.gridControlPlanDurumu.Name = "gridControlPlanDurumu";
-            this.gridControlPlanDurumu.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewPlanDurumu});
-            // 
-            // gridViewPlanDurumu
-            // 
-            this.gridViewPlanDurumu.Appearance.ColumnFilterButton.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.ColumnFilterButton.Font")));
-            this.gridViewPlanDurumu.Appearance.ColumnFilterButton.Options.UseFont = true;
-            this.gridViewPlanDurumu.Appearance.ColumnFilterButtonActive.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.ColumnFilterButtonActive.Font")));
-            this.gridViewPlanDurumu.Appearance.ColumnFilterButtonActive.Options.UseFont = true;
-            this.gridViewPlanDurumu.Appearance.CustomizationFormHint.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.CustomizationFormHint.Font")));
-            this.gridViewPlanDurumu.Appearance.CustomizationFormHint.Options.UseFont = true;
-            this.gridViewPlanDurumu.Appearance.DetailTip.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.DetailTip.Font")));
-            this.gridViewPlanDurumu.Appearance.DetailTip.Options.UseFont = true;
-            this.gridViewPlanDurumu.Appearance.Empty.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.Empty.Font")));
-            this.gridViewPlanDurumu.Appearance.Empty.Options.UseFont = true;
-            this.gridViewPlanDurumu.Appearance.EvenRow.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.EvenRow.Font")));
-            this.gridViewPlanDurumu.Appearance.EvenRow.Options.UseFont = true;
-            this.gridViewPlanDurumu.Appearance.FilterCloseButton.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.FilterCloseButton.Font")));
-            this.gridViewPlanDurumu.Appearance.FilterCloseButton.Options.UseFont = true;
-            this.gridViewPlanDurumu.Appearance.FilterPanel.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.FilterPanel.Font")));
-            this.gridViewPlanDurumu.Appearance.FilterPanel.Options.UseFont = true;
-            this.gridViewPlanDurumu.Appearance.FixedLine.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.FixedLine.Font")));
-            this.gridViewPlanDurumu.Appearance.FixedLine.Options.UseFont = true;
-            this.gridViewPlanDurumu.Appearance.FocusedCell.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.FocusedCell.Font")));
-            this.gridViewPlanDurumu.Appearance.FocusedCell.Options.UseFont = true;
-            this.gridViewPlanDurumu.Appearance.FooterPanel.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.FooterPanel.Font")));
-            this.gridViewPlanDurumu.Appearance.FooterPanel.Options.UseFont = true;
-            this.gridViewPlanDurumu.Appearance.GroupRow.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.GroupRow.Font")));
-            this.gridViewPlanDurumu.Appearance.GroupRow.Options.UseFont = true;
-            this.gridViewPlanDurumu.Appearance.HeaderPanel.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.HeaderPanel.Font")));
-            this.gridViewPlanDurumu.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridViewPlanDurumu.Appearance.Preview.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.Preview.Font")));
-            this.gridViewPlanDurumu.Appearance.Preview.Options.UseFont = true;
-            this.gridViewPlanDurumu.Appearance.Row.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlanDurumu.Appearance.Row.Font")));
-            this.gridViewPlanDurumu.Appearance.Row.Options.UseFont = true;
-            this.gridViewPlanDurumu.GridControl = this.gridControlPlanDurumu;
-            this.gridViewPlanDurumu.Name = "gridViewPlanDurumu";
-            this.gridViewPlanDurumu.OptionsBehavior.Editable = false;
-            this.gridViewPlanDurumu.OptionsView.ShowGroupPanel = false;
-            // 
-            // backstageViewTabItem1
-            // 
-            resources.ApplyResources(this.backstageViewTabItem1, "backstageViewTabItem1");
-            this.backstageViewTabItem1.ContentControl = this.backstageViewClientControl1;
-            this.backstageViewTabItem1.Name = "backstageViewTabItem1";
-            this.backstageViewTabItem1.Selected = false;
-            this.backstageViewTabItem1.ItemPressed += new DevExpress.XtraBars.Ribbon.BackstageViewItemEventHandler(this.backstageViewTabItem1_ItemPressed);
-            // 
-            // backstageViewItemSeparator1
-            // 
-            this.backstageViewItemSeparator1.Name = "backstageViewItemSeparator1";
-            // 
-            // backstageViewItemSeparator2
-            // 
-            this.backstageViewItemSeparator2.Name = "backstageViewItemSeparator2";
             // 
             // ribbonPage1
             // 
@@ -330,7 +256,8 @@ namespace ARAF_OPERATOR_PANEL
             this.ribbonPage1.Appearance.Options.UseBorderColor = true;
             this.ribbonPage1.Appearance.Options.UseForeColor = true;
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            ribbonPageGroupBut});
+            this.ribbonPageGroupBut});
+            this.ribbonPage1.ImageAlign = DevExpress.Utils.HorzAlignment.Center;
             this.ribbonPage1.Name = "ribbonPage1";
             resources.ApplyResources(this.ribbonPage1, "ribbonPage1");
             // 
@@ -371,10 +298,20 @@ namespace ARAF_OPERATOR_PANEL
             this.WorkStationPanel.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
             new DevExpress.XtraBars.Docking2010.WindowsUIButton(resources.GetString("WorkStationPanel.Buttons"), resources.GetString("WorkStationPanel.Buttons1"), ((DevExpress.XtraBars.Docking2010.ImageLocation)(resources.GetObject("WorkStationPanel.Buttons2"))), ((DevExpress.XtraBars.Docking2010.ButtonStyle)(resources.GetObject("WorkStationPanel.Buttons3"))), resources.GetString("WorkStationPanel.Buttons4"), ((bool)(resources.GetObject("WorkStationPanel.Buttons5"))), ((int)(resources.GetObject("WorkStationPanel.Buttons6"))), ((bool)(resources.GetObject("WorkStationPanel.Buttons7"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("WorkStationPanel.Buttons8"))), ((bool)(resources.GetObject("WorkStationPanel.Buttons9"))), ((bool)(resources.GetObject("WorkStationPanel.Buttons10"))), ((bool)(resources.GetObject("WorkStationPanel.Buttons11"))), ((object)(resources.GetObject("WorkStationPanel.Buttons12"))), ((object)(resources.GetObject("WorkStationPanel.Buttons13"))), ((int)(resources.GetObject("WorkStationPanel.Buttons14"))), ((bool)(resources.GetObject("WorkStationPanel.Buttons15"))), ((bool)(resources.GetObject("WorkStationPanel.Buttons16")))),
             new DevExpress.XtraBars.Docking2010.WindowsUIButton()});
+            this.WorkStationPanel.EnableImageTransparency = true;
             this.WorkStationPanel.ForeColor = System.Drawing.Color.Red;
+            this.WorkStationPanel.Images = this.ımageList1;
             this.WorkStationPanel.Name = "WorkStationPanel";
             this.WorkStationPanel.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.WorkStationPanel.UseWaitCursor = true;
+            this.WorkStationPanel.WrapButtons = true;
             this.WorkStationPanel.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.WorkStationPanel_ButtonClick_1);
+            // 
+            // ımageList1
+            // 
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "1.png");
             // 
             // tableLayoutPanel_UST
             // 
@@ -428,7 +365,7 @@ namespace ARAF_OPERATOR_PANEL
             // 
             resources.ApplyResources(this.tableLayoutPanel_Orta, "tableLayoutPanel_Orta");
             this.tableLayoutPanel_Orta.Controls.Add(this.xtraTabControlUretim, 0, 0);
-            this.tableLayoutPanel_Orta.Controls.Add(this.groupBoxSiparisUrun, 0, 0);
+            this.tableLayoutPanel_Orta.Controls.Add(this.gridControlSiparis_urun, 0, 0);
             this.tableLayoutPanel_Orta.Name = "tableLayoutPanel_Orta";
             // 
             // xtraTabControlUretim
@@ -527,6 +464,7 @@ namespace ARAF_OPERATOR_PANEL
             this.simpleButtonPlandakiIsiBaslat.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.simpleButtonPlandakiIsiBaslat, "simpleButtonPlandakiIsiBaslat");
             this.simpleButtonPlandakiIsiBaslat.Name = "simpleButtonPlandakiIsiBaslat";
+            this.simpleButtonPlandakiIsiBaslat.Click += new System.EventHandler(this.simpleButtonPlandakiIsiBaslat_Click);
             // 
             // gridControlPlandakiIsler
             // 
@@ -574,24 +512,21 @@ namespace ARAF_OPERATOR_PANEL
             this.gridViewPlandakiIsler.Appearance.RowSeparator.Options.UseFont = true;
             this.gridViewPlandakiIsler.Appearance.SelectedRow.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlandakiIsler.Appearance.SelectedRow.Font")));
             this.gridViewPlandakiIsler.Appearance.SelectedRow.Options.UseFont = true;
+            this.gridViewPlandakiIsler.Appearance.TopNewRow.Font = ((System.Drawing.Font)(resources.GetObject("gridViewPlandakiIsler.Appearance.TopNewRow.Font")));
+            this.gridViewPlandakiIsler.Appearance.TopNewRow.Options.UseFont = true;
             this.gridViewPlandakiIsler.GridControl = this.gridControlPlandakiIsler;
+            this.gridViewPlandakiIsler.HorzScrollStep = 1;
+            this.gridViewPlandakiIsler.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             this.gridViewPlandakiIsler.Name = "gridViewPlandakiIsler";
             this.gridViewPlandakiIsler.OptionsBehavior.Editable = false;
+            this.gridViewPlandakiIsler.OptionsDetail.AutoZoomDetail = true;
             this.gridViewPlandakiIsler.OptionsView.ShowGroupPanel = false;
+            this.gridViewPlandakiIsler.OptionsView.WaitAnimationOptions = DevExpress.XtraEditors.WaitAnimationOptions.Indicator;
             // 
             // xtraTabPageGrafik
             // 
             this.xtraTabPageGrafik.Name = "xtraTabPageGrafik";
             resources.ApplyResources(this.xtraTabPageGrafik, "xtraTabPageGrafik");
-            // 
-            // groupBoxSiparisUrun
-            // 
-            this.groupBoxSiparisUrun.BackColor = System.Drawing.Color.Transparent;
-            this.groupBoxSiparisUrun.Controls.Add(this.GenelBakis_backstageViewControl);
-            this.groupBoxSiparisUrun.Controls.Add(this.gridControlSiparis_urun);
-            resources.ApplyResources(this.groupBoxSiparisUrun, "groupBoxSiparisUrun");
-            this.groupBoxSiparisUrun.Name = "groupBoxSiparisUrun";
-            this.groupBoxSiparisUrun.TabStop = false;
             // 
             // gridControlSiparis_urun
             // 
@@ -630,6 +565,8 @@ namespace ARAF_OPERATOR_PANEL
             this.cardViewSiparis_Urun.FocusedCardTopFieldIndex = 0;
             this.cardViewSiparis_Urun.GridControl = this.gridControlSiparis_urun;
             this.cardViewSiparis_Urun.Name = "cardViewSiparis_Urun";
+            this.cardViewSiparis_Urun.OptionsBehavior.AutoHorzWidth = true;
+            this.cardViewSiparis_Urun.OptionsBehavior.FieldAutoHeight = true;
             this.cardViewSiparis_Urun.OptionsView.ShowCardCaption = false;
             this.cardViewSiparis_Urun.PaintStyleName = "Skin";
             this.cardViewSiparis_Urun.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Auto;
@@ -680,6 +617,7 @@ namespace ARAF_OPERATOR_PANEL
             // ArafFrmOperatorPanel
             // 
             this.ActiveGlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("ArafFrmOperatorPanel.Appearance.BackColor")));
             this.Appearance.Options.UseBackColor = true;
             resources.ApplyResources(this, "$this");
@@ -697,11 +635,6 @@ namespace ARAF_OPERATOR_PANEL
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ArafFrmOperatorPanel_FormClosed);
             this.Load += new System.EventHandler(this.RibbonForm1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GenelBakis_backstageViewControl)).EndInit();
-            this.GenelBakis_backstageViewControl.ResumeLayout(false);
-            this.backstageViewClientControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlPlanDurumu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewPlanDurumu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRatingControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).EndInit();
             this.tableLayoutPanel_UST.ResumeLayout(false);
@@ -722,7 +655,6 @@ namespace ARAF_OPERATOR_PANEL
             this.tableLayoutPanelPlandakiIsler.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlPlandakiIsler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPlandakiIsler)).EndInit();
-            this.groupBoxSiparisUrun.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlSiparis_urun)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardViewSiparis_Urun)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
@@ -763,6 +695,12 @@ namespace ARAF_OPERATOR_PANEL
       
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_Orta;
+        private DevExpress.XtraCharts.ChartControl chartControlDuruslar;
+        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
+        private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl5;
+        private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl6;
+        private DevExpress.XtraGrid.GridControl gridControlSiparis_urun;
+        internal DevExpress.XtraGrid.Views.Card.CardView cardViewSiparis_Urun;
         private DevExpress.XtraTab.XtraTabControl xtraTabControlUretim;
         private DevExpress.XtraTab.XtraTabPage xtraTabPageUretimBilgileri;
         private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
@@ -774,19 +712,10 @@ namespace ARAF_OPERATOR_PANEL
         private DevExpress.XtraGrid.GridControl gridControlPlandakiIsler;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewPlandakiIsler;
         private DevExpress.XtraTab.XtraTabPage xtraTabPageGrafik;
-        private System.Windows.Forms.GroupBox groupBoxSiparisUrun;
-        private DevExpress.XtraGrid.GridControl gridControlSiparis_urun;
-        private DevExpress.XtraCharts.ChartControl chartControlDuruslar;
-        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
-        internal DevExpress.XtraGrid.Views.Card.CardView cardViewSiparis_Urun;
-        private DevExpress.XtraBars.Ribbon.BackstageViewControl GenelBakis_backstageViewControl;
-        private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl5;
-        private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl6;
-        private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl1;
-        private DevExpress.XtraGrid.GridControl gridControlPlanDurumu;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridViewPlanDurumu;
-        private DevExpress.XtraBars.Ribbon.BackstageViewTabItem backstageViewTabItem1;
-        private DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator backstageViewItemSeparator1;
-        private DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator backstageViewItemSeparator2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupBut;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemPlanEkle;
+        private DevExpress.XtraBars.Ribbon.RibbonMiniToolbar ribbonMiniToolbar1;
+        private DevExpress.XtraBars.Ribbon.RibbonMiniToolbar ribbonMiniToolbar2;
+        private System.Windows.Forms.ImageList ımageList1;
     }
 }
