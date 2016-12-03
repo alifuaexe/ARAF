@@ -1,0 +1,121 @@
+object FormAnaMenu: TFormAnaMenu
+  Left = 0
+  Top = 0
+  Caption = 'FormAnaMenu'
+  ClientHeight = 460
+  ClientWidth = 738
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsMDIForm
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object dxNavBar1: TdxNavBar
+    Left = 0
+    Top = 0
+    Width = 201
+    Height = 460
+    Align = alLeft
+    ActiveGroupIndex = 0
+    TabOrder = 0
+    View = 17
+    ViewStyle.ColorSchemeName = 'Blue'
+    object dxNavBarGroupSabitTanimlamalar: TdxNavBarGroup
+      Caption = 'Sabit Tan'#305'mlamalar'
+      SelectedLinkIndex = -1
+      TopVisibleLinkIndex = 0
+      Links = <
+        item
+          Item = dxNavBar1ItemUsersTanimla
+        end
+        item
+          Item = dxNavBarUrunTipTanimlama
+        end
+        item
+          Item = dxNavBarBirimTanimlama
+        end
+        item
+          Item = dxNavBar1ItemReceteTanimlama
+        end
+        item
+          Item = dxNavBarUrunTanimlama
+        end>
+    end
+    object dxNavBar1GroupHareketler: TdxNavBarGroup
+      Caption = 'Hareketler'
+      SelectedLinkIndex = -1
+      TopVisibleLinkIndex = 0
+      Links = <
+        item
+          Item = dxNavBarUrunGirisi
+        end
+        item
+          Item = dxNavBarUrunCikisi
+        end>
+    end
+    object dxNavBarUrunTanimlama: TdxNavBarItem
+      Tag = 1
+      Caption = #220'r'#252'n Tan'#305'mlama'
+      Hint = 'TFormUrunTanimlama'
+      OnClick = dxNavBarUrunTanimlamaClick
+    end
+    object dxNavBarUrunGirisi: TdxNavBarItem
+      Tag = 1
+      Caption = #220'r'#252'n Giri'#351'i'
+      Hint = 'TFormUrunGiris'
+      OnClick = dxNavBarUrunGirisiClick
+    end
+    object dxNavBarUrunCikisi: TdxNavBarItem
+      Tag = 2
+      Caption = #220'r'#252'n '#199#305'k'#305#351#305
+      Hint = 'TFormUnitUrunCikis'
+      OnClick = dxNavBarUrunGirisiClick
+    end
+    object dxNavBarUrunTipTanimlama: TdxNavBarItem
+      Caption = #220'r'#252'n Tipi Tan'#305'mlama'
+      Hint = 'TFormUnitUrunTipTanimlama'
+      OnClick = dxNavBarUrunGirisiClick
+    end
+    object dxNavBarBirimTanimlama: TdxNavBarItem
+      Caption = 'Birim Tan'#305'mlama'
+      Hint = 'TFormUnitBirimTanimlama'
+      OnClick = dxNavBarUrunGirisiClick
+    end
+    object dxNavBar1ItemUsersTanimla: TdxNavBarItem
+      Caption = 'Kullan'#305'c'#305' Tan'#305'mlama'
+      Hint = 'TFormUnitKullaniciTanimlama'
+      OnClick = dxNavBar1ItemUsersTanimlaClick
+    end
+    object dxNavBar1ItemReceteTanimlama: TdxNavBarItem
+      Caption = 'Re'#231'ete Tan'#305'mlama '
+      Hint = 'TFormUnitReceteTanimlama'
+      OnClick = dxNavBar1ItemReceteTanimlamaClick
+    end
+  end
+  object ADOConnectionMain: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Password=1;Persist Security Info=True;User I' +
+      'D=sa;Initial Catalog=BELEDIYESTOKHAR;Data Source=RAMAZAN\SQL2014'
+    LoginPrompt = False
+    Provider = 'SQLOLEDB.1'
+    Left = 248
+    Top = 64
+  end
+  object IdEncoderMIME1: TIdEncoderMIME
+    FillChar = '#'
+    Left = 560
+    Top = 24
+  end
+  object IdDecoderMIME1: TIdDecoderMIME
+    FillChar = '#'
+    Left = 648
+    Top = 24
+  end
+end

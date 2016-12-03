@@ -1,0 +1,66 @@
+﻿Installing assembly 'C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.InstallLog
+   assemblypath = C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe
+Installing service ArafSayacServisi...
+Service ArafSayacServisi has been successfully installed.
+Creating EventLog source ArafSayacServisi in log Application...
+Committing assembly 'C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.InstallLog
+   assemblypath = C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe
+Uninstalling assembly 'C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.InstallLog
+   assemblypath = C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe
+Removing EventLog source ArafSayacServisi.
+Service ArafSayacServisi is being removed from the system...
+Service ArafSayacServisi was successfully removed from the system.
+Installing assembly 'C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.InstallLog
+   assemblypath = C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe
+Installing service ArafSayacServisi...
+Service ArafSayacServisi has been successfully installed.
+Creating EventLog source ArafSayacServisi in log Application...
+Committing assembly 'C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.InstallLog
+   assemblypath = C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe
+Uninstalling assembly 'C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.InstallLog
+   assemblypath = C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe
+Removing EventLog source ArafSayacServisi.
+Service ArafSayacServisi is being removed from the system...
+Service ArafSayacServisi was successfully removed from the system.
+Uninstalling assembly 'C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.InstallLog
+   assemblypath = C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe
+Removing EventLog source ArafSayacServisi.
+Warning: The source ArafSayacServisi is not registered on the local machine.
+Service ArafSayacServisi is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Installing assembly 'C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.InstallLog
+   assemblypath = C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe
+Installing service ArafSayacServisi...
+Service ArafSayacServisi has been successfully installed.
+Creating EventLog source ArafSayacServisi in log Application...
+Committing assembly 'C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.InstallLog
+   assemblypath = C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe

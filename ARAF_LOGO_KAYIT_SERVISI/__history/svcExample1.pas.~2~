@@ -1,0 +1,45 @@
+unit svcExample1;
+
+
+interface
+
+uses
+    Windows,
+    Messages,
+    SysUtils,
+    Classes,
+    SvCom_NTService, Vcl.ExtCtrls;
+
+type
+  TSampleService1 = class(TNTService)
+    procedure SampleService1Start(Sender: TNtService;
+      var DoAction: Boolean);
+  private
+    { Private declarations }
+    Timer: TTimer;
+    procedure TimerOnTimer(Sender: TObject);
+  public
+    { Public declarations }
+  end;
+
+var
+  SampleService1: TSampleService1;
+
+implementation
+
+{$R *.DFM}
+
+
+procedure TSampleService1.TimerOnTimer(Sender: TObject);
+begin
+    Beep;
+end;
+
+procedure TSampleService1.SampleService1Start(Sender: TNtService;
+  var DoAction: Boolean);
+begin
+     Timer.OnTimer:=TimerOnTimer;
+end;
+
+end.
+

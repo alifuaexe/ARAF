@@ -10,7 +10,7 @@ namespace ARAF_OPERATOR_PANEL
 
     class Default
     {
-        string FileName = @"C:\ARAF\";
+        string FileName = @"C:\ARAF_EXE\GridDizaynlari\";
         public void RestoreLayout(DevExpress.XtraGrid.Views.Grid.GridView Grid, String DizaynName)
         {
             Grid.OptionsLayout.Columns.RemoveOldColumns = false;

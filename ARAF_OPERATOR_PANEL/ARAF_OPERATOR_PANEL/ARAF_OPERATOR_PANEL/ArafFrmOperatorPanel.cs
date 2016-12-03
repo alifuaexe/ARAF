@@ -21,78 +21,92 @@ namespace ARAF_OPERATOR_PANEL
 {
     public partial class ArafFrmOperatorPanel : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        private int WS_ID_=0;
-        private int WSG_ID_=0;
+        private int WS_ID_ = 0;
+        private int WSG_ID_ = 0;
         private int PlanEkleBut = 0;
         public int WS_ID { get { return WS_ID_; } set { WS_ID_ = value; } }
 
-        public object XRChart { get; private set; }
 
-        public static WORKSTATION currentTrainingInstance = null;//
+
         DevExpress.XtraBars.Docking2010.WindowsUIButton customBackButton;
         ArafFrmOperatorInsert ArafOperatorInsert;
         ArafFrmDurusInsert ArafDurusInsert;
-        ArafFrmUretimBitir ArafUretimBitir;
         ArafFrmPlanDurumu ArafPlanDurumu;
         ArafFrmIsListesi ArafPlanEkle;
         Default df = new Default();
-       
 
 
-        public int MakineID=0, ProductionID=0, OPR_ID_=0,SUSPEND_ACTIVE=0;
+
+        public int MakineID = 0, ProductionID = 0, OPR_ID_ = 0, SUSPEND_ACTIVE = 0;
         public float widthRatio = 0;
-        public float heightRatio =0;
-       
+        public float heightRatio = 0;
+
 
         public ArafFrmOperatorPanel()
         {
             InitializeComponent();
         }
 
-      
+
         private void RibbonForm1_Load(object sender, EventArgs e)
         {
-            WorkStationPanel.Buttons.Clear();
-            using (ARAFEntities context = new ARAFEntities())
+            try
             {
-                string LastName = Environment.MachineName;
-                var query1 = from contact in context.WORKSTATION
-                             where
-                 contact.COMPUTER_NAME == LastName
-                             select contact;
 
-                // Iterate through the collection of Contact items.
-                foreach (var result1 in query1)
+                WorkStationPanel.Buttons.Clear();
+                using (ARAFEntities context = new ARAFEntities())
                 {
-                    customBackButton = new DevExpress.XtraBars.Docking2010.WindowsUIButton();
-                    customBackButton.Caption = result1.WS_NAME;
-                    customBackButton.Tag = result1.WS_ID;
-                    WorkStationPanel.Buttons.Add(customBackButton);
-                }
-            }
+                    try
+                    {
+                        string LastName = Environment.MachineName;
+                        var query1 = from contact in context.WORKSTATION
+                                     where
+                         contact.COMPUTER_NAME.Trim() == LastName
+                                     select contact;
+                        // Iterate through the collection of Contact items.
+                        foreach (var result1 in query1)
+                        {
+                            customBackButton = new DevExpress.XtraBars.Docking2010.WindowsUIButton();
+                            customBackButton.Caption = result1.WS_NAME;
+                            customBackButton.Tag = result1.WS_ID;
+                            WorkStationPanel.Buttons.Add(customBackButton);
+                        }
 
-            df.RestoreLayout(gridViewPlandakiIsler, "gridViewPlandakiIsler_" + this.Name);
-            widthRatio = Screen.PrimaryScreen.Bounds.Width /  1024;
-             heightRatio = Screen.PrimaryScreen.Bounds.Height / 768;
-            SizeF scale = new SizeF(widthRatio, heightRatio);
-            this.Scale(scale);
-            foreach (Control control in this.Controls)
-            {
-                control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio);
+                    }
+                    catch (Exception hataTuru)
+                    {
+                        string Text = "Hata meydana geldi." + hataTuru;
+                        MessageBox.Show(Text);
+                    }
+                }
+
+                df.RestoreLayout(gridViewPlandakiIsler, "gridViewPlandakiIsler_" + this.Name);
+                widthRatio = Screen.PrimaryScreen.Bounds.Width / 1024;
+                heightRatio = Screen.PrimaryScreen.Bounds.Height / 768;
+                SizeF scale = new SizeF(widthRatio, heightRatio);
+                this.Scale(scale);
+                foreach (Control control in this.Controls)
+                {
+                    control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio);
+                }
+                PanelTipiAyarla(1, cardViewSiparis_Urun);
+                PanelTipiAyarla(2, cardViewMiktar);
+                Makinebilgisi();
+                PlandakiIsler(MakineID);
+
+                ChardDoldur();
             }
-            PanelTipiAyarla(1, cardViewSiparis_Urun);
-            PanelTipiAyarla(2, cardViewMiktar);
-            Makinebilgisi();
-            PlandakiIsler(MakineID);
-           
-            ChardDoldur();
-   
+            catch (Exception hataTuru)
+            {
+                string Text = "Hata meydana geldi." + hataTuru;
+                MessageBox.Show(Text);
+            }
 
 
 
         }
 
-    
+
         public class Production_Information
         {
             public Production_Information()
@@ -110,7 +124,7 @@ namespace ARAF_OPERATOR_PANEL
 
 
         }
-      
+
         private void ChardDoldur()
         {
             int i = 0;
@@ -118,10 +132,10 @@ namespace ARAF_OPERATOR_PANEL
 
             using (ARAFEntities context = new ARAFEntities())
             {
-             
+
                 var query = from contact in context.ARF_PRODUCTION_SUSPEND
                             where
-                contact.PROD_ID== ProductionID 
+                contact.PROD_ID == ProductionID
                             orderby contact.SUSPEND_TIME
                             select contact;
 
@@ -129,18 +143,18 @@ namespace ARAF_OPERATOR_PANEL
                 foreach (var result in query)
                 {
 
-                    
+
 
                     this.chartControlDuruslar.Titles.Clear();//Chart da varsayılan olarak gelen başlıkları temizliyoruz.
                     this.chartControlDuruslar.Series.Clear();//Chart da varsayılan olarak gelen series (Liste) temizliyoruz.
 
-                   
+
                     // Add two custom labels to the X-axis' collection.
                     diagram.AxisX.CustomLabels.Add(new CustomAxisLabel(result.SUSPEND_NAME.ToString()));
                     diagram.AxisX.CustomLabels[i].AxisValue = result.SUSPEND_NAME.ToString();
                     diagram.AxisX.Title.Text = "";
                     diagram.AxisX.Label.TextColor = Color.Red;
-                   // diagram.AxisX.Label.Visible = true;
+                    // diagram.AxisX.Label.Visible = true;
                     diagram.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
                     Series series1 = new Series("DURUŞ ADI", ViewType.Bar);
                     chartControlDuruslar.Series.Add(series1);
@@ -150,9 +164,9 @@ namespace ARAF_OPERATOR_PANEL
                     series1.ValueScaleType = ScaleType.Numerical;
                     SideBySideBarSeriesView view = series1.View as SideBySideBarSeriesView;
                     view.BarWidth = 0.1;
-                   
+
                     series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-                    
+
                     chartControlDuruslar.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True;
 
                     series1.ValueDataMembers.AddRange(new string[] { "SUSPEND_TIME" });
@@ -160,29 +174,36 @@ namespace ARAF_OPERATOR_PANEL
                     i++;
 
                 }
-            }         
+            }
 
 
         }
-        
+
 
         private void WorkStationPanel_ButtonClick_1(object sender, DevExpress.XtraBars.Docking2010.ButtonEventArgs e)
         {
-            textEditMakineAdi.Text = ""; ;
-            textEditOperatorAdi.Text = "";
-            gridControlSiparis_urun.DataSource = null;
-            gridControlMiktar.DataSource = null;
-           // this.arcScaleComponentVerimlilik.Value = 0;
-            ProductionID = 0;
-            SUSPEND_ACTIVE = 0;
-            textEditMakineAdi.Text = e.Button.Properties.Caption.ToString();
-            if (MakineID!= Convert.ToInt32(e.Button.Properties.Tag.ToString()))
-                e.Button.Properties.Appearance.ForeColor = Color.Transparent;
+            try
+            {
+                textEditMakineAdi.Text = ""; ;
+                textEditOperatorAdi.Text = "";
+                gridControlSiparis_urun.DataSource = null;
+                gridControlMiktar.DataSource = null;
+                // this.arcScaleComponentVerimlilik.Value = 0;
+                ProductionID = 0;
+                SUSPEND_ACTIVE = 0;
+                textEditMakineAdi.Text = e.Button.Properties.Caption.ToString();
+                if (MakineID != Convert.ToInt32(e.Button.Properties.Tag.ToString()))
+                    e.Button.Properties.Appearance.ForeColor = Color.Transparent;
 
-            MakineID = Convert.ToInt32(e.Button.Properties.Tag.ToString());
-            ÜretmBilgileri(MakineID);
-            PlandakiIsler(MakineID);
-
+                MakineID = Convert.ToInt32(e.Button.Properties.Tag.ToString());
+                ÜretmBilgileri(MakineID);
+                PlandakiIsler(MakineID);
+            }
+            catch (Exception hataTuru)
+            {
+                string Text = "Hata meydana geldi." + hataTuru;
+                MessageBox.Show(Text);
+            }
 
 
         }
@@ -190,7 +211,7 @@ namespace ARAF_OPERATOR_PANEL
         {
             using (ARAFEntities context = new ARAFEntities())
             {
-                var Prd = from h in context.ARF_OPERATOR_PANEL where h.WS_ID == MakineID && h.PLAN_STATUS != 2 && h.WS_ID == WSID_ && h.PROD_PLAN_STATUS==0 select new { h.PLAN_ID,h.WORK_ORDER_NO, h.OP_NAME, h.PLAN_DATE, h.ITEM_CODE, h.ITEM_NAME, h.CUSTOMER_NAME, h.WORK_ORDER_QUANTITY };
+                var Prd = from h in context.ARF_OPERATOR_PANEL where h.WS_ID == MakineID && h.PLAN_STATUS != 2 && h.WS_ID == WSID_ && h.PROD_PLAN_STATUS == 0 select new { h.PLAN_ID, h.WORK_ORDER_NO, h.OP_NAME, h.PLAN_DATE, h.ITEM_CODE, h.ITEM_NAME, h.CUSTOMER_NAME, h.WORK_ORDER_QUANTITY };
                 if (Prd != null)
                 {
                     gridControlPlandakiIsler.DataSource = Prd.ToList();
@@ -203,13 +224,24 @@ namespace ARAF_OPERATOR_PANEL
 
         private void Makinebilgisi()
         {
-            
-                MakineID = Convert.ToInt32(WorkStationPanel.Buttons[0].Properties.Tag.ToString());
-                ÜretmBilgileri(MakineID);
-                timer1.Enabled = true;                   
-        
+            try
+            {
 
-       }
+                MakineID = Convert.ToInt32(WorkStationPanel.Buttons[0].Properties.Tag.ToString());
+                if (MakineID > 0)
+                {
+                    ÜretmBilgileri(MakineID);
+                    timer1.Enabled = true;
+                }
+            }
+            catch (Exception hataTuru)
+            {
+                string Text = "Hata meydana geldi." + hataTuru;
+                MessageBox.Show(Text);
+            }
+
+
+        }
         private void ÜretmBilgileri(int WSID_)
         {
             textEditMakineAdi.Text = ""; ;
@@ -217,79 +249,100 @@ namespace ARAF_OPERATOR_PANEL
             textEditOperatorAdi.Text = "";
             gridControlSiparis_urun.DataSource = null;
             gridControlMiktar.DataSource = null;
-        //    this.arcScaleComponentVerimlilik.Value = 0;
+            //    this.arcScaleComponentVerimlilik.Value = 0;
             ProductionID = 0;
             SUSPEND_ACTIVE = 0;
-            using (ARAFEntities context = new ARAFEntities())
+            if (WSID_ !=0)
             {
-                var query = (from contact in context.ARF_OPERATOR_PANEL
-                            where
-                contact.WS_ID == WSID_ && contact.PROD_PLAN_STATUS==1 orderby contact.PROD_PLAN_ID
-                             select contact);
-                foreach (var result in query)
+                using (ARAFEntities context = new ARAFEntities())
                 {
-                    textEditVardiyaAdi.Text = result.SHIFT_CODE.ToString();
-                    textEditMakineAdi.Text = result.WS_NAME.ToString();
-                    textEditOperatorAdi.Text = result.OPR_NAME.ToString();
-                    ProductionID = Convert.ToInt32(result.PROD_ID.ToString());
-                    gridControlSiparis_urun.DataSource = query.ToList();                   
-                    gridControlMiktar.DataSource= query.ToList();
-                    SUSPEND_ACTIVE = result.ACTIVE_SUSPEND_TIME;
-
-
-              //      this.arcScaleComponentVerimlilik.Value = Convert.ToSingle(result.PRODUCTIVITY.ToString());
-                    if (result.PRODUCTION_STATUS.ToString() != "URETIM")
+                    var query = (from contact in context.ARF_OPERATOR_PANEL
+                                 where
+                     contact.WS_ID == WSID_ && contact.PROD_PLAN_STATUS == 1
+                                 orderby contact.PROD_PLAN_ID
+                                 select contact);
+                    foreach (var result in query)
                     {
-                        ribbonPage1.Appearance.BackColor= System.Drawing.ColorTranslator.FromHtml(result.COLOR.ToString());
-                  
+                        try
+                        {
+
+                            textEditVardiyaAdi.Text = result.SHIFT_CODE.ToString();
+                            textEditMakineAdi.Text = result.WS_NAME.ToString();
+                            textEditOperatorAdi.Text = result.OPR_NAME.ToString();
+                            ProductionID = Convert.ToInt32(result.PROD_ID.ToString());
+                            gridControlSiparis_urun.DataSource = query.ToList();
+                            gridControlMiktar.DataSource = query.ToList();
+                            SUSPEND_ACTIVE = result.ACTIVE_SUSPEND_TIME;
+
+
+                            //      this.arcScaleComponentVerimlilik.Value = Convert.ToSingle(result.PRODUCTIVITY.ToString());
+                            if (result.PRODUCTION_STATUS.ToString() != "URETIM")
+                            {
+                                ribbonPage1.Appearance.BackColor = System.Drawing.ColorTranslator.FromHtml(result.COLOR.ToString());
+
+
+                            }
+                            else
+                            {
+                                ribbonPage1.Appearance.BackColor = Color.Transparent;
+
+                            }
+
+                        }
+                        catch (Exception hataTuru)
+                        {
+                            string Text = "Hata meydana geldi." + hataTuru;
+                            MessageBox.Show(Text);
+                        }
 
                     }
-                    else
-                    {
-                        ribbonPage1.Appearance.BackColor = Color.Transparent;
-                  
-                    }
-
-
                 }
             }
 
-        }   
+        }
 
-     
+
         private void RowLariGizle(DevExpress.XtraGrid.Views.Card.CardView Card_)
-        {            
-            for (int i = 0; i <= Card_.Columns.Count-1; i++)
+        {
+            for (int i = 0; i <= Card_.Columns.Count - 1; i++)
             {
-                Card_.Columns[i].Visible =false;
+                Card_.Columns[i].Visible = false;
             }
         }
-        
 
-        private void PanelTipiAyarla(int PanelTipi,DevExpress.XtraGrid.Views.Card.CardView cardTmp)
+
+        private void PanelTipiAyarla(int PanelTipi, DevExpress.XtraGrid.Views.Card.CardView cardTmp)
         {
-            using (ARAFEntities context = new ARAFEntities())
+            try
             {
-
-                RowLariGizle(cardTmp);            
-                var query = from contact in context.PANEL_TYPE_DETAIL
-                            where 
-                contact.ACTIVE == 1 && contact.PANEL_ID== PanelTipi
-                            orderby contact.QUEUE
-                            select contact;
-
-                // Iterate through the collection of Contact items.
-                foreach (var result in query)
+                using (ARAFEntities context = new ARAFEntities())
                 {
-                    GridColumn column = new GridColumn();
-                    column.FieldName = result.FIELD_NAME.ToString();
-                    column.Caption = result.FIELD_CAPTION.ToString();                                
-                    column.Visible = true;
-                    cardTmp.Columns.Add(column);
-                }
 
+                    RowLariGizle(cardTmp);
+                    var query = from contact in context.PANEL_TYPE_DETAIL
+                                where
+                    contact.ACTIVE == 1 && contact.PANEL_ID == PanelTipi
+                                orderby contact.QUEUE
+                                select contact;
+
+                    // Iterate through the collection of Contact items.
+                    foreach (var result in query)
+                    {
+                        GridColumn column = new GridColumn();
+                        column.FieldName = result.FIELD_NAME.ToString();
+                        column.Caption = result.FIELD_CAPTION.ToString();
+                        column.Visible = true;
+                        cardTmp.Columns.Add(column);
+                    }
+
+                }
             }
-        }  
+            catch (Exception hataTuru)
+            {
+                string Text = "Hata meydana geldi." + hataTuru;
+                MessageBox.Show(Text);
+            }
+        }
 
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -327,42 +380,50 @@ namespace ARAF_OPERATOR_PANEL
 
         private void barButtonItemDurus_Bitir_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (ProductionID == 0)
+            try
             {
-                MessageBox.Show("Açık Üretim Yok. Duruş Bitirme İşlemi Yapamazsınız.");
-                return;
+                if (ProductionID == 0)
+                {
+                    MessageBox.Show("Açık Üretim Yok. Duruş Bitirme İşlemi Yapamazsınız.");
+                    return;
+                }
+                if (SUSPEND_ACTIVE == 0)
+                {
+                    MessageBox.Show("Açık Duruş Yok. Duruş Bitirme İşlemi Yapamazsınız.");
+                    return;
+                }
+
+                using (ARAFEntities context = new ARAFEntities())
+                {
+                    var query1 = (from contact in context.PRODUCTION_SUSPEND
+                                  where
+                      contact.PROD_ID == ProductionID && contact.SUSPEND_STATUS == 1
+                                  select contact).First();
+                    query1.SUSPEND_END_TIME = DateTime.Now;
+                    query1.SUSPEND_STATUS = 0;
+                    context.SaveChanges();
+
+
+                }
             }
-            if  (SUSPEND_ACTIVE == 0)
+            catch (Exception hataTuru)
             {
-                MessageBox.Show("Açık Duruş Yok. Duruş Bitirme İşlemi Yapamazsınız.");
-                return;
-            }
-
-            using (ARAFEntities context = new ARAFEntities())
-            {
-                var query1 = (from contact in context.PRODUCTION_SUSPEND
-                              where
-                  contact.PROD_ID == ProductionID && contact.SUSPEND_STATUS == 1
-                              select contact).First();
-                query1.SUSPEND_END_TIME = DateTime.Now;
-                query1.SUSPEND_STATUS = 0;
-                context.SaveChanges();
-
-
+                string Text = "Hata meydana geldi." + hataTuru;
+                MessageBox.Show(Text);
             }
         }
 
         private void ArafFrmOperatorPanel_FormClosed(object sender, FormClosedEventArgs e)
         {
             df.SaveLayoutToXml(gridViewPlandakiIsler, "gridViewPlandakiIsler_" + this.Name);
-         
+
         }
 
         private void barButtonItemIsDurumu_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (ArafPlanDurumu == null)
             {
-                ArafPlanDurumu = new ArafFrmPlanDurumu();              
+                ArafPlanDurumu = new ArafFrmPlanDurumu();
                 if (ArafPlanDurumu.ShowDialog() == DialogResult.OK)
                 {
                     ArafPlanDurumu.Dispose();
@@ -379,7 +440,7 @@ namespace ARAF_OPERATOR_PANEL
                 var Prd = from h in context.ARF_PLANNING_STATUS select h;
                 if (Prd != null)
                 {
-                 //   gridControlPlanDurumu.DataSource = Prd.ToList();
+                    //   gridControlPlanDurumu.DataSource = Prd.ToList();
 
                 }
             }
@@ -394,25 +455,36 @@ namespace ARAF_OPERATOR_PANEL
 
         private void simpleButtonPlandakiIsiBaslat_Click(object sender, EventArgs e)
         {
-            int PLAN_ID_ = Convert.ToInt32(gridViewPlandakiIsler.GetRowCellValue(gridViewPlandakiIsler.FocusedRowHandle, "PLAN_ID").ToString());
-
-            using (ARAFEntities context = new ARAFEntities())
+            if (gridViewPlandakiIsler.RowCount == 0) return;
+                int PLAN_ID_ = Convert.ToInt32(gridViewPlandakiIsler.GetRowCellValue(gridViewPlandakiIsler.FocusedRowHandle, "PLAN_ID").ToString());
+            if (PLAN_ID_ != 0)
             {
-                if (ProductionID != 0) //Üretim var ise mevcut üretimi bitirmektedir. Yeni üretim başlatmaktadır.
+                using (ARAFEntities context = new ARAFEntities())
                 {
-                    var query1 = (from contact1 in context.PRODUCTION_PLANNING
-                                  where contact1.WS_ID == MakineID && contact1.PROD_PLAN_STATUS == 1
-                                  select contact1).First();
-                    query1.PROD_PLAN_STATUS = 2;
-                    context.SaveChanges();
+                    try
+                    {
+                        if (ProductionID != 0) //Üretim var ise mevcut üretimi bitirmektedir. Yeni üretim başlatmaktadır.
+                        {
+                            var query1 = (from contact1 in context.PRODUCTION_PLANNING
+                                          where contact1.WS_ID == MakineID && contact1.PROD_PLAN_STATUS == 1
+                                          select contact1).First();
+                            query1.PROD_PLAN_STATUS = 2;
+                            context.SaveChanges();
+                        }
+                        var query = (from contact1 in context.PRODUCTION_PLANNING
+                                     where contact1.WS_ID == MakineID && contact1.PLAN_ID == PLAN_ID_ && contact1.PROD_PLAN_STATUS == 0
+                                     select contact1).First();
+                        query.PROD_PLAN_STATUS = 1;
+                        context.SaveChanges();
+                    }
+                    catch (Exception hataTuru)
+                    {
+                        string Text = "Hata meydana geldi." + hataTuru;
+                        MessageBox.Show(Text);
+                    }
                 }
-                var query = (from contact1 in context.PRODUCTION_PLANNING
-                             where contact1.WS_ID == MakineID && contact1.PLAN_ID == PLAN_ID_ && contact1.PROD_PLAN_STATUS == 0
-                             select contact1).First();
-                query.PROD_PLAN_STATUS = 1;
-                context.SaveChanges();
+                PlandakiIsler(MakineID);
             }
-            PlandakiIsler(MakineID);
         }
 
         private void barButtonItemPlanEkle_ItemClick(object sender, ItemClickEventArgs e)
@@ -438,7 +510,7 @@ namespace ARAF_OPERATOR_PANEL
             }
         }
 
-        private void barButtonItemUretimBitir_ItemClick(object sender, ItemClickEventArgs e)
+        private void simpleButtonIsbitir_Click(object sender, EventArgs e)
         {
             if (ProductionID == 0)
             {
@@ -449,21 +521,26 @@ namespace ARAF_OPERATOR_PANEL
                  MakineID);
         }
 
-      
+        private void barButtonItemUretimBitir_ItemClick(object sender, ItemClickEventArgs e)
+        {
+          
+        }
+
+
 
         private void barButtonItemUretimBaslat_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (ProductionID!=0)
+            if (ProductionID != 0)
             {
                 MessageBox.Show("Açık Üretim Var.");
                 return;
             }
-            if (MakineID==0)
+            if (MakineID == 0)
             {
                 MessageBox.Show("Makine Seçiniz.");
                 return;
             }
-            if (gridViewPlandakiIsler.DataRowCount!=0)
+            if (gridViewPlandakiIsler.DataRowCount != 0)
             {
                 MessageBox.Show("Plandaki İşlerden Üretim Başlatınız.");
                 xtraTabControlUretim.SelectedTabPageIndex = 1;

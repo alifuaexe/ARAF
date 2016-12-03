@@ -1,0 +1,273 @@
+inherited FormUnitKullaniciTanimlama: TFormUnitKullaniciTanimlama
+  Caption = 'Kullan'#305'c'#305' Tan'#305'mlama'
+  ClientHeight = 398
+  ClientWidth = 660
+  FormStyle = fsMDIChild
+  Visible = True
+  OnShow = FormShow
+  ExplicitWidth = 676
+  ExplicitHeight = 437
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited cxPageControl1: TcxPageControl
+    Width = 481
+    Height = 323
+    Properties.ActivePage = PageDetay
+    ExplicitWidth = 481
+    ExplicitHeight = 323
+    ClientRectBottom = 318
+    ClientRectRight = 476
+    inherited PageDetay: TcxTabSheet
+      ExplicitLeft = 2
+      ExplicitTop = 25
+      ExplicitWidth = 474
+      ExplicitHeight = 293
+      object cxLabel1: TcxLabel
+        Left = 3
+        Top = 22
+        Caption = 'KEYID'
+        Transparent = True
+      end
+      object cxLabel2: TcxLabel
+        Left = 3
+        Top = 46
+        Caption = 'Kullan'#305'c'#305' Ad'#305
+        Transparent = True
+      end
+      object cxLabel3: TcxLabel
+        Left = 3
+        Top = 70
+        Caption = #350'ifre'
+        Transparent = True
+      end
+      object cxLabel4: TcxLabel
+        Left = 3
+        Top = 94
+        Caption = 'Ad'#305
+        Transparent = True
+      end
+      object edtKeyid: TcxTextEdit
+        Left = 96
+        Top = 20
+        AutoSize = False
+        TabOrder = 4
+        Height = 24
+        Width = 121
+      end
+      object edtKullaniciAdi: TcxTextEdit
+        Left = 96
+        Top = 44
+        AutoSize = False
+        TabOrder = 5
+        Height = 24
+        Width = 273
+      end
+      object edtsifre: TcxTextEdit
+        Left = 96
+        Top = 68
+        AutoSize = False
+        TabOrder = 6
+        Height = 24
+        Width = 273
+      end
+      object cxLabel5: TcxLabel
+        Left = 3
+        Top = 117
+        Caption = 'Soyad'#305
+        Transparent = True
+      end
+      object edtAdi: TcxTextEdit
+        Left = 96
+        Top = 92
+        AutoSize = False
+        TabOrder = 8
+        Height = 24
+        Width = 273
+      end
+      object edtSoyadi: TcxTextEdit
+        Left = 96
+        Top = 116
+        AutoSize = False
+        TabOrder = 9
+        Height = 24
+        Width = 273
+      end
+    end
+    inherited PageListe: TcxTabSheet
+      ExplicitLeft = 2
+      ExplicitTop = 25
+      ExplicitWidth = 474
+      ExplicitHeight = 293
+      inherited cxGrid1: TcxGrid
+        Width = 474
+        Height = 293
+        ExplicitWidth = 474
+        ExplicitHeight = 293
+        inherited gridView: TcxGridDBTableView
+          OptionsBehavior.GoToNextCellOnEnter = True
+          OptionsBehavior.IncSearch = True
+          OptionsBehavior.NavigatorHints = True
+          OptionsBehavior.PullFocusing = True
+          OptionsCustomize.ColumnsQuickCustomization = True
+          OptionsCustomize.ColumnsQuickCustomizationReordering = qcrEnabled
+          OptionsView.ScrollBars = ssHorizontal
+          OptionsView.ShowEditButtons = gsebAlways
+          OptionsView.GroupRowStyle = grsOffice11
+          OptionsView.Indicator = True
+          OptionsView.ShowColumnFilterButtons = sfbAlways
+          Preview.Visible = True
+          object gridViewKEYID: TcxGridDBColumn
+            DataBinding.FieldName = 'KEYID'
+            Width = 47
+          end
+          object gridViewKULLANICI_ADI: TcxGridDBColumn
+            DataBinding.FieldName = 'KULLANICI_ADI'
+            Width = 94
+          end
+          object gridViewKULLANICI_SIFRE: TcxGridDBColumn
+            DataBinding.FieldName = 'KULLANICI_SIFRE'
+            Width = 105
+          end
+          object gridViewADI: TcxGridDBColumn
+            DataBinding.FieldName = 'ADI'
+            Width = 36
+          end
+          object gridViewSOYADI: TcxGridDBColumn
+            DataBinding.FieldName = 'SOYADI'
+            Width = 56
+          end
+        end
+      end
+    end
+  end
+  inherited Panel1: TPanel
+    Width = 660
+    ExplicitWidth = 660
+    inherited GridPanel1: TGridPanel
+      Width = 658
+      ColumnCollection = <
+        item
+          Value = 25.024202101173890000
+        end
+        item
+          Value = 25.032764840680120000
+        end
+        item
+          Value = 24.961980390381530000
+        end
+        item
+          Value = 24.981052667764470000
+        end>
+      ExplicitWidth = 658
+      inherited BtnYeni: TcxButton
+        ExplicitLeft = 1
+        ExplicitTop = 1
+        ExplicitWidth = 164
+      end
+      inherited BtnKaydet: TcxButton
+        ExplicitLeft = 165
+        ExplicitWidth = 164
+      end
+      inherited BtnDegistir: TcxButton
+        ExplicitLeft = 329
+        ExplicitWidth = 163
+      end
+      inherited BtnSil: TcxButton
+        OnClick = BtnSilClick
+        ExplicitLeft = 492
+        ExplicitWidth = 165
+      end
+    end
+  end
+  inherited Panel2: TPanel
+    Height = 323
+    ExplicitHeight = 323
+    inherited cxSplitter1: TcxSplitter
+      Height = 296
+      ExplicitHeight = 296
+    end
+    inherited btnAra: TcxButton
+      Top = 297
+      ExplicitTop = 297
+    end
+    object cxLabel8: TcxLabel
+      Left = 2
+      Top = 2
+      Caption = 'Ad'#305
+      Transparent = True
+    end
+    object edtadiAra: TcxTextEdit
+      Left = 2
+      Top = 25
+      TabOrder = 3
+      OnKeyDown = edtadiAraKeyDown
+      Width = 160
+    end
+    object cxLabel9: TcxLabel
+      Left = 2
+      Top = 58
+      Caption = 'Soyad'#305
+      Transparent = True
+    end
+    object edtsoyadiAra: TcxTextEdit
+      Left = 2
+      Top = 81
+      TabOrder = 5
+      OnKeyDown = edtsoyadiAraKeyDown
+      Width = 160
+    end
+  end
+  inherited ADOQuery1: TADOQuery
+    CursorType = ctStatic
+    SQL.Strings = (
+      'select * from KULLANICI_BILGILERI')
+    Left = 482
+    Top = 132
+    object ADOQuery1KEYID: TAutoIncField
+      FieldName = 'KEYID'
+      ReadOnly = True
+    end
+    object ADOQuery1KULLANICI_ADI: TWideStringField
+      FieldName = 'KULLANICI_ADI'
+      Size = 50
+    end
+    object ADOQuery1KULLANICI_SIFRE: TWideStringField
+      FieldName = 'KULLANICI_SIFRE'
+      Size = 8
+    end
+    object ADOQuery1ADI: TWideStringField
+      FieldName = 'ADI'
+      Size = 50
+    end
+    object ADOQuery1SOYADI: TWideStringField
+      FieldName = 'SOYADI'
+      Size = 50
+    end
+  end
+  inherited DataSource1: TDataSource
+    Left = 562
+    Top = 124
+  end
+  object ADOQueryBirim: TADOQuery
+    Connection = FormAnaMenu.ADOConnectionMain
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from BIRIM_TANIM')
+    Left = 594
+    Top = 268
+    object ADOQueryBirimKEYID: TAutoIncField
+      FieldName = 'KEYID'
+      ReadOnly = True
+    end
+    object ADOQueryBirimBIRIM_ADI: TWideStringField
+      FieldName = 'BIRIM_ADI'
+      Size = 50
+    end
+  end
+  object DataSourceBirim: TDataSource
+    DataSet = ADOQueryBirim
+    Left = 578
+    Top = 236
+  end
+end

@@ -1,0 +1,178 @@
+inherited FormUnitBirimTanimlama: TFormUnitBirimTanimlama
+  Caption = 'Birim Tan'#305'mlama Ekran'#305
+  ClientHeight = 398
+  ClientWidth = 660
+  FormStyle = fsMDIChild
+  Visible = True
+  OnShow = FormShow
+  ExplicitTop = 8
+  ExplicitWidth = 676
+  ExplicitHeight = 437
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited cxPageControl1: TcxPageControl
+    Width = 481
+    Height = 323
+    Properties.ActivePage = PageDetay
+    ExplicitWidth = 481
+    ExplicitHeight = 323
+    ClientRectBottom = 318
+    ClientRectRight = 476
+    inherited PageDetay: TcxTabSheet
+      ExplicitWidth = 474
+      ExplicitHeight = 293
+      object cxLabel1: TcxLabel
+        Left = 3
+        Top = 25
+        Caption = 'KEYID'
+        Transparent = True
+      end
+      object cxLabel2: TcxLabel
+        Left = 3
+        Top = 52
+        Caption = 'Birim Ad'#305
+        Transparent = True
+      end
+      object edtKeyid: TcxTextEdit
+        Left = 96
+        Top = 24
+        TabOrder = 2
+        Width = 121
+      end
+      object edtBirimAdi: TcxTextEdit
+        Left = 96
+        Top = 51
+        TabOrder = 3
+        Width = 121
+      end
+    end
+    inherited PageListe: TcxTabSheet
+      ExplicitWidth = 474
+      ExplicitHeight = 293
+      inherited cxGrid1: TcxGrid
+        Width = 474
+        Height = 293
+        ExplicitWidth = 474
+        ExplicitHeight = 293
+        inherited gridView: TcxGridDBTableView
+          OptionsBehavior.GoToNextCellOnEnter = True
+          OptionsBehavior.IncSearch = True
+          OptionsBehavior.NavigatorHints = True
+          OptionsBehavior.PullFocusing = True
+          OptionsCustomize.ColumnsQuickCustomization = True
+          OptionsCustomize.ColumnsQuickCustomizationReordering = qcrEnabled
+          OptionsView.ScrollBars = ssHorizontal
+          OptionsView.ShowEditButtons = gsebAlways
+          OptionsView.GroupRowStyle = grsOffice11
+          OptionsView.Indicator = True
+          OptionsView.ShowColumnFilterButtons = sfbAlways
+          Preview.Visible = True
+          object gridViewKEYID: TcxGridDBColumn
+            DataBinding.FieldName = 'KEYID'
+          end
+          object gridViewBIRIM_ADI: TcxGridDBColumn
+            DataBinding.FieldName = 'BIRIM_ADI'
+          end
+        end
+      end
+    end
+  end
+  inherited Panel1: TPanel
+    Width = 660
+    ExplicitWidth = 660
+    inherited GridPanel1: TGridPanel
+      Width = 658
+      ExplicitWidth = 658
+      inherited BtnYeni: TcxButton
+        Width = 164
+        ExplicitWidth = 164
+      end
+      inherited BtnKaydet: TcxButton
+        Left = 165
+        Width = 164
+        ExplicitLeft = 165
+        ExplicitWidth = 164
+      end
+      inherited BtnDegistir: TcxButton
+        Left = 329
+        Width = 163
+        ExplicitLeft = 329
+        ExplicitWidth = 163
+      end
+      inherited BtnSil: TcxButton
+        Left = 492
+        Width = 165
+        OnClick = BtnSilClick
+        ExplicitLeft = 492
+        ExplicitWidth = 165
+      end
+    end
+  end
+  inherited Panel2: TPanel
+    Height = 323
+    ExplicitHeight = 323
+    inherited cxSplitter1: TcxSplitter
+      Height = 296
+      ExplicitHeight = 296
+    end
+    inherited btnAra: TcxButton
+      Top = 297
+      OnClick = btnAraClick
+      ExplicitTop = 297
+    end
+    object edtBirimAdiAra: TcxTextEdit
+      Left = 10
+      Top = 41
+      TabOrder = 2
+      OnKeyDown = edtBirimAdiAraKeyDown
+      Width = 121
+    end
+    object cxLabel3: TcxLabel
+      Left = 10
+      Top = 18
+      Caption = 'Birim Ad'#305
+      Transparent = True
+    end
+  end
+  inherited ADOQuery1: TADOQuery
+    CursorType = ctStatic
+    SQL.Strings = (
+      'select * from BIRIM_TANIM')
+    Left = 482
+    Top = 132
+    object ADOQuery1KEYID: TAutoIncField
+      FieldName = 'KEYID'
+      ReadOnly = True
+    end
+    object ADOQuery1BIRIM_ADI: TWideStringField
+      FieldName = 'BIRIM_ADI'
+      Size = 50
+    end
+  end
+  inherited DataSource1: TDataSource
+    Left = 482
+    Top = 180
+  end
+  object ADOQueryBirim: TADOQuery
+    Connection = FormAnaMenu.ADOConnectionMain
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from BIRIM_TANIM')
+    Left = 554
+    Top = 140
+    object ADOQueryBirimKEYID: TAutoIncField
+      FieldName = 'KEYID'
+      ReadOnly = True
+    end
+    object ADOQueryBirimBIRIM_ADI: TWideStringField
+      FieldName = 'BIRIM_ADI'
+      Size = 50
+    end
+  end
+  object DataSourceBirim: TDataSource
+    DataSet = ADOQueryBirim
+    Left = 554
+    Top = 188
+  end
+end

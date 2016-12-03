@@ -155,6 +155,12 @@
     <NavigationProperty Name="WORKSTATION" Relationship="Self.FK_PRODUCTION_PLANNING_WORKSTATION" FromRole="PRODUCTION_PLANNING" ToRole="WORKSTATION" />
     <Property Name="LAST_READ_DATE" Type="DateTime" Precision="3" />
     <NavigationProperty Name="PRODUCTION" Relationship="ARAFModel.FK_PRODUCTION_PLANNING_PRODUCTION" FromRole="PRODUCTION_PLANNING" ToRole="PRODUCTION" />
+    <Property Name="TRANSFER_STATUS" Type="Boolean" Nullable="false" />
+    <Property Name="TRANSFER_DATE" Type="DateTime" Precision="3" />
+    <Property Name="TRANSFER_ERROR" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CONSUMPTION_STATUS" Type="Boolean" Nullable="false" />
+    <Property Name="CONSUMPTION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CONSUMPTION_ERROR" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="ROTATION">
     <Key>
@@ -320,7 +326,7 @@
     <Property Name="WSG_ID" Type="Int32" />
     <Property Name="WS_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="WS_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-    <Property Name="COMPUTER_NAME" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="COMPUTER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="PLANNING" Relationship="Self.WS_ID" FromRole="WORKSTATION" ToRole="PLANNING" />
     <NavigationProperty Name="PRODUCTION_PLANNING" Relationship="Self.FK_PRODUCTION_PLANNING_WORKSTATION" FromRole="WORKSTATION" ToRole="PRODUCTION_PLANNING" />
     <NavigationProperty Name="ITEM_OPERATIONS" Relationship="Self.FK_ITEM_OPERATIONS_WS_ID" FromRole="WORKSTATION" ToRole="ITEM_OPERATIONS" />

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.109,=D:\UYGULAMALARIM\STOK_TAKIP\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.379,D:\UYGULAMALARIM\STOK_TAKIP\UnitUrunGiris.dfm=D:\UYGULAMALARIM\STOK_TAKIP\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.440,=D:\UYGULAMALARIM\STOK_TAKIP\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.247,=D:\UYGULAMALARIM\STOK_TAKIP\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.608,=D:\UYGULAMALARIM\STOK_TAKIP\SecimOzel.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.351,D:\UYGULAMALARIM\STOK_TAKIP\UnitUrunTanimlama.dfm=D:\UYGULAMALARIM\STOK_TAKIP\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.349,D:\UYGULAMALARIM\STOK_TAKIP\CariSec.dfm=D:\UYGULAMALARIM\STOK_TAKIP\UrunSec.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.615,D:\UYGULAMALARIM\STOK_TAKIP\SecimOzel.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.351,D:\UYGULAMALARIM\STOK_TAKIP\UnitUrunTanimlama.pas=D:\UYGULAMALARIM\STOK_TAKIP\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.043,=D:\UYGULAMALARIM\STOK_TAKIP\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.517,=C:\Users\Ramazan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.105,D:\UYGULAMALARIM\STOK_TAKIP\UnitLogin.dfm=D:\UYGULAMALARIM\STOK_TAKIP\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.617,C:\Users\Ramazan\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\UYGULAMALARIM\STOK_TAKIP\UnitBasic.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.985,=C:\Users\Ramazan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.470,=D:\UYGULAMALARIM\STOK_TAKIP\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.898,=D:\UYGULAMALARIM\STOK_TAKIP\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.071,=D:\UYGULAMALARIM\STOK_TAKIP\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.861,=D:\UYGULAMALARIM\STOK_TAKIP\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.242,D:\UYGULAMALARIM\STOK_TAKIP\Unit2.pas=D:\UYGULAMALARIM\STOK_TAKIP\UnitAnaMenu.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.752,=D:\UYGULAMALARIM\STOK_TAKIP\Units.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.105,D:\UYGULAMALARIM\STOK_TAKIP\UnitLogin.pas=D:\UYGULAMALARIM\STOK_TAKIP\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.242,D:\UYGULAMALARIM\STOK_TAKIP\Unit2.dfm=D:\UYGULAMALARIM\STOK_TAKIP\UnitAnaMenu.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.296,=D:\UYGULAMALARIM\STOK_TAKIP\UnitBirimTanimlama.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.379,D:\UYGULAMALARIM\STOK_TAKIP\UnitUrunGiris.pas=D:\UYGULAMALARIM\STOK_TAKIP\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.321,=D:\UYGULAMALARIM\STOK_TAKIP\CariSec.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.349,D:\UYGULAMALARIM\STOK_TAKIP\CariSec.pas=D:\UYGULAMALARIM\STOK_TAKIP\UrunSec.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.552,=D:\UYGULAMALARIM\STOK_TAKIP\UnitUsersTanimlama.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.877,D:\UYGULAMALARIM\STOK_TAKIP\UnitUsersTanimlama.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.378,=D:\UYGULAMALARIM\STOK_TAKIP\UnitRecete.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.679,D:\UYGULAMALARIM\STOK_TAKIP\DataModul.dfm=D:\UYGULAMALARIM\STOK_TAKIP\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.999,=D:\UYGULAMALARIM\STOK_TAKIP\UnitUrunCikis.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.617,C:\Users\Ramazan\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\UYGULAMALARIM\STOK_TAKIP\UnitBasic.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.756,=D:\UYGULAMALARIM\STOK_TAKIP\UnitConnectionSettings.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.346,C:\Users\Ramazan\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\UYGULAMALARIM\STOK_TAKIP\StokTakip.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.177,=D:\UYGULAMALARIM\STOK_TAKIP\UnitUrunTipTanimlama.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.882,D:\UYGULAMALARIM\STOK_TAKIP\UnitRecete.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.192,D:\UYGULAMALARIM\STOK_TAKIP\DataModul.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.679,D:\UYGULAMALARIM\STOK_TAKIP\DataModul.pas=D:\UYGULAMALARIM\STOK_TAKIP\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

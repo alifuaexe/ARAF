@@ -17,7 +17,7 @@ namespace ARAF_OPERATOR_PANEL
 {
     public partial class ArafFrmIsListesi : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public int MakineID=0;
+        public int MakineID = 0;
         public int WSG_ID_ = 0;
         public int WORK_ORDER_TYPE_ = 0;
         public int PlanEkle_ = 0;
@@ -29,13 +29,13 @@ namespace ARAF_OPERATOR_PANEL
         }
         private void StokListele()
         {
-            
+
             using (ARAFEntities context = new ARAFEntities())
             {
-             
+
                 if (WORK_ORDER_TYPE_ == 0)
                 {
-                   var Prd = from h in context.ARF_PLANNING_WORKSTATION_ITEMS
+                    var Prd = from h in context.ARF_PLANNING_WORKSTATION_ITEMS
                               where h.WS_ID == MakineID
                               select new { h.ITEM_CODE, h.ITEM_NAME };
                     if (Prd != null)
@@ -46,8 +46,8 @@ namespace ARAF_OPERATOR_PANEL
                 }
                 else
                 {
-                  var Prd = from h in context.ARF_PLANNING_WORKSTATION_ITEMS
-                              where h.WSG_ID== WSG_ID_
+                    var Prd = from h in context.ARF_PLANNING_WORKSTATION_ITEMS
+                              where h.WSG_ID == WSG_ID_
                               select new { h.ITEM_CODE, h.ITEM_NAME };
                     if (Prd != null)
                     {
@@ -55,12 +55,12 @@ namespace ARAF_OPERATOR_PANEL
 
                     }
                 }
-               
+
             }
         }
         private void ArafFrmIsListesi_Load(object sender, EventArgs e)
         {
-            df.RestoreLayout(gridViewStokListesi,"gridControlStokListesi_" + this.Name);
+            df.RestoreLayout(gridViewStokListesi, "gridControlStokListesi_" + this.Name);
             df.RestoreLayout(gridViewIsListesi, "gridControlIsListesi_" + this.Name);
             df.RestoreLayout(gridViewPlanListe, "gridControlPlanListe_" + this.Name);
             WSG_ID_ = df.WSG_IDGET(MakineID);
@@ -73,7 +73,7 @@ namespace ARAF_OPERATOR_PANEL
                 simpleButtonseciliIsiBaslat.Visible = false;
                 simpleButtonTumunuBaslat.Visible = false;
             }
-       
+
         }
         private void IsListele(string ITEM_CODE_)
         {
@@ -125,50 +125,83 @@ namespace ARAF_OPERATOR_PANEL
 
         private void gridViewStokListesi_Click(object sender, EventArgs e)
         {
-            if (gridViewStokListesi.RowCount!=0)
-            IsListele(gridViewStokListesi.GetRowCellValue(gridViewStokListesi.FocusedRowHandle, "ITEM_CODE").ToString());
+            if (gridViewStokListesi.RowCount != 0)
+                IsListele(gridViewStokListesi.GetRowCellValue(gridViewStokListesi.FocusedRowHandle, "ITEM_CODE").ToString());
         }
 
         private void simpleButtonPlanEkle_Click(object sender, EventArgs e)
         {
+            if (gridViewIsListesi.RowCount == 0) return;
             int ID = Convert.ToInt32(gridViewIsListesi.GetRowCellValue(gridViewIsListesi.FocusedRowHandle, "PLAN_ID").ToString());
-            using (ARAFEntities context = new ARAFEntities())
+            if (ID != 0)
             {
-                var Prd = from h in context.ARF_TMP_PLANNING where h.WS_ID == MakineID && h.PLAN_ID == ID select h;
-                if ((Prd != null) && (Prd.Count() != 0))
+                using (ARAFEntities context = new ARAFEntities())
                 {
-                    MessageBox.Show("Plan Eklenmiş.");
-                }
-                else
-                {
-                    Kaydet();
-                }
+                    try
+                    {
+                        var Prd = from h in context.ARF_TMP_PLANNING where h.WS_ID == MakineID && h.PLAN_ID == ID select h;
+                        if ((Prd != null) && (Prd.Count() != 0))
+                        {
+                            MessageBox.Show("Plan Eklenmiş.");
+                        }
+                        else
+                        {
+                            Kaydet();
+                        }
+                    }
+                    catch (Exception hataTuru)
+                    {
+                        string Text = "Hata meydana geldi." + hataTuru;
+                        MessageBox.Show(Text);
+                    }
 
+                }
             }
 
         }
         private void Kaydet()
         {
-            ARAFEntities db = new ARAFEntities();
-            TMP_PLANNING tmpP = new TMP_PLANNING();
-            tmpP.WS_ID = MakineID;
-            tmpP.PLAN_ID = Convert.ToInt32(gridViewIsListesi.GetRowCellValue(gridViewIsListesi.FocusedRowHandle, "PLAN_ID").ToString());
-            tmpP.MULTIPLIER = 1;
-            tmpP.DIVIDING = 1;
-            db.TMP_PLANNING.Add(tmpP);
-            db.SaveChanges();
-            EklenenPlanListesi();
+            try
+            {
+                ARAFEntities db = new ARAFEntities();
+                TMP_PLANNING tmpP = new TMP_PLANNING();
+                tmpP.WS_ID = MakineID;
+                tmpP.PLAN_ID = Convert.ToInt32(gridViewIsListesi.GetRowCellValue(gridViewIsListesi.FocusedRowHandle, "PLAN_ID").ToString());
+                tmpP.MULTIPLIER = 1;
+                tmpP.DIVIDING = 1;
+                db.TMP_PLANNING.Add(tmpP);
+                db.SaveChanges();
+                EklenenPlanListesi();
+            }
+            catch (Exception hataTuru)
+            {
+                string Text = "Hata meydana geldi." + hataTuru;
+                MessageBox.Show(Text);
+            }
+
         }
 
         private void Silme()
         {
-            int ID = Convert.ToInt32(gridViewPlanListe.GetRowCellValue(gridViewPlanListe.FocusedRowHandle, "TMP_PLN_ID").ToString());
-            using (ARAFEntities context = new ARAFEntities())
+            try
             {
-                context.TMP_PLANNING.RemoveRange(context.TMP_PLANNING.Where(u => u.TMP_PLN_ID == ID));
-                context.SaveChanges();
+                if (gridViewPlanListe.RowCount == 0) return;
+                int ID = Convert.ToInt32(gridViewPlanListe.GetRowCellValue(gridViewPlanListe.FocusedRowHandle, "TMP_PLN_ID").ToString());
+                if (ID != 0)
+                {
+                    using (ARAFEntities context = new ARAFEntities())
+                    {
+                        context.TMP_PLANNING.RemoveRange(context.TMP_PLANNING.Where(u => u.TMP_PLN_ID == ID));
+                        context.SaveChanges();
+                    }
+                    EklenenPlanListesi();
+                }
             }
-            EklenenPlanListesi();
+            catch (Exception hataTuru)
+            {
+                string Text = "Hata meydana geldi." + hataTuru;
+                MessageBox.Show(Text);
+            }
         }
 
         private void simpleButtonPlanSil_Click(object sender, EventArgs e)
@@ -178,55 +211,82 @@ namespace ARAF_OPERATOR_PANEL
 
         private void simpleButtonseciliIsiBaslat_Click(object sender, EventArgs e)
         {
-
+            if (gridViewPlanListe.RowCount == 0) return;
             int PLAN_ID_ = Convert.ToInt32(gridViewPlanListe.GetRowCellValue(gridViewPlanListe.FocusedRowHandle, "PLAN_ID").ToString());
-
-            using (ARAFEntities context = new ARAFEntities())
+            if (PLAN_ID_ != 0)
             {
-                var query1 = from contact in context.ARF_TMP_PLANNING
-                             where
-                 contact.WS_ID == MakineID
-                             select contact;
-
-                // Iterate through the collection of Contact items.
-                foreach (var result1 in query1)
+                using (ARAFEntities context = new ARAFEntities())
                 {
-                    uretimPlanEkle(result1.PLAN_ID, result1.WS_ID);
+                    try
+                    {
+                        var query1 = from contact in context.ARF_TMP_PLANNING
+                                     where
+                         contact.WS_ID == MakineID
+                                     select contact;
+
+                        // Iterate through the collection of Contact items.
+                        foreach (var result1 in query1)
+                        {
+                            uretimPlanEkle(result1.PLAN_ID, result1.WS_ID);
+                        }
+                        UretimEkle(MakineID);
+
+
+                        if (PlanEkle_ == 0)
+                        {
+                            var query = (from contact1 in context.PRODUCTION_PLANNING
+                                         where contact1.WS_ID == MakineID && contact1.PLAN_ID == PLAN_ID_ && contact1.PROD_PLAN_STATUS == 0
+                                         select contact1).First();
+                            query.PROD_PLAN_STATUS = 1;
+                            context.SaveChanges();
+                        }
+                    }
+                    catch (Exception hataTuru)
+                    {
+                        string Text = "Hata meydana geldi." + hataTuru;
+                        MessageBox.Show(Text);
+                    }
+
                 }
-                UretimEkle(MakineID);
-
-
-                if (PlanEkle_ == 0)
-                {
-                    var query = (from contact1 in context.PRODUCTION_PLANNING
-                                 where contact1.WS_ID == MakineID && contact1.PLAN_ID == PLAN_ID_ && contact1.PROD_PLAN_STATUS == 0
-                                 select contact1).First();
-                    query.PROD_PLAN_STATUS = 1;
-                    context.SaveChanges();
-                }
-
             }
 
 
             simpleButtonKapat_Click(sender, e);
 
         }
-   
+
         public void uretimPlanEkle(int PLAN_ID, int WS_ID)
         {
-            int dd;
-            using (ARAFEntities context = new ARAFEntities())
+            try
             {
-                dd =Convert.ToInt32(context.ARF_PRODUCTION_PLANNIG_INSERT(PLAN_ID, WS_ID).ToString());
+                int dd;
+                using (ARAFEntities context = new ARAFEntities())
+                {
+                    dd = Convert.ToInt32(context.ARF_PRODUCTION_PLANNIG_INSERT(PLAN_ID, WS_ID).ToString());
+                }
             }
+            catch (Exception hataTuru)
+            {
+                string Text = "Hata meydana geldi." + hataTuru;
+                MessageBox.Show(Text);
+            }
+
 
         }
         public void UretimEkle(int WS_ID)
         {
-            int dd;
-            using (ARAFEntities context = new ARAFEntities())
+            try
             {
-                dd = Convert.ToInt32(context.ARF_PRODUCTION_START(WS_ID).ToString());
+                int dd;
+                using (ARAFEntities context = new ARAFEntities())
+                {
+                    dd = Convert.ToInt32(context.ARF_PRODUCTION_START(WS_ID).ToString());
+                }
+            }
+            catch (Exception hataTuru)
+            {
+                string Text = "Hata meydana geldi." + hataTuru;
+                MessageBox.Show(Text);
             }
 
         }
@@ -235,19 +295,27 @@ namespace ARAF_OPERATOR_PANEL
         {
             using (ARAFEntities context = new ARAFEntities())
             {
-                var query1 = from contact in context.ARF_TMP_PLANNING
-                             where
-                 contact.WS_ID ==   MakineID
-                             select contact;
-
-                // Iterate through the collection of Contact items.
-                foreach (var result1 in query1)
+                try
                 {
-                    uretimPlanEkle(result1.PLAN_ID,result1.WS_ID);                 
+                    var query1 = from contact in context.ARF_TMP_PLANNING
+                                 where
+                     contact.WS_ID == MakineID
+                                 select contact;
+
+                    // Iterate through the collection of Contact items.
+                    foreach (var result1 in query1)
+                    {
+                        uretimPlanEkle(result1.PLAN_ID, result1.WS_ID);
+                    }
+                    UretimEkle(MakineID);
                 }
-                UretimEkle(MakineID);
+                catch (Exception hataTuru)
+                {
+                    string Text = "Hata meydana geldi." + hataTuru;
+                    MessageBox.Show(Text);
+                }
             }
-            simpleButtonKapat_Click(sender,e);
+            simpleButtonKapat_Click(sender, e);
         }
 
         private void simpleButtonKapat_Click(object sender, EventArgs e)

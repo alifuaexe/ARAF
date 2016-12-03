@@ -1,0 +1,13 @@
+program SvComExample1;
+
+uses
+    SvCom_NTService,
+    svcExample1 {SampleService1: TNtService};
+
+{$R *.RES}
+
+begin
+    Application.Initialize;
+    Application.CreateForm(TSampleService1, SampleService1);
+    Application.Run;
+end.

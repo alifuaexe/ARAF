@@ -1,0 +1,13 @@
+object SampleService1: TSampleService1
+  DisplayName = 'SvCom Example N 1'
+  ShareProcess = True
+  UseSynchronizer = False
+  OnStart = SampleService1Start
+  OnStop = SampleService1Stop
+  FailureActions = <>
+  Left = 211
+  Top = 121
+  Height = 150
+  Width = 215
+  StartedByScm = '00D244E7-B5119CE0'
+end

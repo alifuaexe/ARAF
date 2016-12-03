@@ -26,6 +26,12 @@ namespace ARAF_OPERATOR_PANEL
         public Nullable<System.DateTime> PROD_PLAN_START_DATE { get; set; }
         public Nullable<System.DateTime> PROD_PLAN_END_DATE { get; set; }
         public Nullable<System.DateTime> LAST_READ_DATE { get; set; }
+        public bool TRANSFER_STATUS { get; set; }
+        public Nullable<System.DateTime> TRANSFER_DATE { get; set; }
+        public string TRANSFER_ERROR { get; set; }
+        public bool CONSUMPTION_STATUS { get; set; }
+        public Nullable<System.DateTime> CONSUMPTION_DATE { get; set; }
+        public string CONSUMPTION_ERROR { get; set; }
     
         public virtual PLANNING PLANNING { get; set; }
         public virtual WORKSTATION WORKSTATION { get; set; }

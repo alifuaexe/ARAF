@@ -32,11 +32,11 @@ namespace ARAF_OPERATOR_PANEL
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArafFrmOperatorPanel));
-            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel1 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
-            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView1 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel2 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
+            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView2 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             this.ribbonPageGroupBut = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barButtonItemUretimBaslat = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemUretimBitir = new DevExpress.XtraBars.BarButtonItem();
@@ -61,6 +61,13 @@ namespace ARAF_OPERATOR_PANEL
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel_Orta = new System.Windows.Forms.TableLayoutPanel();
+            this.chartControlDuruslar = new DevExpress.XtraCharts.ChartControl();
+            this.ribbonGalleryBarItem2 = new DevExpress.XtraBars.RibbonGalleryBarItem();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.simpleButtonIsbitir = new DevExpress.XtraEditors.SimpleButton();
+            this.gridControlSiparis_urun = new DevExpress.XtraGrid.GridControl();
+            this.cardViewSiparis_Urun = new DevExpress.XtraGrid.Views.Card.CardView();
             this.xtraTabControlUretim = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPageUretimBilgileri = new DevExpress.XtraTab.XtraTabPage();
             this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
@@ -72,11 +79,6 @@ namespace ARAF_OPERATOR_PANEL
             this.gridControlPlandakiIsler = new DevExpress.XtraGrid.GridControl();
             this.gridViewPlandakiIsler = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPageGrafik = new DevExpress.XtraTab.XtraTabPage();
-            this.gridControlSiparis_urun = new DevExpress.XtraGrid.GridControl();
-            this.cardViewSiparis_Urun = new DevExpress.XtraGrid.Views.Card.CardView();
-            this.chartControlDuruslar = new DevExpress.XtraCharts.ChartControl();
-            this.ribbonGalleryBarItem2 = new DevExpress.XtraBars.RibbonGalleryBarItem();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRatingControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).BeginInit();
@@ -87,6 +89,14 @@ namespace ARAF_OPERATOR_PANEL
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel_Orta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControlDuruslar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView2)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlSiparis_urun)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cardViewSiparis_Urun)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlUretim)).BeginInit();
             this.xtraTabControlUretim.SuspendLayout();
             this.xtraTabPageUretimBilgileri.SuspendLayout();
@@ -98,13 +108,6 @@ namespace ARAF_OPERATOR_PANEL
             this.tableLayoutPanelPlandakiIsler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlPlandakiIsler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPlandakiIsler)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlSiparis_urun)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cardViewSiparis_Urun)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControlDuruslar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonPageGroupBut
@@ -162,7 +165,7 @@ namespace ARAF_OPERATOR_PANEL
             // 
             // barButtonItemDurus_Baslat
             // 
-            this.barButtonItemDurus_Baslat.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barButtonItemDurus_Baslat.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
             resources.ApplyResources(this.barButtonItemDurus_Baslat, "barButtonItemDurus_Baslat");
             this.barButtonItemDurus_Baslat.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemDurus_Baslat.Glyph")));
             this.barButtonItemDurus_Baslat.Id = 4;
@@ -205,11 +208,9 @@ namespace ARAF_OPERATOR_PANEL
             // 
             // barButtonItemPlanEkle
             // 
-            this.barButtonItemPlanEkle.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             resources.ApplyResources(this.barButtonItemPlanEkle, "barButtonItemPlanEkle");
             this.barButtonItemPlanEkle.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemPlanEkle.Glyph")));
             this.barButtonItemPlanEkle.Id = 1;
-            this.barButtonItemPlanEkle.ImageUri.Uri = "AddItem";
             this.barButtonItemPlanEkle.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemPlanEkle.LargeGlyph")));
             this.barButtonItemPlanEkle.Name = "barButtonItemPlanEkle";
             this.barButtonItemPlanEkle.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -365,8 +366,109 @@ namespace ARAF_OPERATOR_PANEL
             // 
             resources.ApplyResources(this.tableLayoutPanel_Orta, "tableLayoutPanel_Orta");
             this.tableLayoutPanel_Orta.Controls.Add(this.xtraTabControlUretim, 0, 0);
-            this.tableLayoutPanel_Orta.Controls.Add(this.gridControlSiparis_urun, 0, 0);
+            this.tableLayoutPanel_Orta.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel_Orta.Name = "tableLayoutPanel_Orta";
+            // 
+            // chartControlDuruslar
+            // 
+            xyDiagram2.AxisX.NumericScaleOptions.ProcessMissingPoints = DevExpress.XtraCharts.ProcessMissingPointsMode.InsertEmptyPoints;
+            xyDiagram2.AxisX.NumericScaleOptions.ScaleMode = DevExpress.XtraCharts.ScaleMode.Manual;
+            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram2.AxisY.Interlaced = true;
+            xyDiagram2.AxisY.MinorCount = 4;
+            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram2.PaneLayoutDirection = DevExpress.XtraCharts.PaneLayoutDirection.Horizontal;
+            this.chartControlDuruslar.Diagram = xyDiagram2;
+            resources.ApplyResources(this.chartControlDuruslar, "chartControlDuruslar");
+            this.chartControlDuruslar.Legend.Name = "Default Legend";
+            this.chartControlDuruslar.Name = "chartControlDuruslar";
+            series2.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Numerical;
+            series2.CrosshairEnabled = DevExpress.Utils.DefaultBoolean.True;
+            series2.CrosshairHighlightPoints = DevExpress.Utils.DefaultBoolean.False;
+            fullStackedBarSeriesLabel2.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Gradient;
+            fullStackedBarSeriesLabel2.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.TopInside;
+            fullStackedBarSeriesLabel2.Shadow.Visible = true;
+            fullStackedBarSeriesLabel2.ShowForZeroValues = true;
+            series2.Label = fullStackedBarSeriesLabel2;
+            series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series2.LegendName = "Default Legend";
+            resources.ApplyResources(series2, "series2");
+            series2.View = fullStackedBarSeriesView2;
+            this.chartControlDuruslar.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series2};
+            // 
+            // ribbonGalleryBarItem2
+            // 
+            resources.ApplyResources(this.ribbonGalleryBarItem2, "ribbonGalleryBarItem2");
+            // 
+            // 
+            // 
+            this.ribbonGalleryBarItem2.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
+            galleryItemGroup2});
+            this.ribbonGalleryBarItem2.Id = 3;
+            this.ribbonGalleryBarItem2.Name = "ribbonGalleryBarItem2";
+            // 
+            // defaultLookAndFeel1
+            // 
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Visual Studio 2013 Dark";
+            // 
+            // tableLayoutPanel2
+            // 
+            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
+            this.tableLayoutPanel2.Controls.Add(this.simpleButtonIsbitir, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.gridControlSiparis_urun, 0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            // 
+            // simpleButtonIsbitir
+            // 
+            this.simpleButtonIsbitir.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("simpleButton1.Appearance.Font")));
+            this.simpleButtonIsbitir.Appearance.Options.UseFont = true;
+            resources.ApplyResources(this.simpleButtonIsbitir, "simpleButtonIsbitir");
+            this.simpleButtonIsbitir.Name = "simpleButtonIsbitir";
+            this.simpleButtonIsbitir.Click += new System.EventHandler(this.simpleButtonIsbitir_Click);
+            // 
+            // gridControlSiparis_urun
+            // 
+            resources.ApplyResources(this.gridControlSiparis_urun, "gridControlSiparis_urun");
+            this.gridControlSiparis_urun.MainView = this.cardViewSiparis_Urun;
+            this.gridControlSiparis_urun.MenuManager = this.ribbon;
+            this.gridControlSiparis_urun.Name = "gridControlSiparis_urun";
+            this.gridControlSiparis_urun.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.cardViewSiparis_Urun});
+            // 
+            // cardViewSiparis_Urun
+            // 
+            this.cardViewSiparis_Urun.Appearance.Card.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.Card.Font")));
+            this.cardViewSiparis_Urun.Appearance.Card.Options.UseFont = true;
+            this.cardViewSiparis_Urun.Appearance.CardButton.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.CardButton.Font")));
+            this.cardViewSiparis_Urun.Appearance.CardButton.Options.UseFont = true;
+            this.cardViewSiparis_Urun.Appearance.CardCaption.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.CardCaption.Font")));
+            this.cardViewSiparis_Urun.Appearance.CardCaption.Options.UseFont = true;
+            this.cardViewSiparis_Urun.Appearance.CardExpandButton.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.CardExpandButton.Font")));
+            this.cardViewSiparis_Urun.Appearance.CardExpandButton.Options.UseFont = true;
+            this.cardViewSiparis_Urun.Appearance.EmptySpace.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.EmptySpace.Font")));
+            this.cardViewSiparis_Urun.Appearance.EmptySpace.Options.UseFont = true;
+            this.cardViewSiparis_Urun.Appearance.FieldCaption.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.FieldCaption.Font")));
+            this.cardViewSiparis_Urun.Appearance.FieldCaption.Options.UseFont = true;
+            this.cardViewSiparis_Urun.Appearance.FieldValue.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.FieldValue.Font")));
+            this.cardViewSiparis_Urun.Appearance.FieldValue.Options.UseFont = true;
+            this.cardViewSiparis_Urun.Appearance.FilterCloseButton.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.FilterCloseButton.Font")));
+            this.cardViewSiparis_Urun.Appearance.FilterCloseButton.Options.UseFont = true;
+            this.cardViewSiparis_Urun.Appearance.FilterPanel.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.FilterPanel.Font")));
+            this.cardViewSiparis_Urun.Appearance.FilterPanel.Options.UseFont = true;
+            this.cardViewSiparis_Urun.Appearance.FocusedCardCaption.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.FocusedCardCaption.Font")));
+            this.cardViewSiparis_Urun.Appearance.FocusedCardCaption.Options.UseFont = true;
+            this.cardViewSiparis_Urun.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.cardViewSiparis_Urun.CardScrollButtonBorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.cardViewSiparis_Urun.CardWidth = 400;
+            this.cardViewSiparis_Urun.FocusedCardTopFieldIndex = 0;
+            this.cardViewSiparis_Urun.GridControl = this.gridControlSiparis_urun;
+            this.cardViewSiparis_Urun.Name = "cardViewSiparis_Urun";
+            this.cardViewSiparis_Urun.OptionsBehavior.AutoHorzWidth = true;
+            this.cardViewSiparis_Urun.OptionsBehavior.FieldAutoHeight = true;
+            this.cardViewSiparis_Urun.OptionsView.ShowCardCaption = false;
+            this.cardViewSiparis_Urun.PaintStyleName = "Skin";
+            this.cardViewSiparis_Urun.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Auto;
             // 
             // xtraTabControlUretim
             // 
@@ -438,7 +540,7 @@ namespace ARAF_OPERATOR_PANEL
             this.cardViewMiktar.AppearancePrint.FieldValue.Options.UseBackColor = true;
             this.cardViewMiktar.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.cardViewMiktar.CardScrollButtonBorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.cardViewMiktar.CardWidth = 400;
+            this.cardViewMiktar.CardWidth = 250;
             this.cardViewMiktar.FocusedCardTopFieldIndex = 0;
             this.cardViewMiktar.GridControl = this.gridControlMiktar;
             this.cardViewMiktar.Name = "cardViewMiktar";
@@ -464,7 +566,6 @@ namespace ARAF_OPERATOR_PANEL
             this.simpleButtonPlandakiIsiBaslat.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.simpleButtonPlandakiIsiBaslat, "simpleButtonPlandakiIsiBaslat");
             this.simpleButtonPlandakiIsiBaslat.Name = "simpleButtonPlandakiIsiBaslat";
-            this.simpleButtonPlandakiIsiBaslat.Click += new System.EventHandler(this.simpleButtonPlandakiIsiBaslat_Click);
             // 
             // gridControlPlandakiIsler
             // 
@@ -528,92 +629,6 @@ namespace ARAF_OPERATOR_PANEL
             this.xtraTabPageGrafik.Name = "xtraTabPageGrafik";
             resources.ApplyResources(this.xtraTabPageGrafik, "xtraTabPageGrafik");
             // 
-            // gridControlSiparis_urun
-            // 
-            resources.ApplyResources(this.gridControlSiparis_urun, "gridControlSiparis_urun");
-            this.gridControlSiparis_urun.MainView = this.cardViewSiparis_Urun;
-            this.gridControlSiparis_urun.MenuManager = this.ribbon;
-            this.gridControlSiparis_urun.Name = "gridControlSiparis_urun";
-            this.gridControlSiparis_urun.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.cardViewSiparis_Urun});
-            // 
-            // cardViewSiparis_Urun
-            // 
-            this.cardViewSiparis_Urun.Appearance.Card.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.Card.Font")));
-            this.cardViewSiparis_Urun.Appearance.Card.Options.UseFont = true;
-            this.cardViewSiparis_Urun.Appearance.CardButton.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.CardButton.Font")));
-            this.cardViewSiparis_Urun.Appearance.CardButton.Options.UseFont = true;
-            this.cardViewSiparis_Urun.Appearance.CardCaption.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.CardCaption.Font")));
-            this.cardViewSiparis_Urun.Appearance.CardCaption.Options.UseFont = true;
-            this.cardViewSiparis_Urun.Appearance.CardExpandButton.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.CardExpandButton.Font")));
-            this.cardViewSiparis_Urun.Appearance.CardExpandButton.Options.UseFont = true;
-            this.cardViewSiparis_Urun.Appearance.EmptySpace.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.EmptySpace.Font")));
-            this.cardViewSiparis_Urun.Appearance.EmptySpace.Options.UseFont = true;
-            this.cardViewSiparis_Urun.Appearance.FieldCaption.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.FieldCaption.Font")));
-            this.cardViewSiparis_Urun.Appearance.FieldCaption.Options.UseFont = true;
-            this.cardViewSiparis_Urun.Appearance.FieldValue.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.FieldValue.Font")));
-            this.cardViewSiparis_Urun.Appearance.FieldValue.Options.UseFont = true;
-            this.cardViewSiparis_Urun.Appearance.FilterCloseButton.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.FilterCloseButton.Font")));
-            this.cardViewSiparis_Urun.Appearance.FilterCloseButton.Options.UseFont = true;
-            this.cardViewSiparis_Urun.Appearance.FilterPanel.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.FilterPanel.Font")));
-            this.cardViewSiparis_Urun.Appearance.FilterPanel.Options.UseFont = true;
-            this.cardViewSiparis_Urun.Appearance.FocusedCardCaption.Font = ((System.Drawing.Font)(resources.GetObject("cardViewSiparis_Urun.Appearance.FocusedCardCaption.Font")));
-            this.cardViewSiparis_Urun.Appearance.FocusedCardCaption.Options.UseFont = true;
-            this.cardViewSiparis_Urun.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.cardViewSiparis_Urun.CardScrollButtonBorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.cardViewSiparis_Urun.CardWidth = 400;
-            this.cardViewSiparis_Urun.FocusedCardTopFieldIndex = 0;
-            this.cardViewSiparis_Urun.GridControl = this.gridControlSiparis_urun;
-            this.cardViewSiparis_Urun.Name = "cardViewSiparis_Urun";
-            this.cardViewSiparis_Urun.OptionsBehavior.AutoHorzWidth = true;
-            this.cardViewSiparis_Urun.OptionsBehavior.FieldAutoHeight = true;
-            this.cardViewSiparis_Urun.OptionsView.ShowCardCaption = false;
-            this.cardViewSiparis_Urun.PaintStyleName = "Skin";
-            this.cardViewSiparis_Urun.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Auto;
-            // 
-            // chartControlDuruslar
-            // 
-            xyDiagram1.AxisX.NumericScaleOptions.ProcessMissingPoints = DevExpress.XtraCharts.ProcessMissingPointsMode.InsertEmptyPoints;
-            xyDiagram1.AxisX.NumericScaleOptions.ScaleMode = DevExpress.XtraCharts.ScaleMode.Manual;
-            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisY.Interlaced = true;
-            xyDiagram1.AxisY.MinorCount = 4;
-            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
-            xyDiagram1.PaneLayoutDirection = DevExpress.XtraCharts.PaneLayoutDirection.Horizontal;
-            this.chartControlDuruslar.Diagram = xyDiagram1;
-            resources.ApplyResources(this.chartControlDuruslar, "chartControlDuruslar");
-            this.chartControlDuruslar.Legend.Name = "Default Legend";
-            this.chartControlDuruslar.Name = "chartControlDuruslar";
-            series1.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Numerical;
-            series1.CrosshairEnabled = DevExpress.Utils.DefaultBoolean.True;
-            series1.CrosshairHighlightPoints = DevExpress.Utils.DefaultBoolean.False;
-            fullStackedBarSeriesLabel1.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Gradient;
-            fullStackedBarSeriesLabel1.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.TopInside;
-            fullStackedBarSeriesLabel1.Shadow.Visible = true;
-            fullStackedBarSeriesLabel1.ShowForZeroValues = true;
-            series1.Label = fullStackedBarSeriesLabel1;
-            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series1.LegendName = "Default Legend";
-            resources.ApplyResources(series1, "series1");
-            series1.View = fullStackedBarSeriesView1;
-            this.chartControlDuruslar.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1};
-            // 
-            // ribbonGalleryBarItem2
-            // 
-            resources.ApplyResources(this.ribbonGalleryBarItem2, "ribbonGalleryBarItem2");
-            // 
-            // 
-            // 
-            this.ribbonGalleryBarItem2.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup1});
-            this.ribbonGalleryBarItem2.Id = 3;
-            this.ribbonGalleryBarItem2.Name = "ribbonGalleryBarItem2";
-            // 
-            // defaultLookAndFeel1
-            // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Visual Studio 2013 Dark";
-            // 
             // ArafFrmOperatorPanel
             // 
             this.ActiveGlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -644,6 +659,14 @@ namespace ARAF_OPERATOR_PANEL
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel_Orta.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControlDuruslar)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlSiparis_urun)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cardViewSiparis_Urun)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlUretim)).EndInit();
             this.xtraTabControlUretim.ResumeLayout(false);
             this.xtraTabPageUretimBilgileri.ResumeLayout(false);
@@ -655,13 +678,6 @@ namespace ARAF_OPERATOR_PANEL
             this.tableLayoutPanelPlandakiIsler.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlPlandakiIsler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPlandakiIsler)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlSiparis_urun)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cardViewSiparis_Urun)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControlDuruslar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -699,8 +715,11 @@ namespace ARAF_OPERATOR_PANEL
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
         private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl5;
         private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl6;
-        private DevExpress.XtraGrid.GridControl gridControlSiparis_urun;
-        internal DevExpress.XtraGrid.Views.Card.CardView cardViewSiparis_Urun;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupBut;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemPlanEkle;
+        private DevExpress.XtraBars.Ribbon.RibbonMiniToolbar ribbonMiniToolbar1;
+        private DevExpress.XtraBars.Ribbon.RibbonMiniToolbar ribbonMiniToolbar2;
+        private System.Windows.Forms.ImageList ımageList1;
         private DevExpress.XtraTab.XtraTabControl xtraTabControlUretim;
         private DevExpress.XtraTab.XtraTabPage xtraTabPageUretimBilgileri;
         private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
@@ -712,10 +731,9 @@ namespace ARAF_OPERATOR_PANEL
         private DevExpress.XtraGrid.GridControl gridControlPlandakiIsler;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewPlandakiIsler;
         private DevExpress.XtraTab.XtraTabPage xtraTabPageGrafik;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupBut;
-        private DevExpress.XtraBars.BarButtonItem barButtonItemPlanEkle;
-        private DevExpress.XtraBars.Ribbon.RibbonMiniToolbar ribbonMiniToolbar1;
-        private DevExpress.XtraBars.Ribbon.RibbonMiniToolbar ribbonMiniToolbar2;
-        private System.Windows.Forms.ImageList ımageList1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonIsbitir;
+        private DevExpress.XtraGrid.GridControl gridControlSiparis_urun;
+        internal DevExpress.XtraGrid.Views.Card.CardView cardViewSiparis_Urun;
     }
 }

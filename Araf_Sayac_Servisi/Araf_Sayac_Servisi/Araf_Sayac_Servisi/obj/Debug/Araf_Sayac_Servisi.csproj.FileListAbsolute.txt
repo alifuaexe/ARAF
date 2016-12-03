@@ -1,0 +1,15 @@
+C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\obj\Debug\Interop.FP_CONNECTLib.dll
+C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\obj\Debug\Araf_Sayac_Servisi.csproj.ResolveComReference.cache
+C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe.config
+C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe
+C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.pdb
+C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Interop.FP_CONNECTLib.dll
+C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\obj\Debug\Araf_Sayac_Servisi.exe
+C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\obj\Debug\Araf_Sayac_Servisi.pdb
+C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\obj\Debug\Araf_Sayac_Servisi.ProjectInstaller.resources
+C:\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\obj\Debug\Araf_Sayac_Servisi.csproj.GenerateResource.Cache
+C:\PROJELER\GOOGLE_DRIVE\Araf\Proje\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\bin\Debug\Araf_Sayac_Servisi.exe.config
+C:\PROJELER\GOOGLE_DRIVE\Araf\Proje\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\obj\Debug\Interop.FP_CONNECTLib.dll
+C:\PROJELER\GOOGLE_DRIVE\Araf\Proje\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\obj\Debug\Araf_Sayac_Servisi.csproj.ResolveComReference.cache
+C:\PROJELER\GOOGLE_DRIVE\Araf\Proje\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\obj\Debug\Araf_Sayac_Servisi.exe
+C:\PROJELER\GOOGLE_DRIVE\Araf\Proje\Araf_Sayac_Servisi\Araf_Sayac_Servisi\Araf_Sayac_Servisi\obj\Debug\Araf_Sayac_Servisi.pdb

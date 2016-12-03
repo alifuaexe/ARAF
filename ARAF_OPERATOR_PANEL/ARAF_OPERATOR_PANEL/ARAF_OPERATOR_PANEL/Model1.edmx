@@ -175,6 +175,12 @@ warning 6002: The table/view 'ARAF.dbo.ITEM_OPERATIONS' does not have a primary 
           <Property Name="PROD_PLAN_START_DATE" Type="datetime" />
           <Property Name="PROD_PLAN_END_DATE" Type="datetime" />
           <Property Name="LAST_READ_DATE" Type="datetime" />
+          <Property Name="TRANSFER_STATUS" Type="bit" Nullable="false" />
+          <Property Name="TRANSFER_DATE" Type="datetime" />
+          <Property Name="TRANSFER_ERROR" Type="nvarchar(max)" />
+          <Property Name="CONSUMPTION_STATUS" Type="bit" Nullable="false" />
+          <Property Name="CONSUMPTION_DATE" Type="datetime" />
+          <Property Name="CONSUMPTION_ERROR" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="PRODUCTION_SUSPEND">
           <Key>
@@ -354,7 +360,7 @@ warning 6002: The table/view 'ARAF.dbo.ITEM_OPERATIONS' does not have a primary 
           <Property Name="WSG_ID" Type="int" />
           <Property Name="WS_CODE" Type="varchar" MaxLength="50" />
           <Property Name="WS_NAME" Type="varchar" MaxLength="150" />
-          <Property Name="COMPUTER_NAME" Type="nchar" MaxLength="50" />
+          <Property Name="COMPUTER_NAME" Type="nvarchar" MaxLength="50" />
           <Property Name="TERM_RATE" Type="float" />
           <Property Name="WORK_ORDER_TYPE" Type="tinyint" />
         </EntityType>
@@ -1580,6 +1586,12 @@ warning 6002: The table/view 'ARAF.dbo.ARF_WORKSTATIONS' does not have a primary
           <NavigationProperty Name="WORKSTATION" Relationship="Self.FK_PRODUCTION_PLANNING_WORKSTATION" FromRole="PRODUCTION_PLANNING" ToRole="WORKSTATION" />
           <Property Name="LAST_READ_DATE" Type="DateTime" Precision="3" />
           <NavigationProperty Name="PRODUCTION" Relationship="ARAFModel.FK_PRODUCTION_PLANNING_PRODUCTION" FromRole="PRODUCTION_PLANNING" ToRole="PRODUCTION" />
+          <Property Name="TRANSFER_STATUS" Type="Boolean" Nullable="false" />
+          <Property Name="TRANSFER_DATE" Type="DateTime" Precision="3" />
+          <Property Name="TRANSFER_ERROR" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CONSUMPTION_STATUS" Type="Boolean" Nullable="false" />
+          <Property Name="CONSUMPTION_DATE" Type="DateTime" Precision="3" />
+          <Property Name="CONSUMPTION_ERROR" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ROTATION">
           <Key>
@@ -1745,7 +1757,7 @@ warning 6002: The table/view 'ARAF.dbo.ARF_WORKSTATIONS' does not have a primary
           <Property Name="WSG_ID" Type="Int32" />
           <Property Name="WS_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="WS_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="COMPUTER_NAME" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="COMPUTER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="PLANNING" Relationship="Self.WS_ID" FromRole="WORKSTATION" ToRole="PLANNING" />
           <NavigationProperty Name="PRODUCTION_PLANNING" Relationship="Self.FK_PRODUCTION_PLANNING_WORKSTATION" FromRole="WORKSTATION" ToRole="PRODUCTION_PLANNING" />
           <NavigationProperty Name="ITEM_OPERATIONS" Relationship="Self.FK_ITEM_OPERATIONS_WS_ID" FromRole="WORKSTATION" ToRole="ITEM_OPERATIONS" />
@@ -2701,6 +2713,12 @@ warning 6002: The table/view 'ARAF.dbo.ARF_WORKSTATIONS' does not have a primary
           <EntitySetMapping Name="PRODUCTION_PLANNING">
             <EntityTypeMapping TypeName="ARAFModel.PRODUCTION_PLANNING">
               <MappingFragment StoreEntitySet="PRODUCTION_PLANNING">
+                <ScalarProperty Name="CONSUMPTION_ERROR" ColumnName="CONSUMPTION_ERROR" />
+                <ScalarProperty Name="CONSUMPTION_DATE" ColumnName="CONSUMPTION_DATE" />
+                <ScalarProperty Name="CONSUMPTION_STATUS" ColumnName="CONSUMPTION_STATUS" />
+                <ScalarProperty Name="TRANSFER_ERROR" ColumnName="TRANSFER_ERROR" />
+                <ScalarProperty Name="TRANSFER_DATE" ColumnName="TRANSFER_DATE" />
+                <ScalarProperty Name="TRANSFER_STATUS" ColumnName="TRANSFER_STATUS" />
                 <ScalarProperty Name="LAST_READ_DATE" ColumnName="LAST_READ_DATE" />
                 <ScalarProperty Name="PROD_PLAN_ID" ColumnName="PROD_PLAN_ID" />
                 <ScalarProperty Name="PROD_ID" ColumnName="PROD_ID" />

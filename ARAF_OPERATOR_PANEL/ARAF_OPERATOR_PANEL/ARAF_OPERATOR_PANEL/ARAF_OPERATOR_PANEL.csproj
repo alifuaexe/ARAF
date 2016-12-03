@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ARAF_OPERATOR_PANEL</RootNamespace>
     <AssemblyName>ARAF_OPERATOR_PANEL</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -26,6 +26,8 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -36,6 +38,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -45,6 +48,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -121,6 +125,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\Bin\Framework\tr\DevExpress.DataAccess.v16.1.UI.resources.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.DemosUpdater">
+      <HintPath>..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\System\Components\DevExpress.DemosUpdater.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Diagram.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Diagram.v16.1.Core.resources">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\Bin\Framework\tr\DevExpress.Diagram.v16.1.Core.resources.dll</HintPath>
@@ -165,6 +172,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\Bin\Framework\tr\DevExpress.ExpressApp.Win.v16.1.resources.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Logify.Installer">
+      <HintPath>..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\System\Components\DevExpress.Logify.Installer.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Map.v16.1.Core.resources, Version=16.1.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\Bin\Framework\tr\DevExpress.Map.v16.1.Core.resources.dll</HintPath>
@@ -185,6 +195,16 @@
     <Reference Include="DevExpress.Printing.v16.1.Core.resources, Version=16.1.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\Bin\Framework\tr\DevExpress.Printing.v16.1.Core.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Projects.v16.1.Installers, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\System\Components\DevExpress.Projects.v16.1.Installers.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ProjectUpgrade.Installer">
+      <HintPath>..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\System\Components\DevExpress.ProjectUpgrade.Installer.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ProjectUpgrade.Package">
+      <HintPath>..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\System\Components\DevExpress.ProjectUpgrade.Package.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.RichEdit.v16.1.Core.resources, Version=16.1.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -220,6 +240,16 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\Bin\Framework\tr\DevExpress.Utils.v16.1.UI.resources.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.VSMenuIntegration.Package">
+      <HintPath>..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\System\Components\DevExpress.VSMenuIntegration.Package.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.VSMenuIntegration.PackageInstaller">
+      <HintPath>..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\System\Components\DevExpress.VSMenuIntegration.PackageInstaller.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.VSMenuIntegration.Templates.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\System\Components\DevExpress.VSMenuIntegration.Templates.v16.1.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Web.ASPxHtmlEditor.v16.1.resources, Version=16.1.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\Bin\Framework\tr\DevExpress.Web.ASPxHtmlEditor.v16.1.resources.dll</HintPath>
@@ -247,6 +277,13 @@
     <Reference Include="DevExpress.Web.v16.1.resources, Version=16.1.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\Bin\Framework\tr\DevExpress.Web.v16.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Win.Projects.v16.1.Design, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\System\Components\DevExpress.Win.Projects.v16.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Win.Projects.v16.1.Installers">
+      <HintPath>..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\System\Components\DevExpress.Win.Projects.v16.1.Installers.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.Charts.v16.1.resources, Version=16.1.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -291,6 +328,10 @@
     <Reference Include="DevExpress.Xpf.Printing.v16.1.resources, Version=16.1.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\Bin\Framework\tr\DevExpress.Xpf.Printing.v16.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Projects.v16.1.Design, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\DevExpress 16.1\Components\System\Components\DevExpress.Xpf.Projects.v16.1.Design.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Xpf.PropertyGrid.v16.1.resources, Version=16.1.4.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -726,6 +767,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ArafFrmOperatorPanel.resx">
       <DependentUpon>ArafFrmOperatorPanel.cs</DependentUpon>
@@ -740,7 +782,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="App.Config" />
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>

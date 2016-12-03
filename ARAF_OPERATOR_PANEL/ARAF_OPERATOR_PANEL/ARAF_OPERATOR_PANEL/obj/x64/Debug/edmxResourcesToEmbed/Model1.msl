@@ -136,6 +136,12 @@
     <EntitySetMapping Name="PRODUCTION_PLANNING">
       <EntityTypeMapping TypeName="ARAFModel.PRODUCTION_PLANNING">
         <MappingFragment StoreEntitySet="PRODUCTION_PLANNING">
+          <ScalarProperty Name="CONSUMPTION_ERROR" ColumnName="CONSUMPTION_ERROR" />
+          <ScalarProperty Name="CONSUMPTION_DATE" ColumnName="CONSUMPTION_DATE" />
+          <ScalarProperty Name="CONSUMPTION_STATUS" ColumnName="CONSUMPTION_STATUS" />
+          <ScalarProperty Name="TRANSFER_ERROR" ColumnName="TRANSFER_ERROR" />
+          <ScalarProperty Name="TRANSFER_DATE" ColumnName="TRANSFER_DATE" />
+          <ScalarProperty Name="TRANSFER_STATUS" ColumnName="TRANSFER_STATUS" />
           <ScalarProperty Name="LAST_READ_DATE" ColumnName="LAST_READ_DATE" />
           <ScalarProperty Name="PROD_PLAN_ID" ColumnName="PROD_PLAN_ID" />
           <ScalarProperty Name="PROD_ID" ColumnName="PROD_ID" />

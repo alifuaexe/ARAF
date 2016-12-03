@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.446,C:\PROJELER\ARAF\ARAF_LOGO_KAYIT_SERVISI\svc1.dfm=C:\PROJELER\ARAF\ARAF_LOGO_KAYIT_SERVISI\svcArafLogoServis.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.050,=C:\PROJELER\ARAF\ARAF_LOGO_KAYIT_SERVISI\svc1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.446,C:\PROJELER\ARAF\ARAF_LOGO_KAYIT_SERVISI\svc1.pas=C:\PROJELER\ARAF\ARAF_LOGO_KAYIT_SERVISI\svcArafLogoServis.pas</Transaction>
+    <Transaction>2016.11.26 14:15:56.175,C:\PROJELER\ARAF\ARAF_LOGO_KAYIT_SERVISI\ArafLogoUSKSarfServisi.dproj=C:\PROJELER\ARAF\ARAF_LOGO_KAYIT_SERVISI\SvComExample1.dproj</Transaction>
+    <Transaction>2016.11.26 16:29:11.292,=C:\PROJELER\ARAF\ARAF_SistemYonetimi\Database\UnitConnectionSettings.pas</Transaction>
+    <Transaction>2016.11.26 16:29:29.571,=C:\PROJELER\ARAF\ARAF_SistemYonetimi\Unit\UnitBasic.pas</Transaction>
+    <Transaction>2016.11.26 16:40:51.002,C:\PROJELER\ARAF\ARAF_SistemYonetimi\Database\UnitConnectionSettings.pas=</Transaction>
+    <Transaction>2016.11.26 16:40:58.683,C:\PROJELER\ARAF\ARAF_SistemYonetimi\Unit\UnitBasic.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

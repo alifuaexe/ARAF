@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Licenses\BAA304DF-1198-4BB5-AFCB-14801F755AA6]
+"151ASP.NET"=dword:00000001
+"151WPF Components"=dword:00000001
+"151Windows Forms"=dword:00000001

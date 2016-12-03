@@ -1,0 +1,210 @@
+inherited FormUnitUrunTipTanimlama: TFormUnitUrunTipTanimlama
+  Caption = #220'r'#252'n Tipi Tan'#305'mlama'
+  ClientHeight = 398
+  ClientWidth = 660
+  FormStyle = fsMDIChild
+  Visible = True
+  OnShow = FormShow
+  ExplicitWidth = 676
+  ExplicitHeight = 437
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited cxPageControl1: TcxPageControl
+    Width = 660
+    Height = 341
+    ExplicitLeft = 0
+    ExplicitTop = 57
+    ExplicitWidth = 660
+    ExplicitHeight = 341
+    ClientRectBottom = 336
+    ClientRectRight = 655
+    inherited PageDetay: TcxTabSheet
+      ExplicitWidth = 653
+      ExplicitHeight = 311
+      inherited Panel4: TPanel
+        Width = 466
+        Height = 311
+        ExplicitLeft = 187
+        ExplicitTop = 0
+        ExplicitWidth = 466
+        ExplicitHeight = 311
+        inherited Panel3: TPanel
+          Width = 464
+          ExplicitLeft = 1
+          ExplicitTop = 1
+          ExplicitWidth = 464
+          object cxLabel1: TcxLabel
+            Left = 3
+            Top = 25
+            Caption = 'KEYID'
+            Transparent = True
+          end
+          object cxLabel2: TcxLabel
+            Left = 3
+            Top = 52
+            Caption = 'Tip Kodu'
+            Transparent = True
+          end
+          object cxLabel3: TcxLabel
+            Left = 3
+            Top = 75
+            Caption = 'Tip Adi'
+            Transparent = True
+          end
+          object edtKeyid: TcxTextEdit
+            Left = 96
+            Top = 24
+            TabOrder = 3
+            Width = 121
+          end
+          object edtUruntipKodu: TcxTextEdit
+            Left = 96
+            Top = 51
+            TabOrder = 4
+            Width = 121
+          end
+          object edtUruntipAdi: TcxTextEdit
+            Left = 96
+            Top = 78
+            TabOrder = 5
+            Width = 273
+          end
+        end
+        inherited Panel5: TPanel
+          Width = 464
+          Height = 93
+          ExplicitLeft = 1
+          ExplicitTop = 217
+          ExplicitWidth = 464
+          ExplicitHeight = 93
+          inherited cxGrid1: TcxGrid
+            Width = 462
+            Height = 91
+            ExplicitLeft = 1
+            ExplicitTop = 1
+            ExplicitWidth = 462
+            ExplicitHeight = 91
+            inherited gridView: TcxGridDBTableView
+              OptionsBehavior.GoToNextCellOnEnter = True
+              OptionsBehavior.IncSearch = True
+              OptionsBehavior.NavigatorHints = True
+              OptionsBehavior.PullFocusing = True
+              OptionsCustomize.ColumnsQuickCustomization = True
+              OptionsCustomize.ColumnsQuickCustomizationReordering = qcrEnabled
+              OptionsView.ScrollBars = ssHorizontal
+              OptionsView.ShowEditButtons = gsebAlways
+              OptionsView.GroupRowStyle = grsOffice11
+              OptionsView.Indicator = True
+              OptionsView.ShowColumnFilterButtons = sfbAlways
+              Preview.Visible = True
+              object gridViewITEM_GRP_ID: TcxGridDBColumn
+                DataBinding.FieldName = 'ITEM_GRP_ID'
+              end
+              object gridViewITEM_GRP_CODE: TcxGridDBColumn
+                DataBinding.FieldName = 'ITEM_GRP_CODE'
+                Width = 84
+              end
+              object gridViewITEM_GRP_NAME: TcxGridDBColumn
+                DataBinding.FieldName = 'ITEM_GRP_NAME'
+                Width = 148
+              end
+            end
+          end
+        end
+        inherited cxSplitter2: TcxSplitter
+          Width = 464
+          ExplicitWidth = 464
+        end
+      end
+      inherited cxSplitter1: TcxSplitter
+        Height = 311
+        ExplicitLeft = 177
+        ExplicitTop = 0
+        ExplicitHeight = 311
+      end
+      inherited Panel2: TPanel
+        Height = 311
+        ExplicitHeight = 311
+        inherited btnAra: TcxButton
+          Top = 250
+          ExplicitTop = 250
+          ExplicitWidth = 175
+        end
+      end
+    end
+  end
+  inherited Panel1: TPanel
+    Width = 660
+    ExplicitWidth = 660
+    inherited GridPanel1: TGridPanel
+      Width = 658
+      ColumnCollection = <
+        item
+          Value = 25.024202101173890000
+        end
+        item
+          Value = 25.032764840680120000
+        end
+        item
+          Value = 24.961980390381530000
+        end
+        item
+          Value = 24.981052667764470000
+        end>
+      ExplicitWidth = 658
+      ExplicitHeight = 55
+      inherited BtnYeni: TcxButton
+        Width = 164
+        ExplicitWidth = 164
+        ExplicitHeight = 53
+      end
+      inherited BtnKaydet: TcxButton
+        Left = 165
+        Width = 164
+        ExplicitLeft = 165
+        ExplicitWidth = 164
+        ExplicitHeight = 53
+      end
+      inherited BtnDegistir: TcxButton
+        Left = 329
+        Width = 163
+        ExplicitLeft = 329
+        ExplicitTop = 1
+        ExplicitWidth = 163
+        ExplicitHeight = 53
+      end
+      inherited BtnSil: TcxButton
+        Left = 492
+        Width = 165
+        OnClick = BtnSilClick
+        ExplicitLeft = 492
+        ExplicitWidth = 165
+        ExplicitHeight = 53
+      end
+    end
+  end
+  inherited ADOQuery1: TADOQuery
+    Active = True
+    CursorType = ctStatic
+    SQL.Strings = (
+      'select * from ITEM_GROUP')
+    Left = 482
+    Top = 132
+    object ADOQuery1ITEM_GRP_ID: TAutoIncField
+      FieldName = 'ITEM_GRP_ID'
+      ReadOnly = True
+    end
+    object ADOQuery1ITEM_GRP_CODE: TWideStringField
+      FieldName = 'ITEM_GRP_CODE'
+      Size = 50
+    end
+    object ADOQuery1ITEM_GRP_NAME: TWideStringField
+      FieldName = 'ITEM_GRP_NAME'
+      Size = 50
+    end
+  end
+  inherited DataSource1: TDataSource
+    Left = 474
+    Top = 188
+  end
+end

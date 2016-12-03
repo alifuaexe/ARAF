@@ -170,6 +170,12 @@ warning 6002: The table/view 'ARAF.dbo.ITEM_OPERATIONS' does not have a primary 
     <Property Name="PROD_PLAN_START_DATE" Type="datetime" />
     <Property Name="PROD_PLAN_END_DATE" Type="datetime" />
     <Property Name="LAST_READ_DATE" Type="datetime" />
+    <Property Name="TRANSFER_STATUS" Type="bit" Nullable="false" />
+    <Property Name="TRANSFER_DATE" Type="datetime" />
+    <Property Name="TRANSFER_ERROR" Type="nvarchar(max)" />
+    <Property Name="CONSUMPTION_STATUS" Type="bit" Nullable="false" />
+    <Property Name="CONSUMPTION_DATE" Type="datetime" />
+    <Property Name="CONSUMPTION_ERROR" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="PRODUCTION_SUSPEND">
     <Key>
@@ -349,7 +355,7 @@ warning 6002: The table/view 'ARAF.dbo.ITEM_OPERATIONS' does not have a primary 
     <Property Name="WSG_ID" Type="int" />
     <Property Name="WS_CODE" Type="varchar" MaxLength="50" />
     <Property Name="WS_NAME" Type="varchar" MaxLength="150" />
-    <Property Name="COMPUTER_NAME" Type="nchar" MaxLength="50" />
+    <Property Name="COMPUTER_NAME" Type="nvarchar" MaxLength="50" />
     <Property Name="TERM_RATE" Type="float" />
     <Property Name="WORK_ORDER_TYPE" Type="tinyint" />
   </EntityType>
